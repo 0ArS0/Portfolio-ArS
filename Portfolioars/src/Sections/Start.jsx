@@ -16,7 +16,7 @@ export const Start = () => {
                 transition={{ duration: 0.5, delay: 0.25 }}
                 className="start"
             >
-                <Image src='src/assets/ProfilePic.png' className='profile-pic' roundedCircle />
+                <Image src='src/assets/ProfilePic.png' className='profile-pic' roundedCircle fluid/>
                 <div className="initial-text-container">
                     <h1 className='title initial-title'>Hey, I'm Arthur<span className='dot-style'>.</span></h1>
                     <p className='text initial-text'>I'm a <span>Full Stack Developer</span></p>

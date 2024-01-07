@@ -54,7 +54,6 @@
 }
 
 .button-projects {
-    background-color: #fff;
     padding: 0.2rem 2rem;
     border-radius: 50px;
     position: relative;
@@ -69,8 +68,7 @@
 
 .button-projects::before {
     content: '';
-    background-color: #03b8ff;
-    color: #000;
+    background-color: var(--special-color);
     width: 0px;
     height: 0px;
     position: absolute;

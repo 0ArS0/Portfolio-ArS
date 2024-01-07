@@ -1,14 +1,21 @@
 /* style header */
 
+.app {
+    background-color: var(--background);
+    color: var(--text-primary);
+    transition: background-color 2.5s ease-in-out, color .5s ease-in-out;
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000ce;
-    padding: 1.5rem 2rem;
+    background-color: var(--backgroundOp);
+    padding: 1rem 2rem;
     z-index: 1000;
     width: 100%;
     position: fixed;
+    transition: background-color 2s ease-in-out;
 }
 
 .header-logo {
@@ -17,15 +24,16 @@ header {
 
 .options-header {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     width: 60%;
     font-size: 20px;
     transition: width 1s ease-in-out;
+    
 }
 
 .options-header a {
-    color: #fff;
-    
+    color: var(--text-primary);
     text-decoration: none;
     position: relative;
     transition: color .5s ease-in-out;
@@ -34,10 +42,10 @@ header {
 .options-header a:before {
     content: '';
     position: absolute;
-    bottom: 13px;
+    bottom: -1px;
     height: 2px;
     width: 0;
-    background: #03b8ff;
+    background: var(--special-color);
     border-radius: 50px;
     transition: width 0.2s linear;
 }
@@ -53,8 +61,47 @@ header {
 .extras-header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 35%;
+    justify-content: space-between;
+    width: 22%;
+}
+
+.darkmode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.darkmode-container i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.darkmode-text {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.flag-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.flag-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    padding: 0;
+}
+
+.flag-button+.flag-button {
+    margin-left: 10px;
 }
 
 /* style main */

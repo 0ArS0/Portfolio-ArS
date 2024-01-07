@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
-:root {}
+:root {
+  --background: #000000;
+  --backgroundOp: #000000ce;
+  --text-primary: #ffffff;
+  --special-color: #03b8ff;
+}
+
+[data-theme="dark"] {
+  --background: #ffffff;
+  --backgroundOp: #ffffffce;
+  --text-primary: #000000;
+  --special-color: #03b8ff;
+}
 
 * {
   margin: 0;
@@ -10,13 +22,11 @@
 }
 
 body {
-  background-image: url("src/assets/sl_0210121_40570_43.jpg");
   background-repeat: no-repeat;
-  background-color: #000;
   background-position: center;
-  background-size: cover; 
-  color: #fff;
+  background-size: cover;
 }
+
 
 .title {
   font-weight: 600;

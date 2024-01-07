@@ -43,14 +43,13 @@
 }
 
 .blink {
-    color: rgb(3, 184, 255);
+    color: var(--special-color);
     animation: blink 1s step-end infinite;
 }
 
 .profile-pic {
     width: 50vh;
-    height: 60vh;
-    border-bottom: 4px solid #03b8ff;
+    border-bottom: 4px solid var(--special-color);
     box-shadow: 10px 10px 20px -14px rgba(3, 184, 255, 0.959);
     transition: box-shadow ease-in-out 1s;
 }
