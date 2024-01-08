@@ -30,6 +30,10 @@
     margin-top: 2em;
 }
 
+.fullstack-text {
+    color: var(--special-color);
+}
+
 @keyframes blink {
 
     0%,
@@ -44,26 +48,29 @@
 
 .blink {
     color: var(--special-color);
+    font-weight: 700;
     animation: blink 1s step-end infinite;
 }
 
 .profile-pic {
     width: 50vh;
     border-bottom: 4px solid var(--special-color);
-    box-shadow: 10px 10px 20px -14px rgba(3, 184, 255, 0.959);
+    box-shadow: 10px 10px 20px -14px var(--special-color);
     transition: box-shadow ease-in-out 1s;
 }
 
+.profile-pic-container {
+    background-color: black;
+    border-radius: 20rem;
+}
 
 @media screen and (max-width: 1200px) {
     .start-container {
         height: 120vh;
     }
-
     .start {
         flex-direction: column;
     }
-
     .initial-text-container {
         text-align: center;
         width: 50%;
@@ -72,11 +79,9 @@
 }
 
 @media screen and (max-width: 1400px) and (min-width: 1200px) {
-
     .start {
         width: 100%;
     }
-
     .initial-text-container {
         width: 35vw;
     }

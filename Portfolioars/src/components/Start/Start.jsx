@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Image } from 'react-bootstrap'
 import { motion } from 'framer-motion'
 import './Start.css';
+import { useTranslation } from 'react-i18next';
 
 export const Start = () => {
+    const [t, i18n] = useTranslation("global")
+
     return (
         <div className="start-container" id="start">
             <motion.section
@@ -16,11 +19,13 @@ export const Start = () => {
                 transition={{ duration: 0.5, delay: 0.25 }}
                 className="start"
             >
-                <Image src='src/assets/ProfilePic.png' className='profile-pic' roundedCircle fluid/>
+                <div className='profile-pic-container'>
+                    <Image src='src/assets/img/ProfilePic.png' className='profile-pic' roundedCircle fluid />
+                </div>
                 <div className="initial-text-container">
-                    <h1 className='title initial-title'>Hey, I'm Arthur<span className='dot-style'>.</span></h1>
-                    <p className='text initial-text'>I'm a <span>Full Stack Developer</span></p>
-                    <p className='text second-text'>Over the past months, I have immersed myself in diverse courses and projects, culminating in the creation of my first portfolio. I hope you find it indicative of my dedication to continuous improvement. <span className='blink'>|</span></p>
+                    <h1 className='title initial-title'>{t("start.text-name")}<span className='dot-style'>.</span></h1>
+                    <p className='text initial-text'>&lt;<span className='fullstack-text'>{t("start.text-dev2")}</span>/&gt;</p>
+                    <p className='text second-text'>{t("start.text-description")}<span className='blink'>|</span></p>
                 </div>
 
             </motion.section>

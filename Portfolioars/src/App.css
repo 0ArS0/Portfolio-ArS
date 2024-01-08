@@ -1,9 +1,16 @@
-/* style header */
-
 .app {
     background-color: var(--background);
     color: var(--text-primary);
-    transition: background-color 2.5s ease-in-out, color .5s ease-in-out;
+    transition: background-color 2.5s ease-in-out, color 2.5s ease-in-out;
+}
+
+/* style main */
+
+#main-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header {
@@ -15,7 +22,7 @@ header {
     z-index: 1000;
     width: 100%;
     position: fixed;
-    transition: background-color 2s ease-in-out;
+    transition: background-color 2.5s ease-in-out;
 }
 
 .header-logo {
@@ -29,14 +36,14 @@ header {
     width: 60%;
     font-size: 20px;
     transition: width 1s ease-in-out;
-    
+
 }
 
 .options-header a {
     color: var(--text-primary);
     text-decoration: none;
     position: relative;
-    transition: color .5s ease-in-out;
+    transition: color 2.5s ease-in-out;
 }
 
 .options-header a:before {
@@ -54,30 +61,26 @@ header {
     width: 100%;
 }
 
-.options-header a:hover {
-    color: #03b8ff;
-}
-
 .extras-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 22%;
+    width: 25%;
+
 }
 
 .darkmode-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
+    width: 50%;
 }
 
 .darkmode-container i {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
 
 .darkmode-text {
     font-size: 15px;
@@ -102,15 +105,6 @@ header {
 
 .flag-button+.flag-button {
     margin-left: 10px;
-}
-
-/* style main */
-
-#main-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* style third section */

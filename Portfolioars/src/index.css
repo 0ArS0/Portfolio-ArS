@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
-:root {
+
+[data-theme="dark"] {
   --background: #000000;
   --backgroundOp: #000000ce;
   --text-primary: #ffffff;
   --special-color: #03b8ff;
 }
 
-[data-theme="dark"] {
-  --background: #ffffff;
-  --backgroundOp: #ffffffce;
+[data-theme="light"] {
+  --background: #f2fffc;
+  --backgroundOp: #f2fffcce;
   --text-primary: #000000;
-  --special-color: #03b8ff;
+  --special-color: #f67828;
 }
 
 * {
@@ -43,11 +44,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #0e0e0e;
+  background-color: #ffffff;
+  border-left: 2px solid rgb(3, 3, 3);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(3, 184, 255);
+  background-color: rgb(153, 153, 153);
   border-radius: 6px;
 }
 

@@ -1,22 +1,32 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './App.css';
 import { Image } from 'react-bootstrap'
-import { motion, useScroll } from 'framer-motion'
-import { Start } from './Sections/Start';
-import { AboutMe } from './Sections/AboutMe';
-import { Projects } from './Sections/Projects';
+import ReactSwitch from 'react-switch';
 import useLocalStorage from 'use-local-storage';
+import { MdOutlineWbSunny } from 'react-icons/md';
+import { IoMoonOutline } from 'react-icons/io5';
+import { motion, useScroll } from 'framer-motion'
+
+import { Start } from './components/Start/Start';
+import { AboutMe } from './components/AboutMe/AboutMe';
+import { Projects } from './components/Projects/Projects';
+import { useTranslation } from 'react-i18next';
 
 export default function App() {
   const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
+  const [t, i18n] = useTranslation("global")
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
   }
 
+  const handleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang)
+  }
+
   return (
-    <div className="app" data-theme={theme}>
+    <div className='app' data-theme={theme} data-bs-theme={theme === 'light' ? 'dark' : 'light'}>
       <motion.header
         initial={{ width: '0%' }}
         animate={{ width: '100%' }}
@@ -24,24 +34,26 @@ export default function App() {
       >
         <div>
           <a href='#start'>
-            <Image src='src/assets/logo.png' className='header-logo' fluid />
+            <Image src={theme === 'dark' ? 'src/assets/img/logoDark.png' : 'src/assets/img/logoLight.png'} className='header-logo' fluid />
           </a>
         </div>
         <div className='options-header'>
-          <a href='#aboutme'>About me</a>
-          <a href='#projects'>Projects</a>
-          <a href='#contact'>Contact</a>
+          <a href='#aboutme'>{t('header.text-aboutme')}</a>
+          <a href='#projects'>{t('header.text-projects')}</a>
+          <a href='#contact'>{t('header.text-contact')}</a>
           <div className='extras-header'>
-            <div className='darkmode-container'>
-              <i onClick={toggleTheme} className='fas fa-toggle-on'></i>
-            </div>
             <div className='flag-button-container'>
-              <button className='flag-button'>
-                <Image className='flag-icon' src='../src/assets/br.png' fluid />
+              <button onClick={() => handleChangeLanguage('br')} className='flag-button'>
+                <Image className='flag-icon' src='../src/assets/img/br.png' fluid />
               </button>
-              <button className='flag-button'>
-                <Image className='flag-icon' src='../src/assets/usa.png' fluid />
+              <button onClick={() => handleChangeLanguage('en')} className='flag-button'>
+                <Image className='flag-icon' src='../src/assets/img/usa.png' fluid />
               </button>
+            </div>
+            <div className='darkmode-container'>
+              <IoMoonOutline />
+              <ReactSwitch checkedIcon={false} onColor={'#f67828'} uncheckedIcon={false} onChange={toggleTheme} checked={theme === 'light'} className='darkmode-switch' />
+              <MdOutlineWbSunny />
             </div>
           </div>
         </div>

@@ -3,10 +3,13 @@ import { motion, useScroll } from 'framer-motion'
 import './AboutMe.css';
 import { GiEnlightenment } from "react-icons/gi";
 import { IoFileTrayFullSharp } from "react-icons/io5";
+import { useTranslation } from 'react-i18next';
 
 export const AboutMe = () => {
     const [eixoX, setEixoX] = useState(0);
     const [eixoY, setEixoY] = useState(0);
+
+    const {t} = useTranslation("global")
 
     const btnRef = useRef();
 
@@ -36,7 +39,7 @@ export const AboutMe = () => {
     })
 
     return (
-        <div id="aboutme">
+        <div className="aboutme-container" id="aboutme">
             <motion.section
                 ref={ref}
                 style={{
@@ -44,31 +47,25 @@ export const AboutMe = () => {
                     opacity: scrollYProgress,
                 }}
                 className="aboutme">
-                <h2 className='title title-aboutme'>About me</h2>
+                <h2 className='title title-aboutme'>{t("aboutme.title")}</h2>
                 <div className='cards-aboutme-container'>
                     <div className="card-aboutme">
-                        <IoFileTrayFullSharp size={40} color='#03b8ff' className='card-aboutme-icon' />
-                        <h4>Projects</h4>
-                        <p>10+ Completed Projects</p>
+                        <IoFileTrayFullSharp size={40} className='card-aboutme-icon' />
+                        <h4>{t("aboutme.title-projects")}</h4>
+                        <p>10+ {t("aboutme.text-projects")}</p>
                     </div>
                     <div className="card-aboutme">
-                        <GiEnlightenment size={40} color='#03b8ff' className='card-aboutme-icon' />
-                        <h4>Experience</h4>
-                        <p>5 Months</p>
+                        <GiEnlightenment size={40} className='card-aboutme-icon' />
+                        <h4>{t("aboutme.title-experience")}</h4>
+                        <p>{t("aboutme.text-experience")}</p>
                     </div>
                 </div>
                 <div className='text-aboutme-container'>
                     <p className='text text-aboutme'>
-                        voluptatem! Incidunt enim praesentium accusantium optio quas dolores adipisci
-                        distinctio animi tempore aliquid natus libero, debitis, nobis autem assumenda et
-                        ipsum accusamus asperiores unde repudiandae? Illo mollitia explicabo voluptatem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione molestias
-                        voluptatem! Incidunt enim praesentium accusantium optio quas dolores adipisci
-                        distinctio animi tempore aliquid natus libero, debitis, nobis autem assumenda et
-                        ipsum accusamus asperiores unde repudiandae? Illo mollitia explicabo voluptatem?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione molestias
-                        voluptatem! Incidunt enim praesentium accusantium optio quas dolores adipisci
-                        distinctio animi tempore aliquid natus libero, debitis, nobis autem assumenda et
-                        ipsum accusamus asperiores unde repudiandae? Illo mollitia explicabo voluptatem?
+                        {t('aboutme.text-aboutme1')}
+                    </p>
+                    <p className='text text-aboutme'>
+                        {t('aboutme.text-aboutme2')}
                     </p>
                 </div>
                 <button className='button-aboutme' style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }} ref={btnRef}>

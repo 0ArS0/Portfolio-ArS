@@ -1,3 +1,7 @@
+.aboutme-container {
+    width: 100%;
+}
+
 .aboutme {
     display: flex;
     flex-direction: column;
@@ -9,7 +13,7 @@
 
 .title-aboutme {
     font-size: 35px;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .cards-aboutme-container {
@@ -23,6 +27,11 @@
 .text-aboutme-container {
     width: 90%;
     margin-top: -4rem;
+}
+.text-aboutme {
+    text-align: center;
+ 
+    font-size: 18px;
 }
 
 .card-aboutme {
@@ -38,21 +47,20 @@
 
 .card-aboutme-icon {
     margin-bottom: 1.2rem;
+    color: var(--special-color);
+    transition: color 2s ease-in-out;
 }
 
-.text-aboutme {
-    text-align: center;
-    font-size: 18px;
-}
 
 .button-aboutme {
-    background-color: #fff;
+    background-color: var(--text-primary);
     padding: 0.6rem 3rem;
     border-radius: 90px;
     margin-top: -5rem;
     position: relative;
     overflow: hidden;
     transition: color ease-in-out .8s;
+    color: var(--background);
 }
 
 .button-aboutme span {
@@ -81,5 +89,5 @@
 }
 
 .button-aboutme:hover {
-    color: #fff;
+    color: var(--text-primary);
 }
