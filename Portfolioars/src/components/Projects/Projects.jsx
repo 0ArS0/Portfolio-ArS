@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 export const Projects = () => {
 
     const [projects, setProjects] = useState([])
-    const { t } = useTranslation("global")
+    const [t, i18n] = useTranslation("global")
 
     const ref = useRef(null)
 
@@ -49,12 +49,12 @@ export const Projects = () => {
                         {projects.map((project) => (
                             <Carousel.Item key={project.id}>
                                 <div className="projects-card">
-                                    <h5 className='title '>{project.name}</h5>
-                                    <Image className="projects-card-image" src={project.image} />
-                                    <p className='projects-card-description'>{project.description}</p>
+                                    <h5 className='title '>{i18n.language === 'br' ? project.nameBR : project.nameUS}</h5>
                                     <a href={project.link} target='_blank' className='project-link'>
                                         {t("projects.text-repository")}
                                     </a>
+                                    <Image className="projects-card-image" src={project.image} />
+                                    <p className='projects-card-description'>{i18n.language === 'br' ? project.descriptionBR : project.descriptionUS}</p>
                                 </div>
                             </Carousel.Item>
                         ))}

@@ -1,37 +1,33 @@
-.aboutme-container {
-    width: 100%;
-}
-
 .aboutme {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 115vh;
 }
 
 .title-aboutme {
     font-size: 35px;
-    margin-top: 2rem;
 }
 
 .cards-aboutme-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
-    margin-top: -5rem;
+    width: 100%;
 }
 
 .text-aboutme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 90%;
-    margin-top: -4rem;
 }
+
 .text-aboutme {
     text-align: center;
- 
-    font-size: 18px;
 }
 
 .card-aboutme {
@@ -41,8 +37,10 @@
     justify-content: center;
     border: 2px solid;
     border-radius: 3rem;
-    width: 25vw;
+    width: 20%;
     height: 25vh;
+    transition: width .5s ease-in-out;
+    margin-bottom: 2rem;
 }
 
 .card-aboutme-icon {
@@ -56,7 +54,6 @@
     background-color: var(--text-primary);
     padding: 0.6rem 3rem;
     border-radius: 90px;
-    margin-top: -5rem;
     position: relative;
     overflow: hidden;
     transition: color ease-in-out .8s;
@@ -90,4 +87,65 @@
 
 .button-aboutme:hover {
     color: var(--text-primary);
+}
+
+@media screen and (max-width: 9999px) {
+    .card-aboutme {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .card-aboutme {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1095px) {
+    .card-aboutme {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .aboutme {
+        height: 120vh;
+    }
+
+}
+
+@media screen and (max-width: 740px) {
+    .aboutme {
+        height: 130vh;
+    }
+
+    .card-aboutme {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .aboutme {
+        height: 140vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .card-aboutme {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .card-aboutme {
+        margin-bottom: 15px;
+        width: 42%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .card-aboutme {
+        width: 46%;
+    }
 }
