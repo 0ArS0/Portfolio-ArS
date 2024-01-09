@@ -14,7 +14,7 @@
 }
 
 .initial-text-container {
-    width: 40%;
+    width: 60%;
     margin-top: 3rem;
     transition: width 1s ease-in-out;
 }
@@ -37,7 +37,7 @@
 .initial-text {
     text-align: center;
     font-weight: 100;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 
@@ -71,7 +71,7 @@
     border-radius: 20rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1050px) {
     .start-container {
         height: 120vh;
     }
@@ -82,33 +82,10 @@
 
     .initial-text-container {
         text-align: center;
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 1400px) and (min-width: 1199px) {
-    .start {
-        width: 100%;
-    }
-
-    .initial-text-container {
-        width: 35vw;
-    }
-}
-
-@media screen and (max-width: 777px) {
-    .initial-text-container {
         width: 90%;
-
     }
 }
 
-@media screen and (max-width: 520px) {
-    .initial-text-container {
-        width: 100%;
-
-    }
-}
 
 @media screen and (max-width: 460px) {
     .start {

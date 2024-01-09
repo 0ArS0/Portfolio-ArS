@@ -35,13 +35,13 @@ export default function App() {
 
   return (
     <div className='app' data-theme={theme} data-bs-theme={theme === 'light' ? 'dark' : 'light'}>
-      <motion.header
-        initial={{ width: '0%' }}
-        animate={{ width: '100%' }}
-        transition={{ duration: 0.6 }}
-      >
+      <header>
         <a href='#start'>
-          <Image src={theme === 'dark' ? 'src/assets/img/logoDark.png' : 'src/assets/img/logoLight.png'} className='header-logo' fluid />
+          {i18n === 'br' ? (
+            <Image src={theme === 'dark' ? 'src/assets/img/logoDark.png' : 'src/assets/img/logoLight.png'} className='header-logo' fluid />
+          ) : (
+            <Image src={theme === 'dark' ? 'src/assets/img/logoDark.png' : 'src/assets/img/logoLight.png'} className='header-logo' fluid />
+          )}
         </a>
         <nav>
           <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
@@ -63,38 +63,38 @@ export default function App() {
             </li>
             <li>
               <div className='darkmode-container'>
-                <IoMoonOutline />
-                <ReactSwitch checkedIcon={false} onColor={'#f67828'} uncheckedIcon={false} onChange={toggleTheme} checked={theme === 'light'} className='darkmode-switch' />
-                <MdOutlineWbSunny />
+                <IoMoonOutline className='darkmode-item' />
+                <ReactSwitch checkedIcon={false} onColor={'#f67828'} uncheckedIcon={false} onChange={toggleTheme} checked={theme === 'light'} className='darkmode-item' />
+                <MdOutlineWbSunny className='darkmode-item' />
               </div>
             </li>
             <li className='languages'>
               <div onClick={() => setLanguageOpen(!languageOpen)} >
                 {languageOpen ? (
                   <div>
-                    <GrLanguage size={30}/>
-                    <IoMdArrowDropup size={30}/>
+                    <GrLanguage size={30} />
+                    <IoMdArrowDropup size={30} />
                   </div>
                 ) : (
                   <div>
-                    <GrLanguage size={30}/>
-                    <IoMdArrowDropdown size={30}/>
+                    <GrLanguage size={30} />
+                    <IoMdArrowDropdown size={30} />
                   </div>
                 )}
               </div>
               <ul className={languageOpen ? "open" : "closed"}>
                 <li>
-                  <p className={i18n.language === 'br' ? "portuguese" : ""}onClick={() => handleChangeLanguage('br')} >{t("name-lang.portuguese")}</p>
+                  <p className={i18n.language === 'br' ? "portuguese" : ""} onClick={() => handleChangeLanguage('br')} >{t("name-lang.portuguese")}</p>
                 </li>
                 <li>
-                  <p className={i18n.language === 'en' ? "usa" : ""}onClick={() => handleChangeLanguage('en')}>{t("name-lang.english")}</p>
+                  <p className={i18n.language === 'en' ? "usa" : ""} onClick={() => handleChangeLanguage('en')}>{t("name-lang.english")}</p>
                 </li>
               </ul>
             </li>
           </ul>
         </nav>
 
-      </motion.header>
+      </header>
 
       <main id='main-home'>
 

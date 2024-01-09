@@ -9,7 +9,7 @@ export const AboutMe = () => {
     const [eixoX, setEixoX] = useState(0);
     const [eixoY, setEixoY] = useState(0);
 
-    const {t} = useTranslation("global")
+    const { t } = useTranslation("global")
 
     const btnRef = useRef();
 
@@ -39,7 +39,7 @@ export const AboutMe = () => {
     })
 
     return (
-        <div className="aboutme-container" id="aboutme">
+        <div id="aboutme">
             <motion.section
                 ref={ref}
                 style={{
@@ -50,14 +50,14 @@ export const AboutMe = () => {
                 <h2 className='title title-aboutme'>{t("aboutme.title")}</h2>
                 <div className='cards-aboutme-container'>
                     <div className="card-aboutme">
-                        <IoFileTrayFullSharp size={40} className='card-aboutme-icon' />
-                        <h4>{t("aboutme.title-projects")}</h4>
-                        <p>10+ {t("aboutme.text-projects")}</p>
+                        <IoFileTrayFullSharp size={50} className='card-aboutme-icon' />
+                        <h4 className='title'>{t("aboutme.title-projects")}</h4>
+                        <p className='text'>10+ {t("aboutme.text-projects")}</p>
                     </div>
                     <div className="card-aboutme">
-                        <GiEnlightenment size={40} className='card-aboutme-icon' />
-                        <h4>{t("aboutme.title-experience")}</h4>
-                        <p>{t("aboutme.text-experience")}</p>
+                        <GiEnlightenment size={50} className='card-aboutme-icon' />
+                        <h4 className='title'>{t("aboutme.title-experience")}</h4>
+                        <p className='text'>{t("aboutme.text-experience")}</p>
                     </div>
                 </div>
                 <div className='text-aboutme-container'>
@@ -67,10 +67,10 @@ export const AboutMe = () => {
                     <p className='text text-aboutme'>
                         {t('aboutme.text-aboutme2')}
                     </p>
+                    <button className='button-aboutme' style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }} ref={btnRef}>
+                        <span className='text'>{t('aboutme.button-download-text')} CV</span>
+                    </button>
                 </div>
-                <button className='button-aboutme' style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }} ref={btnRef}>
-                    <span className='text'>Download CV</span>
-                </button>
             </motion.section>
         </div>
     )
