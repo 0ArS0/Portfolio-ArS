@@ -11,10 +11,17 @@ import { Start } from './components/Start/Start';
 import { AboutMe } from './components/AboutMe/AboutMe';
 import { Projects } from './components/Projects/Projects';
 import { useTranslation } from 'react-i18next';
+import { IoMdArrowDropdown } from "react-icons/io";
+import { AiOutlineBars } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
+import { GrLanguage } from "react-icons/gr";
+import { IoMdArrowDropup } from "react-icons/io";
 
 export default function App() {
   const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
   const [t, i18n] = useTranslation("global")
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [languageOpen, setLanguageOpen] = useState(false)
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
@@ -23,6 +30,7 @@ export default function App() {
 
   const handleChangeLanguage = (lang) => {
     i18n.changeLanguage(lang)
+    console.log(i18n.language);
   }
 
   return (
@@ -32,31 +40,60 @@ export default function App() {
         animate={{ width: '100%' }}
         transition={{ duration: 0.6 }}
       >
-        <div>
-          <a href='#start'>
-            <Image src={theme === 'dark' ? 'src/assets/img/logoDark.png' : 'src/assets/img/logoLight.png'} className='header-logo' fluid />
-          </a>
-        </div>
-        <div className='options-header'>
-          <a href='#aboutme'>{t('header.text-aboutme')}</a>
-          <a href='#projects'>{t('header.text-projects')}</a>
-          <a href='#contact'>{t('header.text-contact')}</a>
-          <div className='extras-header'>
-            <div className='flag-button-container'>
-              <button onClick={() => handleChangeLanguage('br')} className='flag-button'>
-                <Image className='flag-icon' src='../src/assets/img/br.png' fluid />
-              </button>
-              <button onClick={() => handleChangeLanguage('en')} className='flag-button'>
-                <Image className='flag-icon' src='../src/assets/img/usa.png' fluid />
-              </button>
-            </div>
-            <div className='darkmode-container'>
-              <IoMoonOutline />
-              <ReactSwitch checkedIcon={false} onColor={'#f67828'} uncheckedIcon={false} onChange={toggleTheme} checked={theme === 'light'} className='darkmode-switch' />
-              <MdOutlineWbSunny />
-            </div>
+        <a href='#start'>
+          <Image src={theme === 'dark' ? 'src/assets/img/logoDark.png' : 'src/assets/img/logoLight.png'} className='header-logo' fluid />
+        </a>
+        <nav>
+          <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? (
+              <AiOutlineClose size={50} />
+            ) : (
+              <AiOutlineBars size={50} />
+            )}
           </div>
-        </div>
+          <ul className={menuOpen ? "open" : ""}>
+            <li>
+              <a href='#aboutme'>{t('header.text-aboutme')}</a>
+            </li>
+            <li>
+              <a href='#projects'>{t('header.text-projects')}</a>
+            </li>
+            <li>
+              <a href='#contact'>{t('header.text-contact')}</a>
+            </li>
+            <li>
+              <div className='darkmode-container'>
+                <IoMoonOutline />
+                <ReactSwitch checkedIcon={false} onColor={'#f67828'} uncheckedIcon={false} onChange={toggleTheme} checked={theme === 'light'} className='darkmode-switch' />
+                <MdOutlineWbSunny />
+              </div>
+            </li>
+            <li className='languages'>
+              <div onClick={() => setLanguageOpen(!languageOpen)} >
+                {languageOpen ? (
+                  <div>
+                    <GrLanguage size={30}/>
+                    <IoMdArrowDropup size={30}/>
+                  </div>
+                ) : (
+                  <div>
+                    <GrLanguage size={30}/>
+                    <IoMdArrowDropdown size={30}/>
+                  </div>
+                )}
+              </div>
+              <ul className={languageOpen ? "open" : "closed"}>
+                <li>
+                  <p className={i18n.language === 'br' ? "portuguese" : ""}onClick={() => handleChangeLanguage('br')} >{t("name-lang.portuguese")}</p>
+                </li>
+                <li>
+                  <p className={i18n.language === 'en' ? "usa" : ""}onClick={() => handleChangeLanguage('en')}>{t("name-lang.english")}</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
       </motion.header>
 
       <main id='main-home'>

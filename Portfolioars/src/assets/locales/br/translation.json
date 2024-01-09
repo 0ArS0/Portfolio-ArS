@@ -23,5 +23,9 @@
         "title": "Projetos",
         "text-button": "Mostrar Todos",
         "text-repository": "Clique aqui para acessar o repositório"
+    },
+    "name-lang": {
+        "portuguese": "Português (Brasil)",
+        "english": "Inglês"
     }
 }

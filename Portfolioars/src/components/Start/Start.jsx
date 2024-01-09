@@ -23,9 +23,11 @@ export const Start = () => {
                     <Image src='src/assets/img/ProfilePic.png' className='profile-pic' roundedCircle fluid />
                 </div>
                 <div className="initial-text-container">
-                    <h1 className='title initial-title'>{t("start.text-name")}<span className='dot-style'>.</span></h1>
-                    <p className='text initial-text'>&lt;<span className='fullstack-text'>{t("start.text-dev2")}</span>/&gt;</p>
-                    <p className='text second-text'>{t("start.text-description")}<span className='blink'>|</span></p>
+                    <div className="title-container">
+                        <h1 className='title initial-title'>{t("start.text-name")}<span className='dot-style'>.</span></h1>
+                        <p className='text fullstack-text'>&lt;<span className='fullstack-text-color'>{t("start.text-dev2")}</span>/&gt;</p>
+                    </div>
+                    <p className='text initial-text'>{t("start.text-description")}<span className='blink'>|</span></p>
                 </div>
 
             </motion.section>

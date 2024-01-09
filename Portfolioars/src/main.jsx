@@ -28,8 +28,8 @@ i18n
     supportedLngs: ['en', 'br'],
     fallbackLgn: "en",
     detection: {
-      order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
-      caches: ['cookie'],
+      order: ['localStorage', 'htmlTag', 'cookie', 'path', 'subdomain'],
+      caches: ['localStorage'],
     },
     backend: {
       loadPath: './assets/locales/{{lng}}/translation.json',

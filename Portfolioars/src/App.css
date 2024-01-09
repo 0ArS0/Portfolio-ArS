@@ -1,7 +1,6 @@
 .app {
     background-color: var(--background);
     color: var(--text-primary);
-    transition: background-color 2.5s ease-in-out, color 2.5s ease-in-out;
 }
 
 /* style main */
@@ -17,36 +16,46 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 24px;
+    transition: width 1s ease-in-out;
     background-color: var(--backgroundOp);
     padding: 1rem 2rem;
     z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    transition: width .5s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
-    position: fixed;
-    transition: background-color 2.5s ease-in-out;
+}
+
+nav ul li {
+    list-style: none;
 }
 
 .header-logo {
     width: 15vh;
 }
 
-.options-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 60%;
-    font-size: 20px;
-    transition: width 1s ease-in-out;
-
-}
-
-.options-header a {
-    color: var(--text-primary);
+nav a {
+    display: block;
     text-decoration: none;
+    color: var(--text-primary);
     position: relative;
-    transition: color 2.5s ease-in-out;
 }
 
-.options-header a:before {
+nav a:before {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -57,8 +66,15 @@ header {
     transition: width 0.2s linear;
 }
 
-.options-header a:hover:before {
+nav a:hover:before {
     width: 100%;
+}
+
+nav .menu {
+    display: none;
+    position: absolute;
+    top: 1.1rem;
+    right: 4rem;
 }
 
 .extras-header {
@@ -66,7 +82,6 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 25%;
-
 }
 
 .darkmode-container {
@@ -74,69 +89,130 @@ header {
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    width: 50%;
 }
 
-.darkmode-container i {
-    font-size: 1.5rem;
+.languages>div {
+    display: flex;
     cursor: pointer;
 }
 
-.darkmode-text {
-    font-size: 15px;
-    margin-bottom: 0px;
+.languages li {
+    cursor: pointer;
+    text-align: center;
+    width: 70%;
 }
 
-.flag-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
+.languages ul.closed {
+    display: none;
 }
 
-.flag-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    width: 100%;
-    padding: 0;
-}
-
-.flag-button+.flag-button {
-    margin-left: 10px;
-}
-
-/* style third section */
-
-.tecnologies {
+.languages ul.open {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100vh;
+    position: absolute;
+    top: 6rem;
+    right: 0rem;
+    width: 21%;
+    transition: width .5s ease-in-out;
 }
 
-/* style fourth section */
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100vh;
+.portuguese {
+    color: var(--special-color);
 }
 
-@media screen and (max-width: 1200px) {
-    .options-header {
-        width: 85%;
+.usa {
+    color: var(--special-color);
+}
+
+
+@media screen and (max-width: 1050px) {
+    nav {
+        width: 80%;
+    }
+
+    .languages ul.open {
+        width: 27.5%;
     }
 }
 
-@media screen and (max-width: 1400px) and (min-width: 1199px) {
-    .options-header {
-        width: 70%;
+@media screen and (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    nav .menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+    }
+
+    nav ul.open {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--backgroundOp);
+        top: 5.45rem;
+        right: 0rem;
+        width: 40%;
+        height: 60vh;
+    }
+
+    .languages ul.open {
+        top: 28.35rem;
+        width: 100%;
+        height: 20vh;
+    }
+
+    .languages>div {
+        margin-left: 40%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+    }
+
+    .darkmode-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    nav ul.open {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 220px) {
+    nav .menu {
+        top: 5.5rem;
+        right: 5rem;
+    }
+
+    nav ul.open {
+        display: flex;
+        position: absolute;
+        top: 9rem;
+        right: 0.8rem;
+    }
+}
+
+
+@media screen and (max-width: 800px) and (max-height: 921px) {
+    .languages ul.open {
+        top: 34.5rem;
+        width: 100%;
+        height: 20vh;
     }
 }

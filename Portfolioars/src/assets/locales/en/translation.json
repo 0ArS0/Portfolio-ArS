@@ -22,5 +22,9 @@
         "title": "Projects",
         "text-button": "Show All",
         "text-repository": "Click here to access the repository"
+    },
+    "name-lang": {
+        "portuguese": "Portuguese (Brazil)",
+        "english": "English"
     }
 }
