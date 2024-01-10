@@ -3,17 +3,17 @@
 
 
 [data-theme="dark"] {
-  --background: #000000;
-  --backgroundOp: #000000ce;
+  --background: #1a1a1a;
+  --backgroundOp: #1a1a1ace;
   --text-primary: #ffffff;
   --special-color: #03b8ff;
 }
 
 [data-theme="light"] {
-  --background: #f2fffc;
-  --backgroundOp: #f2fffcce;
+  --background: #f6f6f6;
+  --backgroundOp: #f6f6f6ce;
   --text-primary: #000000;
-  --special-color: #f67828;
+  --special-color: #03b8ff;
 }
 
 * {
@@ -35,7 +35,7 @@ body {
 }
 
 .text {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Arimo', sans-serif;
 }
 

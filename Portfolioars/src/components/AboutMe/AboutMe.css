@@ -1,10 +1,15 @@
 .aboutme {
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.aboutme-container {
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 115vh;
 }
 
 .title-aboutme {
@@ -13,9 +18,9 @@
 
 .cards-aboutme-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
 }
 
 .text-aboutme-container {
@@ -23,7 +28,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 70%;
+    margin-top: 1rem;
 }
 
 .text-aboutme {
@@ -37,8 +43,7 @@
     justify-content: center;
     border: 2px solid;
     border-radius: 3rem;
-    width: 20%;
-    height: 25vh;
+    padding: 4rem 6rem;
     transition: width .5s ease-in-out;
     margin-bottom: 2rem;
 }
@@ -51,6 +56,7 @@
 
 
 .button-aboutme {
+    margin-top: 1rem;
     background-color: var(--text-primary);
     padding: 0.6rem 3rem;
     border-radius: 90px;
@@ -89,63 +95,3 @@
     color: var(--text-primary);
 }
 
-@media screen and (max-width: 9999px) {
-    .card-aboutme {
-        width: 25%;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .card-aboutme {
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 1095px) {
-    .card-aboutme {
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 950px) {
-    .aboutme {
-        height: 120vh;
-    }
-
-}
-
-@media screen and (max-width: 740px) {
-    .aboutme {
-        height: 130vh;
-    }
-
-    .card-aboutme {
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .aboutme {
-        height: 140vh;
-    }
-}
-
-@media screen and (max-width: 600px) {
-
-    .card-aboutme {
-        margin-bottom: 15px;
-    }
-}
-
-@media screen and (max-width: 545px) {
-    .card-aboutme {
-        margin-bottom: 15px;
-        width: 42%;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    .card-aboutme {
-        width: 46%;
-    }
-}
