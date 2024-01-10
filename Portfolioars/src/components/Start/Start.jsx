@@ -47,7 +47,7 @@ export const Start = () => {
                     animate="visible"
                     transition={{ duration: 1, delay: 0.25 }}
                     className='profile-pic-container'>
-                    <Image src='src/assets/img/ProfilePic.png' className='profile-pic' roundedCircle fluid />
+                    <Image src={theme === 'light' ? 'src/assets/img/ProfilePicLight.png' : 'src/assets/img/ProfilePicDark.png'} className='profile-pic' roundedCircle fluid />
                 </motion.div>
                 <div className="initial-text-container">
                     <div className="title-container">

@@ -71,28 +71,42 @@
 .profile-pic {
     width: 50vh;
     border-bottom: 4px solid var(--special-color);
-    box-shadow: 10px 10px 20px -14px var(--special-color);
+    box-shadow: -10px 10px 20px -14px var(--special-color);
     transition: box-shadow ease-in-out 1s;
 }
 
 .profile-pic-container {
-    background-color: black;
+    /* background-color: black; */
     border-radius: 20rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .initial-text-container{
+        width: 40%;
+    }
+    .social {
+        width: 30%;
+    }
 }
 
 @media screen and (max-width: 1050px) {
     .start {
+        margin-top: 20%;
         flex-direction: column;
     }
 
     .initial-text-container {
+        align-items: center;
         text-align: center;
         width: 90%;
     }
 }
 
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 500px) {
+    .start {
+        margin-top: 40%;
+    }
 
 }
 

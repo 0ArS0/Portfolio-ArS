@@ -1,17 +1,20 @@
 .app {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     background-color: var(--background);
     color: var(--text-primary);
 }
 
 [data-theme="dark"] {
     background-image: url(src/assets/img/bgDark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 [data-theme="light"] {
     background-image: url(src/assets/img/bgLight.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* style main */
@@ -119,8 +122,9 @@ nav .menu {
     display: flex;
     flex-direction: column;
     position: absolute;
+    padding-top: 1rem;
     top: 100%;
-    right: 0rem;
+    right: 0.05%;
     width: 21%;
     transition: width .5s ease-in-out;
     background-color: var(--backgroundOp);
@@ -192,10 +196,11 @@ nav .menu {
         width: 40%;
         height: 60vh;
         border-left: 0.1px solid var(--text-primary);
+        border-bottom: 0.1px solid var(--text-primary);;
     }
 
     .languages ul.open {
-        width: 100.5%;
+        width: 100.2%;
         height: 20vh;
     }
 
