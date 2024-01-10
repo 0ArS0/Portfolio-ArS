@@ -71,7 +71,7 @@
 .profile-pic {
     width: 50vh;
     border-bottom: 4px solid var(--special-color);
-    box-shadow: -10px 10px 20px -14px var(--special-color);
+    box-shadow: -20px 10px 20px 5px  var(--sombra);
     transition: box-shadow ease-in-out 1s;
 }
 

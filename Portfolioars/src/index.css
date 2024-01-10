@@ -7,13 +7,15 @@
   --backgroundOp: #1a1a1ace;
   --text-primary: #ffffff;
   --special-color: #03b8ff;
+  --sombra: #03b8ff69;
 }
 
 [data-theme="light"] {
   --background: #f6f6f6;
   --backgroundOp: #f6f6f6ce;
   --text-primary: #000000;
-  --special-color: #03b8ff;
+  --special-color: #000000;
+  --sombra: #00000069;
 }
 
 * {
