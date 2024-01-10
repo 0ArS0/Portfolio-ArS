@@ -3,6 +3,20 @@
     color: var(--text-primary);
 }
 
+[data-theme="dark"] {
+    background-image: url(src/assets/img/bgDark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+[data-theme="light"] {
+    background-image: url(src/assets/img/bgLight.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /* style main */
 
 #main-home {
@@ -16,13 +30,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: 20px;
     transition: width 1s ease-in-out;
     background-color: var(--backgroundOp);
     padding: 1rem 2rem;
     z-index: 1000;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0.1px 0.1px 6px 0.1px var(--text-primary);
 }
 
 nav {
@@ -73,26 +90,16 @@ nav a:hover:before {
 nav .menu {
     display: none;
     position: absolute;
-    top: 1.3rem;
-    right: 6.5rem;
-}
-
-.extras-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 25%;
+    top: 25%;
+    right: 15%;
 }
 
 .darkmode-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
-.darkmode-item+.darkmode-item {
-    margin-left: 15px;
+.darkmode-item {
+    cursor: pointer;
 }
 
 .languages>div {
@@ -115,11 +122,14 @@ nav .menu {
     display: flex;
     flex-direction: column;
     position: absolute;
+    padding-top: 1rem;
     top: 100%;
-    right: 0rem;
+    right: 0.05%;
     width: 21%;
     transition: width .5s ease-in-out;
     background-color: var(--backgroundOp);
+    border-bottom: 0.1px solid var(--text-primary);
+    border-left: 0.1px solid var(--text-primary);
 }
 
 .portuguese {
@@ -146,6 +156,7 @@ nav .menu {
     header {
         flex-direction: column;
         align-items: start;
+        
     }
 
     nav .menu {
@@ -184,16 +195,17 @@ nav .menu {
         right: 0rem;
         width: 40%;
         height: 60vh;
+        border-left: 0.1px solid var(--text-primary);
+        border-bottom: 0.1px solid var(--text-primary);;
     }
 
     .languages ul.open {
-        top: 100%;
-        width: 100%;
+        width: 100.2%;
         height: 20vh;
     }
 
     .languages>div {
-        margin-left: 40%;
+        margin-left: 45%;
     }
 
     nav ul li {

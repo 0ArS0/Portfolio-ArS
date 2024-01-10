@@ -5,19 +5,18 @@
         "text-contact": "Contact"
     },
     "start": {
-        "text-name": "Hey, I'm Arthur",
-        "text-dev2": "Full Stack Developer",
-        "text-description": "Over the past months, I have immersed myself in diverse courses and projects, culminating in the creation of my first portfolio. I hope you find it indicative of my dedication to continuous improvement."
+        "text-name": "Full Stack Developer",
+        "text-description": "Programmer in training, with around 7 months of experience. I am in a constant learning process, experimenting with different languages ​​and technologies. I seek challenges to improve my skills and contribute significantly to interesting projects."
     },
     "aboutme": {
         "title": "About me",
-        "title-projects": "Projects",
         "text-projects": "Completed Projects",
-        "title-experience": "Experience",
-        "text-experience": "7 Months",
-        "text-aboutme1": "My name is Arthur da Silva Monteiro, I'm 19 years old, and I've always been fascinated by the technological universe. My journey began at college (FAETERJ), where, in three months, I absorbed the fundamentals of programming logic. It was there that a friend recommended SERRATEC to me, where I embarked on an intensive bootcamp, dedicating four intense months that represented around 90% of my knowledge in the area.",
+        "text-months": "Months",
+        "text-years": "Years",
+        "text-experience": " of Experiences",
+        "text-aboutme1": "My name is Arthur da Silva Monteiro, I'm 19 years old, have 2 dogs, and I've always been fascinated by the technological universe. My journey began at college (FAETERJ), where, in three months, I absorbed the fundamentals of programming logic. It was there that a friend recommended SERRATEC to me, where I embarked on an intensive bootcamp, dedicating four intense months that represented around 90% of my knowledge in the area.",
         "text-aboutme2": "Now, I'm eager to apply and expand my knowledge, looking for opportunities that allow me to contribute to stimulating and constantly learning projects. With a solid foundation in programming and my dedication to the area, I seek to continually grow in the field of technology. I am open to new experiences and collaborations that can further enrich my professional career.",
-        "button-download-text": "Download"
+        "button-download-text": "Download Resume"
     },
     "projects": {
         "title": "Projects",

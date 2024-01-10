@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import { Image } from 'react-bootstrap'
-import ReactSwitch from 'react-switch';
 import useLocalStorage from 'use-local-storage';
 import { MdOutlineWbSunny } from 'react-icons/md';
 import { IoMoonOutline } from 'react-icons/io5';
-import { motion, useScroll } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import { Start } from './components/Start/Start';
 import { AboutMe } from './components/AboutMe/AboutMe';
@@ -18,8 +17,8 @@ import { GrLanguage } from "react-icons/gr";
 import { IoMdArrowDropup } from "react-icons/io";
 
 export default function App() {
-  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
   const [t, i18n] = useTranslation("global")
+  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
   const [menuOpen, setMenuOpen] = useState(false)
   const [languageOpen, setLanguageOpen] = useState(false)
 
@@ -46,9 +45,9 @@ export default function App() {
         <nav>
           <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? (
-              <AiOutlineClose size={50} />
+              <AiOutlineClose size={40} />
             ) : (
-              <AiOutlineBars size={50} />
+              <AiOutlineBars size={40} />
             )}
           </div>
           <ul className={menuOpen ? "open" : ""}>
@@ -62,23 +61,25 @@ export default function App() {
               <a href='#contact'>{t('header.text-contact')}</a>
             </li>
             <li>
-              <div className='darkmode-container'>
-                <IoMoonOutline className='darkmode-item' />
-                <ReactSwitch checkedIcon={false} onColor={'#f67828'} uncheckedIcon={false} onChange={toggleTheme} checked={theme === 'light'} className='darkmode-item' />
-                <MdOutlineWbSunny className='darkmode-item' />
-              </div>
+              <motion.div className='darkmode-container'>
+                {theme === 'light' ? (
+                  <MdOutlineWbSunny className='darkmode-item' onClick={() => toggleTheme()}/>
+                ) : (
+                  <IoMoonOutline className='darkmode-item' onClick={() => toggleTheme()} />
+                )}
+              </motion.div>
             </li>
             <li className='languages'>
               <div onClick={() => setLanguageOpen(!languageOpen)} >
                 {languageOpen ? (
                   <div>
-                    <GrLanguage size={30} />
-                    <IoMdArrowDropup size={30} />
+                    <GrLanguage size={20} />
+                    <IoMdArrowDropup size={20} />
                   </div>
                 ) : (
                   <div>
-                    <GrLanguage size={30} />
-                    <IoMdArrowDropdown size={30} />
+                    <GrLanguage size={20} />
+                    <IoMdArrowDropdown size={20} />
                   </div>
                 )}
               </div>
@@ -102,7 +103,6 @@ export default function App() {
 
         <AboutMe />
 
-        <Projects />
 
       </main>
     </div>
