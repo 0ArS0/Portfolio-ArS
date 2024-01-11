@@ -44,21 +44,52 @@ export const Projects = () => {
                 <div className='projects-conteudo-container'>
                     <a className="showall-anchor" href="">{t("projects.text-button")}</a>
                 </div>
-                <div className="carrousel-projects-container">
-                    <Carousel indicators={false} className='projects-carrousel'>
-                        {projects.map((project) => (
-                            <Carousel.Item key={project.id}>
-                                <div className="projects-card">
-                                    <h5 className='title '>{i18n.language === 'br' ? project.nameBR : project.nameUS}</h5>
-                                    <a href={project.link} target='_blank' className='project-link'>
-                                        {t("projects.text-repository")}
-                                    </a>
-                                    <Image className="projects-card-image" src={project.image} />
-                                    <p className='projects-card-description'>{i18n.language === 'br' ? project.descriptionBR : project.descriptionUS}</p>
-                                </div>
-                            </Carousel.Item>
-                        ))}
-                    </Carousel>
+                <div className="projects-container">
+                    <div className="project-card">
+                        <div className="left-side side">
+                            <p>Title</p>
+                            <Image className="dog-photo2" src='src/assets/img/DogProfile.jpeg' />
+                        </div>
+                        <div className="right-side side">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolorum omnis ipsa a, quis hic, corrupti dolorem tenetur, ex eligendi atque voluptatibus doloribus iusto eum pariatur reiciendis illo repudiandae ea inventore! Earum commodi delectus ut. Qui quo placeat quibusdam impedit.</p>
+                            <div className='tec-project-container'>
+                                <p>React</p>
+                                <p>React</p>
+                                <p>React</p>
+                                <p>React</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="project-card">
+                        <div className="left-side side">
+                            <p>Title</p>
+                            <Image className="dog-photo2" src='src/assets/img/DogProfile.jpeg' />
+                        </div>
+                        <div className="right-side side">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolorum omnis ipsa a, quis hic, corrupti dolorem tenetur, ex eligendi atque voluptatibus doloribus iusto eum pariatur reiciendis illo repudiandae ea inventore! Earum commodi delectus ut. Qui quo placeat quibusdam impedit.</p>
+                            <div className='tec-project-container'>
+                                <p>React</p>
+                                <p>React</p>
+                                <p>React</p>
+                                <p>React</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="project-card">
+                        <div className="left-side side">
+                            <p>Title</p>
+                            <Image className="dog-photo2" src='src/assets/img/DogProfile.jpeg' />
+                        </div>
+                        <div className="right-side side">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolorum omnis ipsa a, quis hic, corrupti dolorem tenetur, ex eligendi atque voluptatibus doloribus iusto eum pariatur reiciendis illo repudiandae ea inventore! Earum commodi delectus ut. Qui quo placeat quibusdam impedit.</p>
+                            <div className='tec-project-container'>
+                                <p>React</p>
+                                <p>React</p>
+                                <p>React</p>
+                                <p>React</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </motion.section >
         </div>

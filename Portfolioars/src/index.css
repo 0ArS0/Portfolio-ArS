@@ -4,17 +4,19 @@
 
 [data-theme="dark"] {
   --background: #1a1a1a;
+  --background-invert: #f6f6f6;
   --backgroundOp: #1a1a1ace;
   --text-primary: #ffffff;
-  --special-color: #03b8ff;
-  --sombra: #03b8ff69;
+  --special-color: #ffffff;
+  --sombra: #ffffff69;
 }
 
 [data-theme="light"] {
   --background: #f6f6f6;
+  --background-invert: #1a1a1a;
   --backgroundOp: #f6f6f6ce;
   --text-primary: #000000;
-  --special-color: #000000;
+  --special-color: #1a1a1a;
   --sombra: #00000069;
 }
 

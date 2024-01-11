@@ -3,8 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
 }
 
 .projects-conteudo-container {
@@ -21,77 +19,52 @@
     font-size: 35px;
 }
 
-.initial-text-projects {
-    font-size: 18px;
-}
 
-.button-projects {
-    padding: 0.2rem 2rem;
-    border-radius: 50px;
-    position: relative;
-    right: 0;
-    overflow: hidden;
-    transition: color ease-in-out .8s;
-}
-
-.button-projects span {
-    font-weight: 600;
-    position: relative;
-}
-
-.button-projects::before {
-    content: '';
-    background-color: var(--special-color);
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    top: var(--eixoY);
-    left: var(--eixoX);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 1.5s, height 1.5s;
-}
-
-.button-projects:hover::before {
-    width: 1000px;
-    height: 1000px;
-}
-
-
-.carrousel-projects-container {
+.projects-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.project-card {
+    display: flex;
     justify-content: center;
-    width: 100%;
-    margin-top: 20px;
+    width: 80%;
+    position: relative;
+    background-color: #0000003f;
+    border: 2px solid red;
 }
 
-.projects-carrousel {
-    width: 70%;
-}
-
-.projects-card-description {
-    margin-top: 2rem;
-    width: 85%;
-    text-align: center;
-}
-
-.project-link {
-    color: var(--special-color);
-    text-decoration: none;
-}
-
-.projects-card {
+.side {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 2px solid blue;
 }
 
-.projects-card-image {
-    width: 75%;
-    height: 40vh;
+.left-side {}
+
+.right-side {
+    display: flex;
+    align-items: start;
 }
+
+.tec-project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-weight: 500;
+}
+
+.dog-photo2 {
+    width: 60%;
+}
+
+
+
 
 @media screen and (max-width: 1050px) {}
 

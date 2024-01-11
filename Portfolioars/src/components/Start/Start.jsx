@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import './Start.css';
 import { useTranslation } from 'react-i18next';
 import { useReadLocalStorage } from 'usehooks-ts';
+import { RxExternalLink } from "react-icons/rx";
 
 export const Start = () => {
     const [t, i18n] = useTranslation("global")
     const theme = useReadLocalStorage('dark')
+    const [eixoX, setEixoX] = useState(0);
+    const [eixoY, setEixoY] = useState(0);
 
     const startText = {
         initial: {
@@ -35,10 +38,45 @@ export const Start = () => {
         }
     }
 
+    const btnRef = useRef();
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            const x = e.pageX - btnRef.current.offsetLeft;
+            const y = e.pageY - btnRef.current.offsetTop;
+
+            setEixoX(x);
+            setEixoY(y);
+        };
+
+        const btn = btnRef.current;
+
+        btn.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            btn.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    const ref = useRef(null)
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end start"]
+    })
+    const opacityY = useTransform(scrollYProgress, [0.4, 1], [1, 0]);
+    const textX = useTransform(scrollYProgress, [0.4, 1], ["0%", "-100%"]);
+
     return (
-        <div id="start">
-            <section className="start" >
+        <div ref={ref} id="start">
+            <motion.section
+                style={{
+                    x: textX,
+                    opacity: opacityY
+                }}
+                className="start">
                 <motion.div
+
                     variants={{
                         hidden: { opacity: 0, y: 80 },
                         visible: { opacity: 1, y: 0 }
@@ -47,9 +85,16 @@ export const Start = () => {
                     animate="visible"
                     transition={{ duration: 1, delay: 0.25 }}
                     className='profile-pic-container'>
+
                     <Image src={theme === 'light' ? 'src/assets/img/ProfilePicLight.png' : 'src/assets/img/ProfilePicDark.png'} className='profile-pic' roundedCircle fluid />
+
+                    <a className='button-curriculum' style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }} ref={btnRef} href='https://drive.google.com/file/d/18V65-2EczAn9usCFvDxVB460FN9kEo7i/view?usp=sharing' target='_blank'>
+                        <span className='text'>{t('start.button-download-text')}<RxExternalLink /></span>
+                    </a>
+
                 </motion.div>
-                <div className="initial-text-container">
+                <motion.div
+                    className="initial-text-container">
                     <div className="title-container">
                         <motion.h1
                             variants={startText}
@@ -84,34 +129,31 @@ export const Start = () => {
                         )}<motion.span variants={startWords} className='blink'>|</motion.span>
 
                     </motion.p>
-                    <div className='social'>
+                    <motion.div
+                        variants={{
+                            hidden: { opacity: 0, y: 80 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 1, delay: 3 }} className='social'>
                         <motion.a
-                            variants={startText}
-                            initial="initial"
-                            animate="animate"
                             whileHover={{ y: -4 }}
                             whileTap={{ scale: 0.9 }}
                             href='https://github.com/0ArS0' target='_blank'>
-                            <motion.img
-                                className='span-text'
-                                variants={startWords}
+                            <img
                                 src={theme === 'light' ? 'src/assets/img/githubDark.svg' : 'src/assets/img/githubLight.svg'} width={40} />
                         </motion.a>
                         <motion.a
-                            variants={startText}
-                            initial="initial"
-                            animate="animate"
                             whileHover={{ y: -4 }}
                             whileTap={{ scale: 0.9 }}
                             href='https://www.linkedin.com/in/arthurmonteiro-ars/' target='_blank'>
-                            <motion.img
-                                className='span-text'
-                                variants={startWords}
+                            <img
                                 src={theme === 'light' ? 'src/assets/img/linkedInDark.svg' : 'src/assets/img/linkedInLight.svg'} width={45} />
                         </motion.a>
-                    </div>
-                </div>
-            </section>
+                    </motion.div>
+                </motion.div>
+            </motion.section>
         </div>
     )
 }
