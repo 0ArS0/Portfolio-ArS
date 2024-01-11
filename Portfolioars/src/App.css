@@ -1,4 +1,5 @@
 .app {
+    position: relative;
     background-color: var(--background);
     color: var(--text-primary);
 }
@@ -6,6 +7,7 @@
 [data-theme="dark"] {
     background-image: url(src/assets/img/bgDark.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
@@ -16,6 +18,7 @@
     background-position: center;
     background-size: cover;
 }
+
 
 /* style main */
 
@@ -62,7 +65,7 @@ nav ul li {
 }
 
 .header-logo {
-    width: 15vh;
+    width: 45%;
 }
 
 nav a {
@@ -156,7 +159,7 @@ nav .menu {
     header {
         flex-direction: column;
         align-items: start;
-        
+
     }
 
     nav .menu {
@@ -196,7 +199,8 @@ nav .menu {
         width: 40%;
         height: 60vh;
         border-left: 0.1px solid var(--text-primary);
-        border-bottom: 0.1px solid var(--text-primary);;
+        border-bottom: 0.1px solid var(--text-primary);
+        ;
     }
 
     .languages ul.open {

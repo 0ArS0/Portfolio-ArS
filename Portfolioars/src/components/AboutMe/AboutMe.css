@@ -1,11 +1,12 @@
+#aboutme {
+    overflow: hidden;
+}
+
 .aboutme {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 100vh;
-    width: 100%;
-    margin-top: 2%;
-
 }
 
 .aboutme-container-left {
@@ -77,47 +78,6 @@
     box-shadow: 10px 10px 20px -14px var(--special-color);
 }
 
-.button-aboutme {
-    margin-top: 1rem;
-    background-color: var(--text-primary);
-    padding: 0.6rem 3rem;
-    border-radius: 70px;
-    position: relative;
-    overflow: hidden;
-    transition: color ease-in-out .8s;
-    color: var(--background);
-}
-
-.button-aboutme span {
-    font-weight: 800;
-    font-size: 18px;
-    position: relative;
-}
-
-.button-aboutme::before {
-    content: '';
-    background-color: var(--special-color);
-    color: #000;
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    top: var(--eixoY);
-    left: var(--eixoX);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 1.5s, height 1.5s;
-}
-
-.button-aboutme:hover::before {
-    width: 1000px;
-    height: 1000px;
-}
-
-.button-aboutme:hover {
-    color: var(--text-primary);
-}
-
-
 @media screen and (max-width: 1050px) {
     .aboutme {
         flex-direction: column;
@@ -145,8 +105,6 @@
 
 @media screen and (max-width: 800px) {
     .aboutme {
-        flex-direction: column;
-        align-items: center;
         margin-top: 15%;
     }
 
@@ -156,5 +114,11 @@
 
     .dog-photo {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .aboutme {
+        margin-top: 30%;
     }
 }

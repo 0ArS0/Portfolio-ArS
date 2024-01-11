@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { motion, useScroll } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import './AboutMe.css';
 import { useTranslation } from 'react-i18next';
 import { Image } from 'react-bootstrap';
@@ -14,8 +14,6 @@ export const AboutMe = () => {
     const [counterOn, setCounterOn] = useState(false)
     const { t } = useTranslation("global")
 
-
-
     const getMe = async () => {
         try {
             const response = await api.get("/me")
@@ -28,41 +26,23 @@ export const AboutMe = () => {
     useEffect(() => {
         getMe()
     }, [])
-
-    // const btnRef = useRef();
-    // useEffect(() => {
-    //     getMe()
-    //     const handleMouseMove = (e) => {
-    //         const x = e.pageX - btnRef.current.offsetLeft;
-    //         const y = e.pageY - btnRef.current.offsetTop;
-
-    //         setEixoX(x);
-    //         setEixoY(y);
-    //     };
-
-    //     const btn = btnRef.current;
-
-    //     btn.addEventListener('mousemove', handleMouseMove);
-
-    //     return () => {
-    //         btn.removeEventListener('mousemove', handleMouseMove);
-    //     };
-    // }, []);
-
     const ref = useRef(null)
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["0 1", "0.7 1"]
+        offset: ["start start", "end start"]
     })
+
+    const opacityY = useTransform(scrollYProgress, [1, 0], [0, 1]);
+    const textX = useTransform(scrollYProgress, [1, 0.2], ["100%", "0%"]);
 
     return (
         <div id="aboutme">
             <motion.section
                 ref={ref}
                 style={{
-                    scale: scrollYProgress,
-                    opacity: scrollYProgress,
+                    x: textX,
+                    opacity: opacityY,
                 }}
                 className="aboutme">
                 <div className='aboutme-container-left'>
@@ -95,16 +75,12 @@ export const AboutMe = () => {
 
                             </ScrollTrigger>
                         ))}
-                        {/* <button className='button-aboutme' style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }} ref={btnRef}>
-                            <span className='text'>{t('aboutme.button-download-text')}</span>
-                        </button> */}
                     </div>
                 </div>
                 <div className='aboutme-container-right' >
                     <motion.img
                         animate={{
                             y: [-5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5, 0, -0.5, -1, -1.5, -2, -2.5, -3, -3.5, -4, -4.5, -5],
-                            borderRadius: ["20%", "21%", "22%", "23%", "24%", "25%", "26%", "27%", "28%", "29%", "30%", "29%", "28%", "27%", "26%", "25%", "24%", "23%", "22%", "21%", "20%"]
                         }}
                         transition={{
                             duration: 5,

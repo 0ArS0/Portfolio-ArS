@@ -15,6 +15,7 @@ import { AiOutlineBars } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { GrLanguage } from "react-icons/gr";
 import { IoMdArrowDropup } from "react-icons/io";
+import Contact from './components/Contact/Contact';
 
 export default function App() {
   const [t, i18n] = useTranslation("global")
@@ -63,7 +64,7 @@ export default function App() {
             <li>
               <motion.div className='darkmode-container'>
                 {theme === 'light' ? (
-                  <MdOutlineWbSunny className='darkmode-item' onClick={() => toggleTheme()}/>
+                  <MdOutlineWbSunny className='darkmode-item' onClick={() => toggleTheme()} />
                 ) : (
                   <IoMoonOutline className='darkmode-item' onClick={() => toggleTheme()} />
                 )}
@@ -103,7 +104,9 @@ export default function App() {
 
         <AboutMe />
 
+        {/* <Projects /> */}
 
+        <Contact />
       </main>
     </div>
   )
