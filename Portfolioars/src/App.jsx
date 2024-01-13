@@ -6,9 +6,7 @@ import { MdOutlineWbSunny } from 'react-icons/md';
 import { IoMoonOutline } from 'react-icons/io5';
 import { motion } from 'framer-motion'
 
-import { Start } from './components/Start/Start';
 import { AboutMe } from './components/AboutMe/AboutMe';
-import { Projects } from './components/Projects/Projects';
 import { useTranslation } from 'react-i18next';
 import { IoMdArrowDropdown } from "react-icons/io";
 import { AiOutlineBars } from "react-icons/ai";
@@ -16,6 +14,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GrLanguage } from "react-icons/gr";
 import { IoMdArrowDropup } from "react-icons/io";
 import Contact from './components/Contact/Contact';
+import { Hero } from './components/Hero/Hero';
 
 export default function App() {
   const [t, i18n] = useTranslation("global")
@@ -36,7 +35,7 @@ export default function App() {
   return (
     <div className='app' data-theme={theme} data-bs-theme={theme === 'light' ? 'dark' : 'light'}>
       <header>
-        <a href='#start'>
+        <a href='#hero'>
           {i18n === 'br' ? (
             <Image src={theme === 'dark' ? 'src/assets/img/logoDark.png' : 'src/assets/img/logoLight.png'} className='header-logo' fluid />
           ) : (
@@ -100,13 +99,22 @@ export default function App() {
 
       <main id='main-home'>
 
-        <Start />
+        <section id="hero">
+          <Hero />
+        </section>
 
-        <AboutMe />
+        <section id="aboutme">
+          <AboutMe />
+        </section>
 
-        {/* <Projects /> */}
+        <section id="projects">
+          {/* <Projects /> */}
+        </section>
 
-        <Contact />
+        <section id="contact">
+          <Contact />
+        </section>
+
       </main>
     </div>
   )

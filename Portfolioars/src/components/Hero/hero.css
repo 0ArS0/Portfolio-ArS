@@ -1,9 +1,9 @@
-#start {
+#hero {
     position: relative;
     overflow: hidden;
 }
 
-.start {
+.hero {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -12,7 +12,7 @@
 
 }
 
-.start-container {
+.hero-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,8 +26,8 @@
 .initial-text-container {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    width: 60%;
+    align-items: hero;
+    width: 65%;
     margin-top: 3rem;
     transition: width 1s ease-in-out;
 }
@@ -152,7 +152,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .start {
+    .hero {
         margin-top: 15%;
         flex-direction: column;
     }
@@ -168,15 +168,15 @@
     }
 }
 
-@media screen and (max-width: 700px) {
-    .start {
+@media screen and (max-width: 800px) {
+    .hero {
         margin-top: 30%;
         margin-bottom: 10%;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .start {
+    .hero {
         margin-top: 40%;
     }
 

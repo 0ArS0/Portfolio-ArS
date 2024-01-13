@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import './Projects.css'
-import { Carousel, Image } from 'react-bootstrap'
+import './projects.css'
+import { Image } from 'react-bootstrap'
 import { api } from '../../services/api'
 import { motion, useScroll } from 'framer-motion'
 import { useTranslation } from 'react-i18next'

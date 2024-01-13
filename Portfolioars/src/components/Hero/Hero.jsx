@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import './Start.css';
+import './hero.css';
 import { useTranslation } from 'react-i18next';
 import { useReadLocalStorage } from 'usehooks-ts';
 import { RxExternalLink } from "react-icons/rx";
 
-export const Start = () => {
+export const Hero = () => {
     const [t, i18n] = useTranslation("global")
     const theme = useReadLocalStorage('dark')
     const [eixoX, setEixoX] = useState(0);
@@ -62,19 +62,19 @@ export const Start = () => {
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start start", "end start"]
+        offset: ["hero hero", "end hero"]
     })
-    const opacityY = useTransform(scrollYProgress, [0.4, 1], [1, 0]);
-    const textX = useTransform(scrollYProgress, [0.4, 1], ["0%", "-100%"]);
+    const opacityY = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
+    const textX = useTransform(scrollYProgress, [0.5, 1], ["0%", "-100%"]);
 
     return (
-        <div ref={ref} id="start">
+        <div ref={ref} id="hero">
             <motion.section
                 style={{
                     x: textX,
-                    opacity: opacityY
+                    opacity: opacityY,
                 }}
-                className="start">
+                className="hero">
                 <motion.div
 
                     variants={{
@@ -86,10 +86,10 @@ export const Start = () => {
                     transition={{ duration: 1, delay: 0.25 }}
                     className='profile-pic-container'>
 
-                    <Image src={theme === 'light' ? 'src/assets/img/ProfilePicLight.png' : 'src/assets/img/ProfilePicDark.png'} className='profile-pic' roundedCircle fluid />
+                    <Image src={theme === 'light' ? 'src/assets/img/ProfilePicDark.png' : 'src/assets/img/ProfilePicDark.png'} className='profile-pic' roundedCircle fluid />
 
                     <a className='button-curriculum' style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }} ref={btnRef} href='https://drive.google.com/file/d/18V65-2EczAn9usCFvDxVB460FN9kEo7i/view?usp=sharing' target='_blank'>
-                        <span className='text'>{t('start.button-download-text')}<RxExternalLink /></span>
+                        <span className='text'>{t('hero.button-download-text')}<RxExternalLink /></span>
                     </a>
 
                 </motion.div>
@@ -101,7 +101,7 @@ export const Start = () => {
                             initial="initial"
                             animate="animate"
                             className='title initial-title'>
-                            {t("start.text-name").split(" ").map((word, index) =>
+                            {t("hero.text-name").split(" ").map((word, index) =>
                                 <motion.span
                                     className='span-text fullstack-text-color'
                                     variants={startWords}
@@ -118,7 +118,7 @@ export const Start = () => {
                         animate="animate"
                         className='text initial-text'>
 
-                        {t("start.text-description").split(" ").map((word, index) => <>
+                        {t("hero.text-description").split(" ").map((word, index) => <>
                             <motion.span
                                 className='span-text'
                                 variants={startWords}

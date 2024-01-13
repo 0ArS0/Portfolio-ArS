@@ -51,6 +51,7 @@ nav {
     justify-content: space-around;
     width: 60%;
     transition: width .5s ease-in-out;
+    margin-bottom: -0.5rem;
 }
 
 nav ul {
