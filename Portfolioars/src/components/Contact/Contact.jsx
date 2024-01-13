@@ -3,7 +3,7 @@ import './contact.css'
 import { motion, useScroll } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
-export default function Contact() {
+export const Contact = () => {
 
     const ref = useRef(null)
     const [t, i18n] = useTranslation("global")

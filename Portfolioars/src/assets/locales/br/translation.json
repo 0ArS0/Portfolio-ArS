@@ -2,7 +2,8 @@
     "header": {
         "text-aboutme": "Sobre mim",
         "text-projects": "Projetos",
-        "text-contact": "Contato"
+        "text-contact": "Contato",
+        "text-skills": "Habilidades"
     },
     "hero": {
         "text-name": "Desenvolvedor Full Stack.",
@@ -17,6 +18,10 @@
         "text-experience": " de Experiência",
         "text-aboutme1": "Me chamo Arthur da Silva Monteiro, tenho 19 anos, tenho 2 cachorros e desde sempre fui fascinado pelo universo tecnológico. Minha jornada teve início na faculdade (FAETERJ), onde, em três meses, absorvi os fundamentos da lógica de programação. Foi lá que uma amiga me indicou o SERRATEC, onde embarquei em um bootcamp intensivo, dedicando quatro meses intensos que representaram cerca de 90% do meu conhecimento na área.",
         "text-aboutme2": "Agora, estou ansioso para aplicar e ampliar meu conhecimento, procurando oportunidades que me permitam contribuir em projetos estimulantes e em constante aprendizado. Com uma base sólida em programação e minha dedicação à área busco crescer de forma contínua no campo da tecnologia. Estou aberto a novas experiências e colaborações que possam enriquecer ainda mais minha trajetória profissional."
+    },
+    "skills": {
+        "title-skills": "Habilidades",
+        "title-others": "Outros"
     },
     "projects": {
         "title": "Projetos",

@@ -1,0 +1,140 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 110dvh;
+    width: 98vw;
+}
+
+.skills-container>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 30%;
+    height: 100%;
+    position: relative;
+    background-color: var(--background);
+    box-shadow: 0.01px 0.01px 4px 0.01px var(--background-invert);
+    transition: width .5s ease-in-out;
+}
+
+.icon-skills {
+    background-color: var(--background-invert);
+    box-shadow: 0.01px 0.01px 4px 0.01px var(--background-invert);
+    padding: 1.2rem 1.2rem;
+    border-radius: 90px;
+    position: absolute;
+    left: 50%;
+    top: -7rem;
+    transform: translate(-50%, 100%);
+}
+
+.skill-icon {
+    color: var(--background);
+}
+
+.img-icon {
+    width: 20px;
+}
+
+.title-skill {
+    align-self: center;
+    margin-top: 2rem;
+}
+
+.individual-skills {
+    padding: 1% 2%;
+
+}
+
+.individual-skills ul {
+    list-style: none;
+}
+
+.individual-skills ul li {
+    margin: 15px 0;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skill>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.skill-check {
+    color: var(--background-invert);
+}
+
+.individual-skills .barras {
+    background-color: var(--backgroundOp);
+    display: block;
+    box-shadow: 0.01px 0.01px 1px var(--background-invert);
+    height: 15px;
+    width: 60%;
+    border-radius: 5px;
+    position: relative;
+    overflow: clip;
+
+}
+
+
+.barras>span {
+    height: inherit;
+    background: linear-gradient(to right, var(--backgroundOp), var(--background-invert));
+    position: absolute;
+    border-radius: 3px;
+}
+
+.barras span {
+    width: var(--per);
+    animation: var(--anim) forwards;
+}
+
+@media(prefers-reduced-motion: no-preference) {
+    @keyframes skillbar {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: var(--per);
+        }
+
+    }
+}
+
+/* @media screen and (max-width: 1200px) {
+    .skills-container {
+        height: 230dvh;
+    }
+
+    .title-skills {
+        margin-top: 5rem;
+        margin-bottom: -2rem;
+    }
+
+    .skills-container>div {
+        flex-direction: column;
+    }
+
+    .skills {
+        width: 80%;
+        margin-top: 8%;
+    }
+
+} */

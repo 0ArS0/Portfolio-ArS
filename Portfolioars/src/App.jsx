@@ -1,32 +1,43 @@
 import React, { useState } from 'react'
 import './App.css';
-import { Image } from 'react-bootstrap'
-import useLocalStorage from 'use-local-storage';
-import { MdOutlineWbSunny } from 'react-icons/md';
-import { IoMoonOutline } from 'react-icons/io5';
-import { motion } from 'framer-motion'
 
+// Components Imports
 import { AboutMe } from './components/AboutMe/AboutMe';
+import { Contact } from './components/Contact/Contact';
+import { Hero } from './components/Hero/Hero';
+import { Projects } from './components/Projects/Projects';
+
+// External Libraries Imports
+import { Image } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion'
+import useLocalStorage from 'use-local-storage';
+
+// Icon Imports
 import { IoMdArrowDropdown } from "react-icons/io";
 import { AiOutlineBars } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
-import { GrLanguage } from "react-icons/gr";
 import { IoMdArrowDropup } from "react-icons/io";
-import Contact from './components/Contact/Contact';
-import { Hero } from './components/Hero/Hero';
+import { GrLanguage } from "react-icons/gr";
+import { MdOutlineWbSunny } from 'react-icons/md';
+import { IoMoonOutline } from 'react-icons/io5';
+import { Skills } from './components/Skills/Skills';
 
 export default function App() {
+
   const [t, i18n] = useTranslation("global")
   const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
   const [menuOpen, setMenuOpen] = useState(false)
   const [languageOpen, setLanguageOpen] = useState(false)
 
+
+  // Theme Switcher
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
   }
 
+  // Language Switcher
   const handleChangeLanguage = (lang) => {
     i18n.changeLanguage(lang)
     console.log(i18n.language);
@@ -53,6 +64,9 @@ export default function App() {
           <ul className={menuOpen ? "open" : ""}>
             <li>
               <a href='#aboutme'>{t('header.text-aboutme')}</a>
+            </li>
+            <li>
+              <a href='#skills'>{t('header.text-skills')}</a>
             </li>
             <li>
               <a href='#projects'>{t('header.text-projects')}</a>
@@ -105,6 +119,10 @@ export default function App() {
 
         <section id="aboutme">
           <AboutMe />
+        </section>
+
+        <section id="skills">
+          <Skills />
         </section>
 
         <section id="projects">

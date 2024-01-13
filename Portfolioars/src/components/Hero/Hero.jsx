@@ -100,7 +100,7 @@ export const Hero = () => {
                             variants={startText}
                             initial="initial"
                             animate="animate"
-                            className='title initial-title'>
+                            className='initial-title title'>
                             {t("hero.text-name").split(" ").map((word, index) =>
                                 <motion.span
                                     className='span-text fullstack-text-color'

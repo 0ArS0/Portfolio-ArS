@@ -42,8 +42,8 @@
 }
 
 .initial-title {
-    font-size: 60px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .initial-text {
@@ -71,7 +71,8 @@
 
 .blink {
     color: var(--special-color);
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 18px;
     animation: blink 1s step-end infinite;
 }
 
@@ -107,7 +108,6 @@
 
 .button-curriculum span {
     font-weight: 800;
-    font-size: 18px;
     position: relative;
 }
 
@@ -134,7 +134,7 @@
     color: var(--background);
 }
 
-
+/* 
 @media screen and (min-width: 1440px) {
     .profile-pic {
         width: 90%;
@@ -180,4 +180,4 @@
         margin-top: 40%;
     }
 
-}
+} */
