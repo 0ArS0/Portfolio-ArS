@@ -1,15 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import './AboutMe.css';
+import './aboutMe.css';
 import { useTranslation } from 'react-i18next';
-import { Image } from 'react-bootstrap';
 import { api } from '../../services/api';
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 
 export const AboutMe = () => {
-    const [eixoX, setEixoX] = useState(0);
-    const [eixoY, setEixoY] = useState(0);
     const [me, setMe] = useState([])
     const [counterOn, setCounterOn] = useState(false)
     const { t } = useTranslation("global")
@@ -33,8 +30,8 @@ export const AboutMe = () => {
         offset: ["start start", "end start"]
     })
 
-    const opacityY = useTransform(scrollYProgress, [1, 0], [0, 1]);
-    const textX = useTransform(scrollYProgress, [1, 0.2], ["100%", "0%"]);
+    const opacityY = useTransform(scrollYProgress, [1, 0.4], [0, 1]);
+    const textX = useTransform(scrollYProgress, [1, 0.4], ["100%", "0%"]);
 
     return (
         <div id="aboutme">

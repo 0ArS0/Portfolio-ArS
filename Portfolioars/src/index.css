@@ -30,8 +30,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  letter-spacing: 1px;
+  line-height: 26px;
 }
-
 
 .title {
   font-weight: 600;
