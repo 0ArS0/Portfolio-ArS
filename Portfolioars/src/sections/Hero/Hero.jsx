@@ -118,14 +118,14 @@ export const Hero = () => {
                         animate="animate"
                         className='text initial-text'>
 
-                        {t("hero.text-description").split(" ").map((word, index) => <>
+                        {t("hero.text-description").split(" ").map((word, index) =>
                             <motion.span
                                 className='span-text'
                                 variants={startWords}
                                 key={word + '-' + index}>
                                 {word}&nbsp;
                             </motion.span>
-                        </>
+
                         )}<motion.span variants={startWords} className='blink'>|</motion.span>
 
                     </motion.p>

@@ -1,12 +1,9 @@
-#aboutme {
-    overflow: clip;
-}
-
 .aboutme {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 110vh;
+    margin-top: 85px;
+    height: 86vh;
 }
 
 .aboutme-container-left {

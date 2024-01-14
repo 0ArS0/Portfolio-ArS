@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import './App.css';
 
 // Components Imports
-import { AboutMe } from './components/AboutMe/AboutMe';
-import { Contact } from './components/Contact/Contact';
-import { Hero } from './components/Hero/Hero';
-import { Projects } from './components/Projects/Projects';
+import { AboutMe } from './sections/AboutMe/AboutMe';
+import { Contact } from './sections/Contact/Contact';
+import { Hero } from './sections/Hero/Hero';
+import { Projects } from './sections/Projects/Projects';
+import { Skills } from './sections/Skills/Skills';
 
 // External Libraries Imports
 import { Image } from 'react-bootstrap'
@@ -21,7 +22,6 @@ import { IoMdArrowDropup } from "react-icons/io";
 import { GrLanguage } from "react-icons/gr";
 import { MdOutlineWbSunny } from 'react-icons/md';
 import { IoMoonOutline } from 'react-icons/io5';
-import { Skills } from './components/Skills/Skills';
 
 export default function App() {
 
@@ -126,7 +126,7 @@ export default function App() {
         </section>
 
         <section id="projects">
-          {/* <Projects /> */}
+          <Projects />
         </section>
 
         <section id="contact">
