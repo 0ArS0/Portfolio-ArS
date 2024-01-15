@@ -214,7 +214,7 @@ export const Contact = () => {
 
                         <input type='text' required placeholder={t('contact.name-form')} name='name' />
                         <input type='email' required placeholder='Email' name='email' />
-                        <textarea rows={8} placeholder={t('contact.message-form')} name='message' />
+                        <textarea rows={4} placeholder={t('contact.message-form')} name='message' />
                         <button>{t('contact.submit-button')}</button>
                     </motion.form>
                 </div>

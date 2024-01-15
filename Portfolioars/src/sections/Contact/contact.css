@@ -14,11 +14,12 @@
 }
 
 .text-container h1 {
-    font-size: 70px;
+    font-size: 60px;
     line-height: 88px;
 }
 
 .text-container span {
+    font-size: 16px;
     font-weight: 300;
     user-select: text;
 }
@@ -31,7 +32,7 @@
 
 .formContainer form {
     display: flex;
-    margin-top: 140px;
+    margin-top: 150px;
     flex-direction: column;
     gap: 20px;
 }
