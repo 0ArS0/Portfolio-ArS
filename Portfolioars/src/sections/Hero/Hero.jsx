@@ -86,7 +86,7 @@ export const Hero = () => {
                     transition={{ duration: 1, delay: 0.25 }}
                     className='profile-pic-container'>
 
-                    <Image src={theme === 'light' ? 'src/assets/img/ProfilePicDark.png' : 'src/assets/img/ProfilePicDark.png'} className='profile-pic' roundedCircle fluid />
+                    <Image src={theme === 'light' ? '/img/ProfilePicDark.png' : '/img/ProfilePicDark.png'} className='profile-pic' roundedCircle fluid />
 
                     <a className='button-curriculum' style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }} ref={btnRef} href='https://drive.google.com/file/d/18V65-2EczAn9usCFvDxVB460FN9kEo7i/view?usp=sharing' target='_blank'>
                         <span className='text'>{t('hero.button-download-text')}<RxExternalLink /></span>
@@ -142,14 +142,14 @@ export const Hero = () => {
                             whileTap={{ scale: 0.9 }}
                             href='https://github.com/0ArS0' target='_blank'>
                             <img
-                                src={theme === 'light' ? 'src/assets/img/githubDark.svg' : 'src/assets/img/githubLight.svg'} width={40} />
+                                src={theme === 'light' ? '/img/githubDark.svg' : '/img/githubLight.svg'} width={40} />
                         </motion.a>
                         <motion.a
                             whileHover={{ y: -4 }}
                             whileTap={{ scale: 0.9 }}
                             href='https://www.linkedin.com/in/arthurmonteiro-ars/' target='_blank'>
                             <img
-                                src={theme === 'light' ? 'src/assets/img/linkedInDark.svg' : 'src/assets/img/linkedInLight.svg'} width={45} />
+                                src={theme === 'light' ? '/img/linkedInDark.svg' : '/img/linkedInLight.svg'} width={45} />
                         </motion.a>
                     </motion.div>
                 </motion.div>
