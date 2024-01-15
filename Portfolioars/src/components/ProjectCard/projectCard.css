@@ -1,0 +1,81 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-project {
+    margin-top: 1rem;
+    font-size: 20px;
+}
+
+.project-ilustration {
+    display: flex;
+    align-items: center;
+    background-color: var(--backgroundOp);
+    box-shadow: 0.1px 0.1px 5px 0.1px var(--background-invert);
+    overflow: clip;
+    position: relative;
+    height: 250px;
+    aspect-ratio: 1.3;
+    letter-spacing: 6px;
+    user-select: none;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 45px;
+    position: absolute;
+    background-color: var(--background-invert);
+}
+
+.line-not {
+    transform: translate(-68px, -70px);
+    rotate: -40deg;
+}
+
+.project {
+    position: relative;
+}
+
+.img-project {
+    width: 100%;
+    height: 206px;
+    margin-bottom: 44px;
+}
+
+.line-completed {
+    border-top: 0.5px solid var(--background);
+    transform: translate(-87px, -45px);
+}
+
+.text-line {
+    color: var(--background);
+    transform: translateY(7px);
+    width: 300px;
+    text-align: center;
+    position: absolute;
+    transition: letter-spacing .5s ease-in-out;
+}
+
+.project-ilustration:hover {
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 12px;
+}
+
+
+.project-ilustration:has(.line-not):active {
+    filter: blur(1px);
+    color: red;
+    box-shadow: 0.1px 0.1px 5px 0.1px red;
+    transform: scale(0.98);
+}
+
+.project-ilustration:has(.line-completed):active {
+    box-shadow: 1px 1px 15px 1px var(--background-invert);
+    transform: scale(0.98);
+}

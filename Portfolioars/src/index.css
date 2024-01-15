@@ -32,6 +32,8 @@ body {
   background-size: cover;
   letter-spacing: 1px;
   line-height: 26px;
+  overflow-x: clip;
+  user-select: none;
 }
 
 .title {

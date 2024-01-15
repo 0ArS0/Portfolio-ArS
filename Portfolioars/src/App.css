@@ -27,6 +27,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    overflow: clip;
 }
 
 header {
@@ -79,7 +80,7 @@ nav a {
 nav a:before {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -2.5px;
     height: 2px;
     width: 0;
     background: var(--special-color);
@@ -115,7 +116,7 @@ nav .menu {
 .languages li {
     cursor: pointer;
     text-align: center;
-    width: 70%;
+    width: 90%;
 }
 
 .languages ul.closed {

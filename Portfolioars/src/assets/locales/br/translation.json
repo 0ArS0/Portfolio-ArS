@@ -8,7 +8,7 @@
     "hero": {
         "text-name": "Desenvolvedor Full Stack.",
         "text-description": "Programador em formação, com cerca de 7 meses de experiência. Estou em um constante processo de aprendizado, experimentando com várias linguagens e tecnologias. Busco desafios para aprimorar minhas habilidades e contribuir de forma significativa para projetos interessantes.",
-        "button-download-text": "Curriculum"
+        "button-download-text": "Curriculo"
     },
     "aboutme": {
         "title": "Sobre mim",
@@ -27,6 +27,16 @@
         "title": "Projetos",
         "text-button": "Mostrar Todos",
         "text-repository": "Clique aqui para acessar o repositório"
+    },
+    "contact": {
+        "title": "Entre em contato",
+        "mail": "Email",
+        "phone": "Celular",
+        "local": "Localidade",
+        "local-name": "Brasil",
+        "name-form": "Digite seu nome",
+        "message-form": "Mensagem",
+        "submit-button": "Enviar"
     },
     "name-lang": {
         "portuguese": "Português (Brasil)",
