@@ -5,7 +5,7 @@
 }
 
 [data-theme="dark"] {
-    background-image: url(src/assets/img/bgDark.jpg);
+    background-image: url(/img/bgDark.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -13,7 +13,7 @@
 }
 
 [data-theme="light"] {
-    background-image: url(src/assets/img/bgLight.jpg);
+    background-image: url(/img/bgLight.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

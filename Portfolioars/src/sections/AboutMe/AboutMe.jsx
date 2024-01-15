@@ -69,7 +69,7 @@ export const AboutMe = () => {
                         ease: "easeInOut",
                         repeat: Infinity
                     }}
-                    className="dog-photo" src='src/assets/img/DogProfile.jpeg' />
+                    className="dog-photo" src='/img/DogProfile.jpeg' />
             </div>
         </motion.section>
     )
