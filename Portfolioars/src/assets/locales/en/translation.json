@@ -28,6 +28,16 @@
         "text-button": "Show All",
         "text-repository": "Click here to access the repository"
     },
+    "contact": {
+        "title": "Contact me",
+        "mail": "Email",
+        "phone": "Phone",
+        "local": "Location",
+        "local-name": "Brazil",
+        "name-form": "Name",
+        "message-form": "Message",
+        "submit-button": "Send"
+    },
     "name-lang": {
         "portuguese": "Portuguese (Brazil)",
         "english": "English"

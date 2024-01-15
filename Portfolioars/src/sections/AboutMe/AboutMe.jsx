@@ -26,7 +26,6 @@ export const AboutMe = () => {
 
     return (
         <motion.section
-
             className="aboutme">
             <div className='aboutme-container-left'>
                 <h2 className='title title-aboutme'>{t("aboutme.title")}</h2>

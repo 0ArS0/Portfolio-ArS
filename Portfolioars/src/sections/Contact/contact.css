@@ -1,7 +1,63 @@
 .contact {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: space-around;
+    height: 100dvh;
+    width: 100%;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 40px;
+}
+
+.text-container h1 {
+    font-size: 70px;
+    line-height: 88px;
+}
+
+.text-container span {
+    font-weight: 300;
+    user-select: text;
+}
+
+.formContainer {
+    width: 40vw;
+    position: relative;
+    z-index: 1;
+}
+
+.formContainer form {
+    display: flex;
+    margin-top: 140px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.emailSVG {
+    bottom: 1%;
+    z-index: -1;
+    stroke: var(--background-invert);
+    position: absolute;
+    margin: auto;
+}
+
+.formContainer form input,
+textarea {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--background-invert);
+    color: var(--background-invert);
+    border-radius: 5px;
+}
+
+.formContainer form button {
+    padding: 0.6rem;
+    border: none;
+    background-color: var(--background-invert);
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 500;
 }

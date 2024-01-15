@@ -48,6 +48,7 @@
 }
 
 .line-completed {
+    border-top: 0.5px solid var(--background);
     transform: translate(-87px, -45px);
 }
 
