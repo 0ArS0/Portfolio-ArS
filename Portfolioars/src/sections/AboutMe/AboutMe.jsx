@@ -23,23 +23,10 @@ export const AboutMe = () => {
     useEffect(() => {
         getMe()
     }, [])
-    const ref = useRef(null)
-
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "end start"]
-    })
-
-    const opacityY = useTransform(scrollYProgress, [1, 0.4], [0, 1]);
-    const textX = useTransform(scrollYProgress, [1, 0.4], ["100%", "0%"]);
 
     return (
         <motion.section
-            ref={ref}
-            style={{
-                x: textX,
-                opacity: opacityY,
-            }}
+
             className="aboutme">
             <div className='aboutme-container-left'>
                 <h2 className='title title-aboutme'>{t("aboutme.title")}</h2>

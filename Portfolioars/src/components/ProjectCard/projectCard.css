@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 .title-project {
@@ -15,45 +13,51 @@
     display: flex;
     align-items: center;
     background-color: var(--backgroundOp);
-    box-shadow: 0.01px 0.01px 4px 0.01px var(--background-invert);
+    box-shadow: 0.1px 0.1px 5px 0.1px var(--background-invert);
     overflow: clip;
     position: relative;
-    width: 20vw;
-    height: 30vh;
+    height: 250px;
+    aspect-ratio: 1.3;
     letter-spacing: 6px;
+    user-select: none;
 }
 
-
-.line-not{
-    transform: translate(-20%, -95%);
-    rotate: -35deg;
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 45px;
     position: absolute;
     background-color: var(--background-invert);
-    width: 150%;
-    height: 6vh;
+}
+
+.line-not {
+    transform: translate(-68px, -70px);
+    rotate: -40deg;
+}
+
+.project {
+    position: relative;
 }
 
 .img-project {
-    margin-bottom: 37px;
     width: 100%;
-    height: 24vh;
+    height: 206px;
+    margin-bottom: 44px;
 }
 
-.line-completed{
-    transform: translate(-20%, 77px);
-    position: absolute;
-    background-color: var(--background-invert);
-    width: 150%;
-    height: 6vh;
+.line-completed {
+    transform: translate(-87px, -45px);
 }
 
 .text-line {
     color: var(--background);
-    transform: translate(20px, 4.5px);
-    width: 100%;
+    transform: translateY(7px);
+    width: 300px;
     text-align: center;
     position: absolute;
-    transition: letter-spacing .5s ease-in-out, font-weight .5s ease-in-out;
+    transition: letter-spacing .5s ease-in-out;
 }
 
 .project-ilustration:hover {
@@ -62,3 +66,15 @@
     letter-spacing: 12px;
 }
 
+
+.project-ilustration:has(.line-not):active {
+    filter: blur(1px);
+    color: red;
+    box-shadow: 0.1px 0.1px 5px 0.1px red;
+    transform: scale(0.98);
+}
+
+.project-ilustration:has(.line-completed):active {
+    box-shadow: 1px 1px 15px 1px var(--background-invert);
+    transform: scale(0.98);
+}

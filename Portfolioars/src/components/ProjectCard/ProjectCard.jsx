@@ -8,21 +8,22 @@ export const ProjectCard = ({ project }) => {
         <div className='project-card'>
             <div className='project-ilustration'>
                 {project.completed === true ? (
-                    <div>
+                    <a href={project.link} target='_blank' className='project'>
                         <Image src={project.img} className='img-project' />
-                        <div className='line-completed'>
+                        <div className='line line-completed'>
                             <p className='text-line in-progress'>Completed</p>
                         </div>
-                    </div>
+                    </a>
                 ) : (
-                    <div>
-                        <div className='line-not'>
-                            <p className='text-line in-progress'>in progress</p>
+                    <div className='in-progress'>
+                        <div className='line line-not'>
+                            <p className='text-line'>in progress</p>
                         </div>
                     </div>
                 )}
             </div>
             <h4 className='title title-project'>{project.name}</h4>
+            <p className='text'>{project.descricao}</p>
         </div>
     )
 }

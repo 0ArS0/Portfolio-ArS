@@ -3,8 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 85px;
-
+    margin-top: 130px;
 }
 
 .title-projects {
@@ -13,7 +12,10 @@
 
 .showall-anchor {
     cursor: pointer;
-    color: var(--text-primary);
+    background-color: var(--background-invert);
+    color: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
 }
 
 .projects {
