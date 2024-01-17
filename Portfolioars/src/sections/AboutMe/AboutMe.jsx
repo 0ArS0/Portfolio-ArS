@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import './aboutMe.css';
 import { useTranslation } from 'react-i18next';
 import { api } from '../../services/api';
@@ -7,6 +7,7 @@ import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 
 export const AboutMe = () => {
+
     const [me, setMe] = useState([])
     const [counterOn, setCounterOn] = useState(false)
     const { t } = useTranslation("global")

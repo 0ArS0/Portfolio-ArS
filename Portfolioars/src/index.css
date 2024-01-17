@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 [data-theme="dark"] {
+  --background-bg: url(/img/bgDark.jpg);
+  --background-bg-invert: url(/img/bgLight.jpg);
   --background: #1a1a1a;
   --background-invert: #f6f6f6;
   --backgroundOp: #1a1a1ace;
@@ -11,6 +26,8 @@
 }
 
 [data-theme="light"] {
+  --background-bg: url(/img/bgLight.jpg);
+  --background-bg-invert: url(/img/bgDark.jpg);
   --background: #f6f6f6;
   --background-invert: #1a1a1a;
   --backgroundOp: #f6f6f6ce;
@@ -19,17 +36,11 @@
   --sombra: #00000069;
 }
 
-* {
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   line-height: 26px;
   overflow-x: clip;
   user-select: none;
@@ -41,26 +52,18 @@ body {
 }
 
 .text {
-  font-size: 16px;
   font-family: 'Arimo', sans-serif;
 }
 
-/* 
+
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
   background-color: #ffffff;
-  border-left: 2px solid rgb(3, 3, 3);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(153, 153, 153);
-  border-radius: 6px;
 }
-
-::-webkit-scrollbar-button {
-  display: none;
-} */

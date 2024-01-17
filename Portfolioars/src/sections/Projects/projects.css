@@ -4,7 +4,9 @@
     align-items: center;
     justify-content: center;
     min-height: 100dvh;
-    padding: 2rem 0rem 0rem 0rem;
+    background-image: var(--background-bg-invert);
+    color: var(--background);
+    padding: 5rem 0rem 5rem 0rem;
 }
 
 .title-projects {

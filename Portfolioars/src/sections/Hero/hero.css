@@ -4,9 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 80dvh;
-    padding: 8rem 0rem 0rem 0rem;
-    transition: margin-top ease-in-out .5s;
+    min-height: 100dvh;
+    padding: 7rem 0rem 0rem 0rem;
 }
 
 /* Estilização Lado Esquerdo */

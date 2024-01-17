@@ -44,7 +44,7 @@ export const ProjectCard = ({ project }) => {
                     project.nameUs
                 )}
             </h4>
-            <p className='text'>
+            <p className='text text-project'>
                 {i18n.language === 'br' ? (
                     project.descricao
                 ) : (

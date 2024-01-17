@@ -43,10 +43,10 @@ export const Contact = () => {
             }, (error) => {
                 toast.error('Error ao enviar mensagem!', { className: 'custom-toast-error', autoClose: 1500, toastId: 'uniqueId' });
             });
-        const inputs = formRef.current.querySelectorAll('input, textarea');
-        inputs.forEach((input) => {
-            input.value = '';
-        });
+            const inputs = formRef.current.querySelectorAll('input, textarea');
+            inputs.forEach((input) => {
+              input.value = '';
+            });
     };
 
     return (

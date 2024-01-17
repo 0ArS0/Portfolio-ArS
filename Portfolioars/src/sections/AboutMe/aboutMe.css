@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: space-evenly;
     min-height: 100dvh;
-    padding: 8rem 0rem 0rem 0rem;
+    padding: 5rem 0rem 5rem 0rem;
+    background-image: var(--background-bg-invert);
+    color: var(--background);
 }
 
 .aboutme-container-left {
@@ -12,7 +14,6 @@
     align-items: start;
     justify-content: center;
     width: 60%;
-    backdrop-filter: blur(10px);
     border-radius: 90px;
 }
 
@@ -51,7 +52,7 @@
 
 .count {
     font-size: 22px;
-    color: var(--special-color);
+    color: var(--background);
 }
 
 .text-card {
