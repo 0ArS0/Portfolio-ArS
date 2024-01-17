@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import './aboutMe.css';
+import '../../responsive.css'
+
 import { useTranslation } from 'react-i18next';
 import { api } from '../../services/api';
 import CountUp from 'react-countup';
@@ -26,9 +28,9 @@ export const AboutMe = () => {
     }, [])
 
     return (
-        <motion.section
+        <motion.div
             className="aboutme">
-            <div className='aboutme-container-left'>
+            <div className='aboutme-container-left '>
                 <h2 className='title title-aboutme'>{t("aboutme.title")}</h2>
 
                 <div className='text-aboutme-container'>
@@ -72,6 +74,6 @@ export const AboutMe = () => {
                     }}
                     className="dog-photo" src='/img/DogProfile.jpeg' />
             </div>
-        </motion.section>
+        </motion.div>
     )
 }

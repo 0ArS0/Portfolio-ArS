@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
-
+import './responsive.css'
 // Components Imports
 import { AboutMe } from './sections/AboutMe/AboutMe';
 import { Contact } from './sections/Contact/Contact';
@@ -11,7 +11,6 @@ import { Skills } from './sections/Skills/Skills';
 // External Libraries Imports
 import { Image } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion'
 import useLocalStorage from 'use-local-storage';
 
 // Icon Imports
@@ -30,10 +29,13 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       const navBar = document.querySelector('.nav-bar');
+      const openNav = document.querySelector('.open');
       if (window.scrollY) {
         navBar.classList.add('sticky');
+        openNav.classList.add('sticky');
       } else {
         navBar.classList.remove('sticky');
+        openNav.classList.remove('sticky');
       }
     };
 
@@ -55,6 +57,7 @@ export default function App() {
     i18n.changeLanguage(lang)
     console.log(i18n.language);
   }
+
 
   return (
     <div className='app' data-theme={theme} data-bs-theme={theme === 'light' ? 'dark' : 'light'}>

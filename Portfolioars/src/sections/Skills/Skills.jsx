@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './skills.css'
+import '../../responsive.css'
 
 // External Libraries Imports
 import { useReadLocalStorage } from 'usehooks-ts';
@@ -18,17 +19,18 @@ import { MdDesignServices } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
 
 export const Skills = () => {
+
     const [counterOn, setCounterOn] = useState(false)
     const theme = useReadLocalStorage('dark')
     const [t, i18n] = useTranslation("global")
 
     return (
-        <div className='skills-container'>
+        <div className='skills'>
             <h1 className='title title-skills'>{t('skills.title-skills')}</h1>
             <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
 
                 {/* Card Skill Front-End */}
-                <div className="skills">
+                <div className="skills-container">
                     <div className="icon-skills">
                         <MdDesignServices size={35} className='skill-icon' />
                     </div>
@@ -86,7 +88,7 @@ export const Skills = () => {
 
 
                 {/* Card Skill Back-End */}
-                <div className="skills">
+                <div className="skills-container">
                     <div className="icon-skills">
                         <GoDatabase size={35} className='skill-icon' />
                     </div>
@@ -135,7 +137,7 @@ export const Skills = () => {
 
 
                 {/* Card Skill Other */}
-                <div className="skills">
+                <div className="skills-container">
                     <div className="icon-skills">
                         <FaTools size={35} className='skill-icon' />
                     </div>
