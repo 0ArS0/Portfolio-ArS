@@ -1,8 +1,14 @@
-.app {
-    position: relative;
-    background-color: var(--background);
-    color: var(--text-primary);
+#main-home {
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+    max-width: 1366px;
+    margin-inline: auto;
+    overflow: clip;
 }
+
 
 [data-theme="dark"] {
     background-image: url(/img/bgDark.jpg);
@@ -20,29 +26,32 @@
 }
 
 
-/* style main */
 
-#main-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    overflow: clip;
+img {
+    display: block;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+.app {
+    background-color: var(--background);
+    color: var(--text-primary);
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 20px;
     transition: width 1s ease-in-out;
-    background-color: var(--backgroundOp);
-    padding: 1rem 2rem;
     z-index: 1000;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    background-color: var(--backgroundOp);
     box-shadow: 0.1px 0.1px 6px 0.1px var(--text-primary);
 }
 
@@ -156,7 +165,7 @@ nav .menu {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
     header {
         flex-direction: column;
@@ -197,7 +206,7 @@ nav .menu {
         position: absolute;
         background-color: var(--backgroundOp);
         top: 100%;
-        right: 0rem;
+        right: 0;
         width: 40%;
         height: 60vh;
         border-left: 0.1px solid var(--text-primary);

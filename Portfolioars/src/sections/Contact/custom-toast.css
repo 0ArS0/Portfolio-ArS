@@ -1,0 +1,17 @@
+.custom-toast {
+    --_border-color: var(--background-invert);
+    --_background-toast: var(--background);
+    border-left: 2px solid var(--_border-color);
+    border-right: 2px solid var(--_border-color);
+    border-top: 2px solid var(--_border-color);
+    background-color: var(--_background-toast);
+    color:var(--_border-color);
+}
+
+.custom-toast-error {
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    border-top: 2px solid red;
+    background-color: var(--_background-toast);
+    color:var(--_border-color);
+}
