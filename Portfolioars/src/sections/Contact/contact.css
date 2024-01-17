@@ -2,14 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100dvh;
-    width: 100%;
+    min-height: 100dvh;
+    padding: 8rem 0rem 0rem 0rem;
 }
 
 .text-container {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 50%;
     gap: 40px;
 }
 
@@ -19,30 +19,29 @@
 }
 
 .text-container span {
-    font-size: 16px;
     font-weight: 300;
     user-select: text;
 }
 
 .formContainer {
-    width: 40vw;
+    width: 40%;
     position: relative;
     z-index: 1;
 }
 
-.formContainer form {
-    display: flex;
-    margin-top: 150px;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .emailSVG {
-    bottom: 1%;
+    bottom: -15%;
+    position: absolute;
     z-index: -1;
     stroke: var(--background-invert);
-    position: absolute;
     margin: auto;
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9rem;
+    gap: 20px;
 }
 
 .formContainer form input,
@@ -56,9 +55,39 @@ textarea {
 
 .formContainer form button {
     padding: 0.6rem;
+    margin-left: 2px;
     border: none;
     background-color: var(--background-invert);
     border-radius: 15px;
     cursor: pointer;
     font-weight: 500;
+}
+
+@media screen and (max-width: 980px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .text-container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .formContainer {
+        margin-top: -5rem;
+        padding: 0rem 0rem 2rem 0rem;
+        width: 80%;
+    }
+
+    .emailSVG {
+        top: 8%;
+        left: 18.5%;
+        margin: auto;
+        position: absolute;
+        z-index: -1;
+        stroke: var(--background-invert);
+    }
+
 }

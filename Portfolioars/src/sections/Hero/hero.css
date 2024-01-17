@@ -1,95 +1,30 @@
-#hero {
-    position: relative;
-    overflow: hidden;
-}
+/* Estilização hero section */
 
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    height: 100vh;
-    transition: margin-top ease-in-out .5s;
-
-}
-
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: height 1s ease-in-out;
-}
-
-.span-text {
-    display: inline-block;
-}
-
-.initial-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: hero;
-    width: 65%;
-    margin-top: 3rem;
-    transition: width 1s ease-in-out;
-}
-
-.title-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.fullstack-text-color {
-    color: var(--special-color);
-}
-
-.initial-title {
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.initial-text {
-    font-weight: 100;
-}
-
-.social {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 15%;
+    min-height: 80dvh;
+    padding: 8rem 0rem 0rem 0rem;
+    transition: margin-top ease-in-out .5s;
 }
 
-@keyframes blink {
+/* Estilização Lado Esquerdo */
 
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
-.blink {
-    color: var(--special-color);
-    font-weight: 800;
-    font-size: 18px;
-    animation: blink 1s step-end infinite;
-}
-
-.profile-pic-container {
+.leftSide-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
 }
 
 .profile-pic {
-    width: 70%;
+    width: 80%;
     border-bottom: 4px solid var(--special-color);
     box-shadow: -10px 5px 20px 1px var(--sombra);
     transition: width ease-in-out .5s;
     background-color: #1a1a1a;
 }
-
 
 .button-curriculum {
     margin-top: 1rem;
@@ -134,50 +69,82 @@
     color: var(--background);
 }
 
-/* 
-@media screen and (min-width: 1440px) {
-    .profile-pic {
-        width: 90%;
-    }
+/* Estilização Lado Direito */
+
+.rightSide-container {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    transition: width 1s ease-in-out;
 }
 
-@media screen and (max-width: 1200px) {
-    .initial-text-container {
-        width: 40%;
-    }
-
-    .social {
-        width: 30%;
-    }
+.hero-title-container h1 {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.hero-title {
+    font-weight: 700;
+}
+
+.hero-text {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 7rem;
+}
+
+.rightSide-container span {
+    display: inline-block;
+}
+
+.blink {
+    color: var(--special-color);
+    font-weight: 800;
+    font-size: 18px;
+    animation: blink 1s step-end infinite;
+}
+
 
 @media screen and (max-width: 1050px) {
     .hero {
-        margin-top: 15%;
         flex-direction: column;
     }
 
-    .initial-text-container {
+    .rightSide-container {
+        justify-content: center;
         align-items: center;
-        text-align: center;
-        width: 90%;
     }
 
-    .profile-pic {
-        width: 90%;
+    .hero-text {
+        align-items: center;
+        justify-content: center;
     }
 }
 
-@media screen and (max-width: 800px) {
-    .hero {
-        margin-top: 30%;
-        margin-bottom: 10%;
-    }
+@media screen and (max-width: 900px) {
+    .social {}
 }
 
 @media screen and (max-width: 500px) {
-    .hero {
-        margin-top: 40%;
+    .hero {}
+
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
     }
 
-} */
+    50% {
+        opacity: 0;
+    }
+}

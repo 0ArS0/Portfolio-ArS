@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 85px;
-    height: 86dvh;
+    min-height: 100dvh;
+    padding: 8rem 0rem 0rem 0rem;
 }
 
 .aboutme-container-left {
@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    width: 50%;
+    width: 60%;
     backdrop-filter: blur(10px);
     border-radius: 90px;
 }
@@ -67,16 +67,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 30%;
 }
 
-.dog-photo {
-    width: 70%;
-    border-radius: 50%;
-    border-bottom: 4px solid var(--special-color);
-    box-shadow: 10px 10px 20px -14px var(--special-color);
-}
-/* 
+
 @media screen and (max-width: 1050px) {
     .aboutme {
         flex-direction: column;
@@ -103,21 +97,21 @@
 
 
 @media screen and (max-width: 800px) {
-    .aboutme {
-        margin-top: 15%;
-    }
+
 
     .aboutme-container-left {
         width: 90%;
     }
 
-    .dog-photo {
-        width: 90%;
+    .aboutme-container-right {
+        width: 40%;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .aboutme {
-        margin-top: 30%;
-    }
-} */
+@media screen and (max-width: 500px) {}
+
+.aboutme-container-right>img {
+    border-radius: 50%;
+    border-bottom: 4px solid var(--special-color);
+    box-shadow: 10px 10px 20px -14px var(--special-color);
+}
