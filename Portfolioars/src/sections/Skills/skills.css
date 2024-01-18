@@ -1,47 +1,52 @@
-.skills-container {
-    display: flex;
+.skills {
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    min-height: 100dvh;
-    padding: 8rem 0rem 0rem 0rem;
+    flex-wrap: wrap;
 }
 
-.skills-container>div {
+.skills>h1 {
+    text-align: center;
+    margin-bottom: 8rem;   
+}
+
+.skills .scroll-trigger {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
     width: 100%;
 }
 
-.title-skills {
-    margin-bottom: 5rem;
-}
-
-.skills {
+.skill-container {
     display: flex;
     justify-content: start;
     flex-direction: column;
-    width: 30%;
-    min-height: 50vh;
+    width: 25rem;
+    min-height: 22rem;
     position: relative;
     background-color: var(--background);
     box-shadow: 0.01px 0.01px 4px 0.01px var(--background-invert);
     transition: width .5s ease-in-out;
 }
 
-.icon-skills {
+.skill-container>h2 {
+    align-self: center;
+    margin-top: 1.5em;
+}
+
+.icon-skill-container {
     background-color: var(--background-invert);
     box-shadow: 0.01px 0.01px 4px 0.01px var(--background-invert);
     padding: 1.2rem 1.2rem;
     border-radius: 90px;
     position: absolute;
-    left: 50%;
-    top: -7rem;
+    top: -120px;
+    left: 200px;
+    margin: auto;
     transform: translate(-50%, 100%);
 }
 
-.skill-icon {
+.icon-skill {
     color: var(--background);
 }
 
@@ -49,23 +54,6 @@
     width: 20px;
 }
 
-.title-skill {
-    align-self: center;
-    margin-top: 1.5em;
-}
-
-.individual-skills {
-    padding: 1% 2%;
-
-}
-
-.individual-skills ul {
-    list-style: none;
-}
-
-.individual-skills ul li {
-    margin: 15px 0;
-}
 
 .skill {
     display: flex;
@@ -84,7 +72,7 @@
     color: var(--background-invert);
 }
 
-.individual-skills .barras {
+.skill-stats .barras {
     background-color: var(--backgroundOp);
     display: block;
     box-shadow: 0.01px 0.01px 1px var(--background-invert);
@@ -93,9 +81,19 @@
     border-radius: 5px;
     position: relative;
     overflow: clip;
-
 }
 
+.skill-stats {
+    padding: 1% 2%;
+}
+
+.skill-stats ul {
+    list-style: none;
+}
+
+.skill-stats ul li {
+    margin: 15px 0;
+}
 
 .barras>span {
     height: inherit;
@@ -120,25 +118,4 @@
         }
 
     }
-}
-
-@media screen and (max-width: 1200px) {
-    .skills-container {
-        height: 230dvh;
-    }
-
-    .title-skills {
-        margin-top: 5rem;
-        margin-bottom: -2rem;
-    }
-
-    .skills-container>div {
-        flex-direction: column;
-    }
-
-    .skills {
-        width: 80%;
-        margin-top: 8%;
-    }
-
 }

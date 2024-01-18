@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import './contact.css'
+import '../../responsive.css'
 
 import { motion, useInView } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
@@ -260,16 +261,23 @@ export const Contact = () => {
                         <input
                             type='text'
                             required
-                            placeholder={t('contact.name-form')}
-                            name='name'
+                            placeholder="Assunto"
+                            name='subject'
                             autoComplete="off" />
-
-                        <input
-                            type='email'
-                            required
-                            placeholder='Email'
-                            name='email'
-                            autoComplete="off" />
+                        <div>
+                            <input
+                                type='text'
+                                required
+                                placeholder={t('contact.name-form')}
+                                name='name'
+                                autoComplete="off" />
+                            <input
+                                type='email'
+                                required
+                                placeholder='Email'
+                                name='email'
+                                autoComplete="off" />
+                        </div>
 
                         <textarea
                             rows={4}

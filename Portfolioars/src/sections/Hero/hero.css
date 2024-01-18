@@ -1,14 +1,3 @@
-/* Estilização hero section */
-
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 80dvh;
-    padding: 8rem 0rem 0rem 0rem;
-    transition: margin-top ease-in-out .5s;
-}
-
 /* Estilização Lado Esquerdo */
 
 .leftSide-container {
@@ -109,32 +98,6 @@
     font-weight: 800;
     font-size: 18px;
     animation: blink 1s step-end infinite;
-}
-
-
-@media screen and (max-width: 1050px) {
-    .hero {
-        flex-direction: column;
-    }
-
-    .rightSide-container {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-text {
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .social {}
-}
-
-@media screen and (max-width: 500px) {
-    .hero {}
-
 }
 
 @keyframes blink {

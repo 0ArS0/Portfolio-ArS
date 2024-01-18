@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--background--invert);
 }
 
 .title-project {
@@ -23,6 +24,7 @@
 }
 
 .line {
+    color: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +55,6 @@
 }
 
 .text-line {
-    color: var(--background);
     transform: translateY(7px);
     width: 300px;
     text-align: center;

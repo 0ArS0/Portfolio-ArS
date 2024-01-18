@@ -1,9 +1,5 @@
 .aboutme {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    min-height: 100dvh;
-    padding: 8rem 0rem 0rem 0rem;
+    padding: 7rem 0rem 5rem 0rem;
 }
 
 .aboutme-container-left {
@@ -12,21 +8,7 @@
     align-items: start;
     justify-content: center;
     width: 60%;
-    backdrop-filter: blur(10px);
     border-radius: 90px;
-}
-
-.title-aboutme {
-    font-size: 30px;
-}
-
-.text-aboutme-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    width: 100%;
 }
 
 .card-aboutme-container {
@@ -43,15 +25,15 @@
     justify-content: center;
 }
 
+
 .title-aboutme-card {
     text-align: center;
     font-size: 18px;
 }
 
-
 .count {
     font-size: 22px;
-    color: var(--special-color);
+    color: var(--background-invert);
 }
 
 .text-card {
@@ -69,46 +51,6 @@
     justify-content: center;
     width: 30%;
 }
-
-
-@media screen and (max-width: 1050px) {
-    .aboutme {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10%;
-    }
-
-    .aboutme-container-left {
-        width: 70%;
-    }
-
-    .text-aboutme {
-        text-align: center;
-    }
-
-    .aboutme-container-left {
-        align-items: center;
-    }
-
-    .dog-photo {
-        margin-top: 2%;
-    }
-}
-
-
-@media screen and (max-width: 800px) {
-
-
-    .aboutme-container-left {
-        width: 90%;
-    }
-
-    .aboutme-container-right {
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 500px) {}
 
 .aboutme-container-right>img {
     border-radius: 50%;
