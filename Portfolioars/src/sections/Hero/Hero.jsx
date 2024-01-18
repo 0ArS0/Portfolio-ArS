@@ -102,7 +102,6 @@ export const Hero = () => {
                 </a>
             </motion.div>
 
-
             {/* Div para conteudo ao lado da imagem */}
             <div className="rightSide-container">
                 <motion.h1
