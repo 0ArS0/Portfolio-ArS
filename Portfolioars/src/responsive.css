@@ -1,22 +1,13 @@
-@media screen and (max-width: 1200px) {
-    .skills-container {
-        height: 230dvh;
-    }
-
-    .title-skills {
-        margin-top: 5rem;
-        margin-bottom: -2rem;
-    }
-
-    .skills-container>div {
-        flex-direction: column;
-    }
-
+@media screen and (max-height: 600px) {
     .skills {
-        width: 60%;
-        margin-top: 8%;
+        min-height: 130dvh;
     }
+}
 
+@media screen and (max-height: 470px) {
+    .skills {
+        min-height: 150dvh;
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -30,30 +21,28 @@
     }
 
     .hero-text {
-        align-items: center;
         justify-content: center;
     }
 
     .aboutme {
         flex-direction: column;
-        align-items: center;
-        margin-top: 10%;
     }
 
-    .aboutme-container-left {
-        width: 70%;
+    .title-aboutme {
+        text-align: center;
+        width: 100%;
     }
 
     .text-aboutme {
         text-align: center;
     }
 
-    .aboutme-container-left {
-        align-items: center;
+    .dog-photo {
+        margin-top: 4rem;
     }
 
-    .dog-photo {
-        margin-top: 2%;
+    .nav-bar ul li a>img {
+        margin-block-end: 0px;
     }
 }
 
@@ -86,14 +75,72 @@
 
 }
 
+@media screen and (max-width: 950px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: start;
+
+    }
+
+    .nav-bar .menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-bar ul li .underline-a:before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        right: 27%;
+        height: 2px;
+        width: 0;
+        background: var(--special-color);
+        border-radius: 50px;
+        transition: width 0.2s linear;
+    }
+
+    .nav-bar ul li .underline-a:hover:before {
+        width: 45%;
+    }
+
+    nav ul.open {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        position: absolute;
+        padding: 2rem;
+        top: 100%;
+        right: 0;
+        max-width: 40%;
+        min-height: 80vh;
+        background-color: var(--backgroundOp);
+        border-left: 0.1px solid var(--text-primary);
+        border-bottom: 0.1px solid var(--text-primary);
+    }
+
+    nav ul.open.sticky {
+        background-color: var(--background);
+    }
+
+}
+
 @media screen and (max-width: 800px) {
-
-
     .aboutme-container-left {
         width: 90%;
     }
 
     .aboutme-container-right {
         width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav ul.open {
+        max-width: 70%;
     }
 }

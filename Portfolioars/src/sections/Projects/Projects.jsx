@@ -4,7 +4,6 @@ import '../../responsive.css'
 
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
 import { api } from '../../services/api'
-import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
@@ -52,7 +51,7 @@ export const Projects = () => {
             </span>
             {showAll && (
                 <>
-                    <div className="projects">
+                    <div className="projects-container">
                         {projects.slice(3, 20).map((project) => (
                             <ProjectCard key={project.id} project={project} />
                         ))}

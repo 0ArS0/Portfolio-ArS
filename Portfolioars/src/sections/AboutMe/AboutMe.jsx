@@ -33,34 +33,33 @@ export const AboutMe = () => {
             <div className='aboutme-container-left '>
                 <h2 className='title title-aboutme'>{t("aboutme.title")}</h2>
 
-                <div className='text-aboutme-container'>
-                    <p className='text text-aboutme'>
-                        {t('aboutme.text-aboutme1')}
-                    </p>
-                    <p className='text text-aboutme'>
-                        {t('aboutme.text-aboutme2')}
-                    </p>
-                    {me.map((eu) => (
-                        <ScrollTrigger className="card-aboutme-container" onEnter={() => { setCounterOn(true); getMe() }} onExit={() => setCounterOn(false)} key={eu.id}>
+                <p className='text text-aboutme'>
+                    {t('aboutme.text-aboutme1')}
+                </p>
+                <p className='text text-aboutme'>
+                    {t('aboutme.text-aboutme2')}
+                </p>
 
-                            <div className="card-aboutme">
-                                {counterOn ? (
-                                    <CountUp className="title count" start={0} end={eu.exp >= 12 ? (eu.exp / 12) : eu.exp} duration={5} delay={0} />
-                                ) : (
-                                    0
-                                )}
-                                <h3 className='title title-aboutme-card'>{eu.exp >= 12 ? t('aboutme.text-years') : t('aboutme.text-months')}{t('aboutme.text-experience')}</h3>
-                            </div>
-                            <div className="card-aboutme">
-                                {counterOn &&
-                                    <CountUp className="title count" start={0} end={eu.projects} duration={5} delay={0} />
-                                }
-                                <h3 className='title title-aboutme-card'>{t("aboutme.text-projects")}</h3>
-                            </div>
+                {me.map((eu) => (
+                    <ScrollTrigger className="card-aboutme-container" onEnter={() => { setCounterOn(true); getMe() }} onExit={() => setCounterOn(false)} key={eu.id}>
 
-                        </ScrollTrigger>
-                    ))}
-                </div>
+                        <div className="card-aboutme">
+                            {counterOn ? (
+                                <CountUp className="title count" start={0} end={eu.exp >= 12 ? (eu.exp / 12) : eu.exp} duration={5} delay={0} />
+                            ) : (
+                                0
+                            )}
+                            <h3 className='title title-aboutme-card'>{eu.exp >= 12 ? t('aboutme.text-years') : t('aboutme.text-months')}{t('aboutme.text-experience')}</h3>
+                        </div>
+                        <div className="card-aboutme">
+                            {counterOn &&
+                                <CountUp className="title count" start={0} end={eu.projects} duration={5} delay={0} />
+                            }
+                            <h3 className='title title-aboutme-card'>{t("aboutme.text-projects")}</h3>
+                        </div>
+
+                    </ScrollTrigger>
+                ))}
             </div>
             <div className='aboutme-container-right' >
                 <motion.img

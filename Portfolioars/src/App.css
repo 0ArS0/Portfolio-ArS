@@ -13,9 +13,9 @@
     align-items: center;
     justify-content: space-around;
     min-height: 100dvh;
+    margin: auto;
     padding: 7rem 0rem 0rem 0rem;
 }
-
 
 [data-theme="dark"] {
     background-image: var(--background-bg);
@@ -58,12 +58,13 @@ svg {
     padding: 10px 0px;
     font-size: 18px;
     transition: all 0.6s ease-in-out;
+    background-color: var(--backgroundOp);
+    box-shadow: 0.1px 0.1px 6px 0.1px var(--text-primary);
 }
 
 .nav-bar.sticky {
     padding: 15px 0;
     background-color: var(--background);
-    box-shadow: 0.1px 0.1px 6px 0.1px var(--text-primary);
     z-index: 999;
 }
 
@@ -94,12 +95,9 @@ svg {
 }
 
 .nav-bar ul li a>img {
-    width: 40px;
     margin-block-end: -9px;
-    margin-block-start: auto;
-    margin-inline: auto;
+    width: 40px;
 }
-
 
 .nav-bar ul li .underline-a:before {
     content: '';
@@ -120,67 +118,10 @@ svg {
     display: none;
     position: absolute;
     top: 25%;
-    right: 14.7%;
+    right: 15%;
 }
-
 
 nav ul.open {
+    background-color: var(--backgroundOp);
     transition: all 0.6s ease-in-out;
 }
-
-@media screen and (max-width: 950px) {
-
-    .nav-bar {
-        flex-direction: column;
-        align-items: start;
-
-    }
-
-    .nav-bar .menu {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        width: 100%;
-    }
-
-    nav a:before {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        right: 27%;
-        height: 2px;
-        width: 0;
-        background: var(--special-color);
-        border-radius: 50px;
-        transition: width 0.2s linear;
-    }
-
-    nav a:hover:before {
-        width: 45%;
-    }
-
-    nav ul.open {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 40%;
-        height: 60vh;
-    }
-
-    nav ul.open.sticky {
-        background-color: var(--backgroundOp);
-        border-left: 0.1px solid var(--text-primary);
-        border-bottom: 0.1px solid var(--text-primary);
-    }
-
-}
-
-@media screen and (max-width: 530px) {}
-
-@media screen and (max-width: 220px) {}
