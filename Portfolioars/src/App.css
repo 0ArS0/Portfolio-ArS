@@ -17,21 +17,6 @@
     padding: 7rem 0rem 0rem 0rem;
 }
 
-[data-theme="dark"] {
-    background-image: var(--background-bg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
-[data-theme="light"] {
-    background-image: var(--background-bg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 img {
     display: block;
 }

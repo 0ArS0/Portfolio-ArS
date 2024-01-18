@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
-
 * {
   margin: 0;
   border: 0;
   box-sizing: border-box;
-
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-
 [data-theme="dark"] {
-  --background-bg: url(/img/bgDark.jpg);
-  --background-bg-invert: url(/img/bgLight.jpg);
+  background-image: url(/img/bgDark.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   --background: #1a1a1a;
   --background-invert: #f6f6f6;
   --backgroundOp: #1a1a1ace;
@@ -26,8 +26,11 @@ html {
 }
 
 [data-theme="light"] {
-  --background-bg: url(/img/bgLight.jpg);
-  --background-bg-invert: url(/img/bgDark.jpg);
+  background-image: url(/img/bgLight.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   --background: #f6f6f6;
   --background-invert: #1a1a1a;
   --backgroundOp: #f6f6f6ce;
@@ -37,6 +40,7 @@ html {
 }
 
 body {
+  background: var(--background-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -54,7 +58,6 @@ body {
 .text {
   font-family: 'Arimo', sans-serif;
 }
-
 
 ::-webkit-scrollbar {
   width: 10px;

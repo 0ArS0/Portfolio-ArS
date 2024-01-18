@@ -63,8 +63,8 @@ export default function App() {
   return (
     <div className='app' data-theme={theme} data-bs-theme={theme === 'light' ? 'dark' : 'light'}>
       <header>
-        <nav class="nav-bar text">
-          <div class="max-width">
+        <nav className="nav-bar text">
+          <div className="max-width">
 
             <div className='logo'>
               <a href='#' onClick={() => setMenuOpen(false)}>

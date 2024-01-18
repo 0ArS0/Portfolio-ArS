@@ -1,15 +1,3 @@
-@media screen and (max-height: 600px) {
-    .skills {
-        min-height: 130vh;
-    }
-}
-
-@media screen and (max-height: 470px) {
-    .skills {
-        min-height: 150vh;
-    }
-}
-
 @media screen and (max-width: 1050px) {
     .hero {
         flex-direction: column;
@@ -37,8 +25,6 @@
         width: 100%;
     }
 
-
-
     .dog-photo {
         margin-top: 4rem;
     }
@@ -63,7 +49,6 @@
         flex-direction: column;
         text-align: center;
     }
-
 
     .emailSVG {
         top: 8%;
@@ -143,5 +128,17 @@
 @media screen and (max-width: 500px) {
     nav ul.open {
         max-width: 70%;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .skills {
+        min-height: 130vh;
+    }
+}
+
+@media screen and (max-height: 470px) {
+    .skills {
+        min-height: 150vh;
     }
 }

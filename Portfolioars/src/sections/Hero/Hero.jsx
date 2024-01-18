@@ -106,14 +106,13 @@ export const Hero = () => {
             {/* Div para conteudo ao lado da imagem */}
             <div className="rightSide-container">
                 <motion.h1
-
                     variants={{
-                        hidden: { opacity: 0, y: 80 },
-                        visible: { opacity: 1, y: 0 }
+                        hidden: { opacity: 0 },
+                        visible: { opacity: 1 }
                     }}
                     initial="hidden"
                     animate="visible"
-                    transition={{ duration: 1, delay: 0.25 }}
+                    transition={{ duration: 4, delay: 0.5 }}
                     className='hero-title title'>
                     {t("hero.text-name")}
                 </motion.h1>
@@ -121,16 +120,15 @@ export const Hero = () => {
                     variants={startText}
                     initial="initial"
                     animate="animate"
-                    className='text hero-text'
-                >
+                    className='text hero-text'>
                     {t("hero.text-description").split(" ").map((word, index) =>
                         <motion.span
                             variants={startWords}
                             key={word + '-' + index}>
                             {word}&nbsp;
                         </motion.span>
-                    )}<motion.span variants={startWords} className='blink'>|</motion.span>
-
+                    )}
+                    <motion.span variants={startWords} className='blink'>|</motion.span>
                 </motion.p>
                 <motion.div
                     variants={{
