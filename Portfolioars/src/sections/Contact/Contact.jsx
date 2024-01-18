@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import './contact.css'
 import '../../responsive.css'
 
@@ -61,8 +61,8 @@ export const Contact = () => {
                 className='contact'>
 
                 <motion.div
-                    className='text-container'
-                    variants={variants}>
+                    variants={variants}
+                    className='text-container'>
 
                     <motion.h1
                         className='title'

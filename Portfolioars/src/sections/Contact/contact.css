@@ -1,7 +1,7 @@
 .text-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     gap: 40px;
 }
 
@@ -22,11 +22,10 @@
 }
 
 .emailSVG {
-    bottom: -15%;
+    width: 100%;
     position: absolute;
     z-index: -1;
     stroke: var(--background-invert);
-    margin: auto;
 }
 
 .formContainer form {
@@ -56,7 +55,26 @@ textarea {
 }
 
 form>div {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     gap: 20px;
+}
+
+form>div>input {
+    width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+    .formContainer {
+        width: 70%;
+    }
+
+    .emailSVG {
+        width: 70%;
+    }
+
+    .text-container {
+        width: 100%;
+    }
 }

@@ -1,12 +1,12 @@
 @media screen and (max-height: 600px) {
     .skills {
-        min-height: 130dvh;
+        min-height: 130vh;
     }
 }
 
 @media screen and (max-height: 470px) {
     .skills {
-        min-height: 150dvh;
+        min-height: 150vh;
     }
 }
 
@@ -48,21 +48,19 @@
 
 @media screen and (max-width: 980px) {
     .contact {
+
         flex-direction: column;
+    }
+    .formContainer {
+        margin-top: -5rem;
+        padding: 0rem 0rem 2rem 0rem;
     }
 
     .text-container {
         flex-direction: column;
-        width: 100%;
-        align-items: center;
         text-align: center;
     }
 
-    .formContainer {
-        margin-top: -5rem;
-        padding: 0rem 0rem 2rem 0rem;
-        width: 80%;
-    }
 
     .emailSVG {
         top: 8%;
