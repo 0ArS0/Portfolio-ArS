@@ -106,17 +106,16 @@ export const Hero = () => {
             {/* Div para conteudo ao lado da imagem */}
             <div className="rightSide-container">
                 <motion.h1
-                    variants={startText}
-                    initial="initial"
-                    animate="animate"
+
+                    variants={{
+                        hidden: { opacity: 0, y: 80 },
+                        visible: { opacity: 1, y: 0 }
+                    }}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 1, delay: 0.25 }}
                     className='hero-title title'>
-                    {t("hero.text-name").split(" ").map((word, index) =>
-                        <motion.span
-                            variants={startWords}
-                            key={word + '-' + index}>
-                            {word}&nbsp;
-                        </motion.span>
-                    )}
+                    {t("hero.text-name")}
                 </motion.h1>
                 <motion.p
                     variants={startText}

@@ -57,3 +57,9 @@
     border-bottom: 4px solid var(--special-color);
     box-shadow: 10px 10px 20px -14px var(--special-color);
 }
+
+@media screen and (max-width: 1050px) {
+    .text-aboutme {
+        text-align: center;
+    }
+}
