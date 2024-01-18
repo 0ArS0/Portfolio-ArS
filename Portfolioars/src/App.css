@@ -4,7 +4,18 @@
     overflow: clip;
 }
 
-
+.hero,
+.aboutme,
+.contact,
+.projects,
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100dvh;
+    margin: auto;
+    padding: 7rem 0rem 0rem 0rem;
+}
 
 [data-theme="dark"] {
     background-image: var(--background-bg);
@@ -47,12 +58,13 @@ svg {
     padding: 10px 0px;
     font-size: 18px;
     transition: all 0.6s ease-in-out;
+    background-color: var(--backgroundOp);
+    box-shadow: 0.1px 0.1px 6px 0.1px var(--text-primary);
 }
 
 .nav-bar.sticky {
     padding: 15px 0;
     background-color: var(--background);
-    box-shadow: 0.1px 0.1px 6px 0.1px var(--text-primary);
     z-index: 999;
 }
 
@@ -87,7 +99,6 @@ svg {
     width: 40px;
 }
 
-
 .nav-bar ul li .underline-a:before {
     content: '';
     position: absolute;
@@ -110,125 +121,7 @@ svg {
     right: 15%;
 }
 
-
-/* .languages>div {
-    display: flex;
-    cursor: pointer;
-    margin-bottom: 6px;
-}
-
-.languages ul.closed {
-    display: none;
-}
-
-.languages ul.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    padding-top: 1rem;
-    top: 100%;
-    right: 0.05%;
-    width: 21%;
-    transition: width .5s ease-in-out;
+nav ul.open {
     background-color: var(--backgroundOp);
-    border-bottom: 0.1px solid var(--text-primary);
-    border-left: 0.1px solid var(--text-primary);
-} */
-
-@media screen and (max-width: 1050px) {
-    nav {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 900px) {
-
-    header {
-        flex-direction: column;
-        align-items: start;
-
-    }
-
-    nav .menu {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        width: 100%;
-    }
-
-    nav a:before {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        right: 27%;
-        height: 2px;
-        width: 0;
-        background: var(--special-color);
-        border-radius: 50px;
-        transition: width 0.2s linear;
-    }
-
-    nav a:hover:before {
-        width: 45%;
-    }
-
-    nav ul.open {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        position: absolute;
-        background-color: var(--backgroundOp);
-        top: 100%;
-        right: 0;
-        width: 40%;
-        height: 60vh;
-        border-left: 0.1px solid var(--text-primary);
-        border-bottom: 0.1px solid var(--text-primary);
-        ;
-    }
-
-    .languages ul.open {
-        width: 100.2%;
-        height: 20vh;
-    }
-
-    .languages>div {
-        margin-left: 45%;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        margin: 0.2rem 0.5rem;
-    }
-
-    .darkmode-container {
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 530px) {
-    nav ul.open {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 220px) {
-    nav .menu {
-        top: 5.5rem;
-        right: 5rem;
-    }
-
-    nav ul.open {
-        display: flex;
-        position: absolute;
-        top: 9rem;
-        right: 0.8rem;
-    }
+    transition: all 0.6s ease-in-out;
 }

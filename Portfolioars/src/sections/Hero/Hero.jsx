@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import './hero.css';
+import '../../responsive.css'
+
 import { useTranslation } from 'react-i18next';
 import { useReadLocalStorage } from 'usehooks-ts';
 import { RxExternalLink } from "react-icons/rx";
@@ -63,8 +65,11 @@ export const Hero = () => {
         };
     }, []);
 
+
+
+
     return (
-        <section className="hero">
+        <div className="hero">
 
             {/* Div para imagem de perfil */}
             <motion.div
@@ -153,6 +158,6 @@ export const Hero = () => {
 
                 </motion.div>
             </div>
-        </section>
+        </div>
     )
 }

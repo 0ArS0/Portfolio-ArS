@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
+import './responsive.css'
 
 // Components Imports
 import { AboutMe } from './sections/AboutMe/AboutMe';
@@ -11,7 +12,6 @@ import { Skills } from './sections/Skills/Skills';
 // External Libraries Imports
 import { Image } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion'
 import useLocalStorage from 'use-local-storage';
 
 // Icon Imports
@@ -30,10 +30,14 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       const navBar = document.querySelector('.nav-bar');
+      const openNav = document.querySelector('.open');
+
       if (window.scrollY) {
         navBar.classList.add('sticky');
+        openNav.classList.add('sticky');
       } else {
         navBar.classList.remove('sticky');
+        openNav.classList.remove('sticky');
       }
     };
 
@@ -63,7 +67,7 @@ export default function App() {
           <div class="max-width">
 
             <div className='logo'>
-              <a href='#'>
+              <a href='#' onClick={() => setMenuOpen(false)}>
                 {i18n === 'br' ? (
                   <Image src={theme === 'dark' ? '/img/logoDark.png' : '/img/logoLight.png'} className='header-logo' fluid />
                 ) : (
@@ -74,16 +78,20 @@ export default function App() {
 
             <ul className={menuOpen ? "open" : ""}>
               <li>
-                <a href='#aboutme' className='underline-a'>{t('header.text-aboutme')}</a>
+                <a href='#aboutme'
+                  onClick={() => setMenuOpen(false)} className='underline-a'>{t('header.text-aboutme')}</a>
               </li>
               <li>
-                <a href='#skills' className='underline-a'>{t('header.text-skills')}</a>
+                <a href='#skills'
+                  onClick={() => setMenuOpen(false)} className='underline-a'>{t('header.text-skills')}</a>
               </li>
               <li>
-                <a href='#projects' className='underline-a'>{t('header.text-projects')}</a>
+                <a href='#projects'
+                  onClick={() => setMenuOpen(false)} className='underline-a'>{t('header.text-projects')}</a>
               </li>
               <li>
-                <a href='#contact' className='underline-a'>{t('header.text-contact')}</a>
+                <a href='#contact'
+                  onClick={() => setMenuOpen(false)} className='underline-a'>{t('header.text-contact')}</a>
               </li>
               <li>
                 <a>

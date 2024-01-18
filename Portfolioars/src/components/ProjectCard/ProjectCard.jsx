@@ -1,8 +1,9 @@
 import React from 'react'
 import './projectCard.css'
+import '../../responsive.css'
+
 import { Image } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-
 
 export const ProjectCard = ({ project }) => {
     const [t, i18n] = useTranslation('global')
