@@ -1,19 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './projects.css'
-import '../../responsive.css'
 
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
 import { api } from '../../services/api'
-import { useTranslation } from 'react-i18next'
 
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import ScrollTrigger from 'react-scroll-trigger'
 
 export const Projects = () => {
 
     const [projects, setProjects] = useState([])
-    const [t] = useTranslation("global")
     const [showAll, setShowAll] = useState(false)
-
 
     const projectsGet = async () => {
         try {
@@ -28,21 +25,16 @@ export const Projects = () => {
         setShowAll(!showAll)
     }
 
-    useEffect(() => {
-        projectsGet()
-    }, [])
-
     return (
-        <div
-            className="projects">
-            <h3 className='title title-projects'>{t('projects.title')}</h3>
+        <ScrollTrigger onEnter={() => projectsGet()} className="projects">
+            <h3 className='title title-projects'>Projetos</h3>
             <div className="projects-container">
                 {projects.slice(0, 3).map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
             </div>
             <span className="showall-anchor" onClick={() => toggleShowAll()}>
-                {t("projects.text-button")}
+                Mostrar Todos
                 {showAll === true ? (
                     <FaAngleUp size={18} />
                 ) : (
@@ -58,6 +50,6 @@ export const Projects = () => {
                     </div>
                 </>
             )}
-        </div>
+        </ScrollTrigger>
     )
 }

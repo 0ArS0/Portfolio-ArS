@@ -1,9 +1,7 @@
 import React, { useRef } from 'react'
 import './contact.css'
-import '../../responsive.css'
 
 import { motion, useInView } from 'framer-motion'
-import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -28,8 +26,6 @@ const variants = {
 
 export const Contact = () => {
 
-    const [t, i18n] = useTranslation('global')
-
     const ref = useRef()
     const formRef = useRef()
 
@@ -41,13 +37,13 @@ export const Contact = () => {
         emailjs.sendForm('service_a3xt9wl', 'template_u13rxqn', formRef.current, 'QPee5wEPhESgM2uLR')
             .then((result) => {
                 toast.success('Mensagem enviada com sucesso!', { className: 'custom-toast', autoClose: 2000, toastId: 'uniqueId' });
+                const inputs = formRef.current.querySelectorAll('input, textarea');
+                inputs.forEach((input) => {
+                    input.value = '';
+                });
             }, (error) => {
                 toast.error('Error ao enviar mensagem!', { className: 'custom-toast-error', autoClose: 1500, toastId: 'uniqueId' });
             });
-        const inputs = formRef.current.querySelectorAll('input, textarea');
-        inputs.forEach((input) => {
-            input.value = '';
-        });
     };
 
     return (
@@ -62,13 +58,13 @@ export const Contact = () => {
 
                 <motion.div
                     variants={variants}
-                    className='text-container'>
+                    className='text-container-contact'>
 
                     <motion.h1
                         className='title'
                         variants={variants}>
 
-                        {t('contact.title')}
+                        Entre em contato
                     </motion.h1>
 
                     <motion.div
@@ -76,7 +72,7 @@ export const Contact = () => {
                         variants={variants}>
 
                         <h2 className='title'>
-                            {t('contact.mail')}
+                            Email
                         </h2>
 
                         <span className='text'>
@@ -88,7 +84,7 @@ export const Contact = () => {
                         variants={variants}>
 
                         <h2 className='title'>
-                            {t('contact.phone')}
+                            Celular
                         </h2>
 
                         <span className='text'>
@@ -100,11 +96,11 @@ export const Contact = () => {
                         variants={variants}>
 
                         <h2 className='title'>
-                            {t('contact.local')}
+                            Localidade
                         </h2>
 
                         <span className='text'>
-                            Petrópolis - RJ, {t('contact.local-name')}
+                            Petrópolis - RJ, Brasil
                         </span>
                     </motion.div>
                 </motion.div>
@@ -268,7 +264,7 @@ export const Contact = () => {
                             <input
                                 type='text'
                                 required
-                                placeholder={t('contact.name-form')}
+                                placeholder='Nome'
                                 name='name'
                                 autoComplete="off" />
                             <input
@@ -281,12 +277,12 @@ export const Contact = () => {
 
                         <textarea
                             rows={4}
-                            placeholder={t('contact.message-form')}
+                            placeholder='Mensagem'
                             name='message'
                             autoComplete="off" />
 
                         <button>
-                            {t('contact.submit-button')}
+                            Enviar
                         </button>
                     </motion.form>
                 </div>

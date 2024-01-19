@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import './skills.css'
-import '../../responsive.css'
 
 // External Libraries Imports
 import { useReadLocalStorage } from 'usehooks-ts';
-import { useTranslation } from 'react-i18next';
 import ScrollTrigger from 'react-scroll-trigger';
 
 // Icon Imports
@@ -22,11 +20,10 @@ export const Skills = () => {
 
     const [counterOn, setCounterOn] = useState(false)
     const theme = useReadLocalStorage('dark')
-    const [t, i18n] = useTranslation("global")
 
     return (
         <div className='skills'>
-            <h1 className='title'>{t('skills.title-skills')}</h1>
+            <h1 className='title'>Habilidades</h1>
             <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)} className='scroll-trigger'>
 
                 {/* Card Skill Front-End */}
@@ -144,7 +141,7 @@ export const Skills = () => {
                     <div className="icon-skill-container">
                         <FaTools size={35} className='icon-skill' />
                     </div>
-                    <h2 className='title'>{t("skills.title-others")}</h2>
+                    <h2 className='title'>Outros</h2>
                     <div className="skill-stats">
                         <ul>
                             <li className='skill'>

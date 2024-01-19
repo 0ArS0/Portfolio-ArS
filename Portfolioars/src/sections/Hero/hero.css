@@ -4,15 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
 }
 
 .profile-pic {
-    width: 80%;
+    width: 60%;
     border-bottom: 4px solid var(--special-color);
     box-shadow: -10px 5px 20px 1px var(--sombra);
     transition: width ease-in-out .5s;
-    background-color: #1a1a1a;
 }
 
 .button-curriculum {
@@ -63,7 +61,7 @@
 .rightSide-container {
     display: flex;
     flex-direction: column;
-    width: 66%;
+    width: 100%;
     transition: width 1s ease-in-out;
 }
 
@@ -110,4 +108,30 @@
     50% {
         opacity: 0;
     }
+}
+
+
+@media screen and (max-width: 1050px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        width: 40%;
+    }
+
+    .hero-title {
+        text-align: center;
+    }
+
+    .rightSide-container {
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
 }

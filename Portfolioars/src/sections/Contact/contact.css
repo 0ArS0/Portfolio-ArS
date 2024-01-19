@@ -1,16 +1,16 @@
-.text-container {
+.text-container-contact {
     display: flex;
     flex-direction: column;
     width: 40%;
     gap: 40px;
 }
 
-.text-container h1 {
+.text-container-contact h1 {
     font-size: 60px;
     line-height: 88px;
 }
 
-.text-container span {
+.text-container-contact span {
     font-weight: 300;
     user-select: text;
 }
@@ -48,10 +48,11 @@ textarea {
     padding: 0.6rem;
     margin-left: 2px;
     border: none;
-    background-color: var(--background-invert);
     border-radius: 15px;
     cursor: pointer;
     font-weight: 500;
+    background-color: var(--background-invert);
+    border: 2px solid var(--background-invert);
 }
 
 form>div {
@@ -65,16 +66,40 @@ form>div>input {
     width: 100%;
 }
 
+form>button:hover {
+    background-color: var(--background);
+    color: var(--background-invert);
+}
+
+form>button:active {
+    transform: scale(0.98);
+}
+
+
 @media screen and (max-width: 980px) {
+    .contact {
+        flex-direction: column;
+    }
+
     .formContainer {
+        margin-top: -5rem;
         width: 70%;
+        padding: 0rem 0rem 2rem 0rem;
     }
 
     .emailSVG {
+        top: 8%;
+        left: 18.5%;
+        margin: auto;
+        position: absolute;
         width: 70%;
+        z-index: -1;
+        stroke: var(--background-invert);
     }
 
-    .text-container {
+    .text-container-contact {
+        flex-direction: column;
         width: 100%;
+        text-align: center;
     }
 }

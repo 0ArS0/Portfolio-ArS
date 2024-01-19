@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import './hero.css';
-import '../../responsive.css'
 
-import { useTranslation } from 'react-i18next';
 import { useReadLocalStorage } from 'usehooks-ts';
 import { RxExternalLink } from "react-icons/rx";
 
@@ -35,13 +33,9 @@ const startWords = {
 }
 
 export const Hero = () => {
-
-    const [t, i18n] = useTranslation("global")
-
     const theme = useReadLocalStorage('dark')
 
     // Lógica por trás da animação do botão do curriculo 
-
     const [eixoX, setEixoX] = useState(0);
     const [eixoY, setEixoY] = useState(0);
 
@@ -65,9 +59,6 @@ export const Hero = () => {
         };
     }, []);
 
-
-
-
     return (
         <div className="hero">
 
@@ -82,9 +73,8 @@ export const Hero = () => {
                 transition={{ duration: 1, delay: 0.25 }}
                 className='leftSide-container'
             >
-
                 <Image
-                    src={theme === 'light' ? '/img/ProfilePicDark.png' : '/img/ProfilePicDark.png'}
+                    src='/img/ProfileHero.jpeg'
                     className='profile-pic'
                     roundedCircle
                     fluid
@@ -97,37 +87,21 @@ export const Hero = () => {
                     target='_blank'
                 >
                     <span className='text' >
-                        {t('hero.button-download-text')}<RxExternalLink />
+                        Curriculo<RxExternalLink />
                     </span>
                 </a>
             </motion.div>
 
             {/* Div para conteudo ao lado da imagem */}
             <div className="rightSide-container">
-                <motion.h1
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: { opacity: 1 }
-                    }}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 4, delay: 0.5 }}
-                    className='hero-title title'>
-                    {t("hero.text-name")}
-                </motion.h1>
+                <h1 className='hero-title title'>Desenvolvedor Full Stack.</h1>
                 <motion.p
                     variants={startText}
                     initial="initial"
                     animate="animate"
-                    className='text hero-text'>
-                    {t("hero.text-description").split(" ").map((word, index) =>
-                        <motion.span
-                            variants={startWords}
-                            key={word + '-' + index}>
-                            {word}&nbsp;
-                        </motion.span>
-                    )}
-                    <motion.span variants={startWords} className='blink'>|</motion.span>
+                    className='text hero-text'
+                >
+                    <span>Programador em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar me meu conhecimento. <motion.span variants={startWords} className='blink'>|</motion.span></span>
                 </motion.p>
                 <motion.div
                     variants={{
@@ -136,7 +110,8 @@ export const Hero = () => {
                     }}
                     initial="hidden"
                     animate="visible"
-                    transition={{ duration: 1, delay: 3 }} className='social'>
+                    transition={{ duration: 1 }} className='social'
+                >
                     <motion.a
                         whileHover={{ y: -4 }}
                         whileTap={{ scale: 0.9 }}
@@ -151,7 +126,6 @@ export const Hero = () => {
                         <img
                             src={theme === 'light' ? '/img/linkedInDark.svg' : '/img/linkedInLight.svg'} width={45} />
                     </motion.a>
-
                 </motion.div>
             </div>
         </div>

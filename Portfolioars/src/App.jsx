@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
-import './responsive.css'
 
 // Components Imports
 import { AboutMe } from './sections/AboutMe/AboutMe';
@@ -11,7 +10,6 @@ import { Skills } from './sections/Skills/Skills';
 
 // External Libraries Imports
 import { Image } from 'react-bootstrap'
-import { useTranslation } from 'react-i18next';
 import useLocalStorage from 'use-local-storage';
 
 // Icon Imports
@@ -22,7 +20,6 @@ import { IoMoonOutline } from 'react-icons/io5';
 
 export default function App() {
 
-  const [t, i18n] = useTranslation("global")
   const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
 
   const [menuOpen, setMenuOpen] = useState(false)
@@ -54,12 +51,6 @@ export default function App() {
     setTheme(newTheme)
   }
 
-  // Language Switcher
-  const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang)
-    console.log(i18n.language);
-  }
-
   return (
     <div className='app' data-theme={theme} data-bs-theme={theme === 'light' ? 'dark' : 'light'}>
       <header>
@@ -68,30 +59,26 @@ export default function App() {
 
             <div className='logo'>
               <a href='#' onClick={() => setMenuOpen(false)}>
-                {i18n === 'br' ? (
-                  <Image src={theme === 'dark' ? '/img/logoDark.png' : '/img/logoLight.png'} className='header-logo' fluid />
-                ) : (
-                  <Image src={theme === 'dark' ? '/img/logoDark.png' : '/img/logoLight.png'} className='header-logo' fluid />
-                )}
+                <Image src={theme === 'dark' ? '/img/logoDark.png' : '/img/logoLight.png'} className='header-logo' fluid />
               </a>
             </div>
 
             <ul className={menuOpen ? "open" : ""}>
               <li>
                 <a href='#aboutme'
-                  onClick={() => setMenuOpen(false)} className='underline-a'>{t('header.text-aboutme')}</a>
+                  onClick={() => setMenuOpen(false)} className='underline-a'>Sobre Mim</a>
               </li>
               <li>
                 <a href='#skills'
-                  onClick={() => setMenuOpen(false)} className='underline-a'>{t('header.text-skills')}</a>
+                  onClick={() => setMenuOpen(false)} className='underline-a'>Habilidades</a>
               </li>
               <li>
                 <a href='#projects'
-                  onClick={() => setMenuOpen(false)} className='underline-a'>{t('header.text-projects')}</a>
+                  onClick={() => setMenuOpen(false)} className='underline-a'>Projetos</a>
               </li>
               <li>
                 <a href='#contact'
-                  onClick={() => setMenuOpen(false)} className='underline-a'>{t('header.text-contact')}</a>
+                  onClick={() => setMenuOpen(false)} className='underline-a'>Contato</a>
               </li>
               <li>
                 <a>
@@ -102,15 +89,6 @@ export default function App() {
                   )}
                 </a>
               </li>
-              <li>
-                <a>
-                  {i18n.language === 'br' ? (
-                    <img src='/img/br.png' onClick={() => handleChangeLanguage('en')} />
-                  ) : 'en' ? (
-                    <img src='/img/usa.png' onClick={() => handleChangeLanguage('br')} />
-                  ) : ''}
-                </a>
-              </li>
             </ul>
             <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? (
@@ -119,7 +97,6 @@ export default function App() {
                 <AiOutlineBars size={40} />
               )}
             </div>
-
           </div>
         </nav>
       </header>

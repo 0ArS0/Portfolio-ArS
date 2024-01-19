@@ -1,66 +1,48 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import './aboutMe.css';
-import '../../responsive.css'
 
-import { useTranslation } from 'react-i18next';
-import { api } from '../../services/api';
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 
 export const AboutMe = () => {
 
-    const [me, setMe] = useState([])
     const [counterOn, setCounterOn] = useState(false)
-    const { t } = useTranslation("global")
-
-    const getMe = async () => {
-        try {
-            const response = await api.get("/me")
-            setMe(response.data)
-        } catch (e) {
-            console.log(e);
-        }
-    }
-
-    useEffect(() => {
-        getMe()
-    }, [])
 
     return (
         <motion.div
             className="aboutme">
             <div className='aboutme-container-left '>
-                <h2 className='title title-aboutme'>{t("aboutme.title")}</h2>
+                <h2 className='title title-aboutme'>Sobre Mim</h2>
 
                 <p className='text text-aboutme'>
-                    {t('aboutme.text-aboutme1')}
+                    Me chamo Arthur da Silva Monteiro, tenho 19 anos, tenho 2 cachorros e faço parte do universo tecnológico desde muito cedo. No entanto, minha jornada em programação teve início na faculdade FAETERJ em 2022, onde, em três meses, absorvi os fundamentos da lógica de programação. Foi lá que uma amiga me indicou o SERRATEC, onde participei de um bootcamp intensivo, dedicando cinco meses intensos que representaram cerca de 90% do meu conhecimento na área.
                 </p>
                 <p className='text text-aboutme'>
-                    {t('aboutme.text-aboutme2')}
+                    Atualmente, estou concentrado em praticar e expandir meu conhecimento, buscando realizar diversos projetos do zero e em diferentes linguagens, tanto no back-end quanto no front-end. E com a minha dedicação à área, busco um crescimento contínuo neste campo.
                 </p>
 
-                {me.map((eu) => (
-                    <ScrollTrigger className="card-aboutme-container" onEnter={() => { setCounterOn(true); getMe() }} onExit={() => setCounterOn(false)} key={eu.id}>
+                <ScrollTrigger className="card-aboutme-container" onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)} >
 
-                        <div className="card-aboutme">
-                            {counterOn ? (
-                                <CountUp className="title count" start={0} end={eu.exp >= 12 ? (eu.exp / 12) : eu.exp} duration={5} delay={0} />
-                            ) : (
-                                0
-                            )}
-                            <h3 className='title title-aboutme-card'>{eu.exp >= 12 ? t('aboutme.text-years') : t('aboutme.text-months')}{t('aboutme.text-experience')}</h3>
-                        </div>
-                        <div className="card-aboutme">
-                            {counterOn &&
-                                <CountUp className="title count" start={0} end={eu.projects} duration={5} delay={0} />
-                            }
-                            <h3 className='title title-aboutme-card'>{t("aboutme.text-projects")}</h3>
-                        </div>
-
-                    </ScrollTrigger>
-                ))}
+                    <div className="card-aboutme">
+                        {counterOn ? (
+                            <CountUp className="title count" start={0} end={7} duration={5} delay={0} />
+                        ) : (
+                            0
+                        )}
+                        <h3 className='title title-aboutme-card'>Meses de experiencia</h3>
+                    </div>
+                    <div className="card-aboutme">
+                        {counterOn ? (
+                            <CountUp className="title count" start={0} end={1} duration={5} delay={0} />
+                        ) : (
+                            0
+                        )}
+                        <h3 className='title title-aboutme-card'>Projetos Completos</h3>
+                    </div>
+                </ScrollTrigger>
             </div>
+
             <div className='aboutme-container-right' >
                 <motion.img
                     animate={{
@@ -71,7 +53,7 @@ export const AboutMe = () => {
                         ease: "easeInOut",
                         repeat: Infinity
                     }}
-                    className="dog-photo" src='/img/DogProfile.jpeg' />
+                    src='/img/ProfilePicDark.png' />
             </div>
         </motion.div>
     )

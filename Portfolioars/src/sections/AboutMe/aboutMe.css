@@ -55,11 +55,55 @@
 .aboutme-container-right>img {
     border-radius: 50%;
     border-bottom: 4px solid var(--special-color);
+    background-color: #1a1a1a;
     box-shadow: 10px 10px 20px -14px var(--special-color);
 }
 
 @media screen and (max-width: 1050px) {
     .text-aboutme {
         text-align: center;
+    }
+
+    .aboutme-container-left {
+        width: 90%;
+    }
+
+    .aboutme {
+        flex-direction: column;
+    }
+
+    .title-aboutme {
+        text-align: center;
+        width: 100%;
+    }
+
+    .aboutme-container-right>img {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .text-aboutme {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .aboutme-container-left {
+        width: 90%;
+    }
+
+    .aboutme-container-right {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .aboutme-container-right {
+        width: 50%;
+    }
+    .card-aboutme-container {
+        flex-direction: column;
+        gap: 40px;
     }
 }

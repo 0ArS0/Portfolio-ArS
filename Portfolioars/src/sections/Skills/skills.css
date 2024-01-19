@@ -5,7 +5,7 @@
 
 .skills>h1 {
     text-align: center;
-    margin-bottom: 8rem;   
+    margin-bottom: 5rem;
 }
 
 .skills .scroll-trigger {
@@ -116,6 +116,7 @@
         100% {
             width: var(--per);
         }
-
     }
 }
+
+
