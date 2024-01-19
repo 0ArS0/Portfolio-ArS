@@ -1,6 +1,16 @@
 .projects {
     flex-direction: column;
 }
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    width: 90vw;
+}
 
 .title-projects {
     font-size: 35px;
@@ -12,15 +22,4 @@
     color: var(--background);
     padding: 0.5rem 1rem;
     border-radius: 10px;
-}
-
-.projects-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    position: relative;
-    color: var(--text-primary);
-    margin-top: 2rem;
-    width: 90vw;
 }

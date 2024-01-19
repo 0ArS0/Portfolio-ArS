@@ -27,7 +27,7 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       const navBar = document.querySelector('.nav-bar');
-      const openNav = document.querySelector('.open');
+      const openNav = document.querySelector("ul");
 
       if (window.scrollY) {
         navBar.classList.add('sticky');

@@ -11,6 +11,10 @@
     border-radius: 90px;
 }
 
+.aboutme-container-left > h2 {
+    margin-block: 1.5rem;
+}
+
 .card-aboutme-container {
     display: flex;
     align-items: center;
@@ -24,7 +28,6 @@
     align-items: center;
     justify-content: center;
 }
-
 
 .title-aboutme-card {
     text-align: center;
