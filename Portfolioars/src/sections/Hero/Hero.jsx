@@ -6,32 +6,6 @@ import './hero.css';
 import { useReadLocalStorage } from 'usehooks-ts';
 import { RxExternalLink } from "react-icons/rx";
 
-const startText = {
-    initial: {
-        opacity: 1,
-    },
-    animate: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.08,
-        }
-    }
-}
-
-const startWords = {
-    initial: {
-        opacity: 0,
-        y: 30,
-    },
-    animate: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 1
-        }
-    }
-}
-
 export const Hero = () => {
     const theme = useReadLocalStorage('dark')
 
@@ -60,19 +34,19 @@ export const Hero = () => {
     }, []);
 
     return (
-        <div className="hero">
+        <motion.div
+            variants={{
+                hidden: { opacity: 0, y: 80 },
+                visible: { opacity: 1, y: 0 }
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 0.25 }}
 
+            className="hero"
+        >
             {/* Div para imagem de perfil */}
-            <motion.div
-                variants={{
-                    hidden: { opacity: 0, y: 80 },
-                    visible: { opacity: 1, y: 0 }
-                }}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 1, delay: 0.25 }}
-                className='leftSide-container'
-            >
+            <div className='leftSide-container' >
                 <Image
                     src='/img/ProfileHero.jpeg'
                     className='profile-pic'
@@ -90,28 +64,17 @@ export const Hero = () => {
                         Curriculo<RxExternalLink />
                     </span>
                 </a>
-            </motion.div>
+            </div>
 
             {/* Div para conteudo ao lado da imagem */}
             <div className="rightSide-container">
+
                 <h1 className='hero-title title'>Desenvolvedor Full Stack.</h1>
-                <motion.p
-                    variants={startText}
-                    initial="initial"
-                    animate="animate"
-                    className='text hero-text'
-                >
-                    <span>Programador em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar me meu conhecimento. <motion.span variants={startWords} className='blink'>|</motion.span></span>
-                </motion.p>
-                <motion.div
-                    variants={{
-                        hidden: { opacity: 0, y: 80 },
-                        visible: { opacity: 1, y: 0 }
-                    }}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 1 }} className='social'
-                >
+
+                <p className='text hero-text' >
+                    <span>Programador em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar me meu conhecimento. <span className='blink'>|</span></span>
+                </p>
+                <div className='social' >
                     <motion.a
                         whileHover={{ y: -4 }}
                         whileTap={{ scale: 0.9 }}
@@ -126,8 +89,8 @@ export const Hero = () => {
                         <img
                             src={theme === 'light' ? '/img/linkedInDark.svg' : '/img/linkedInLight.svg'} width={45} />
                     </motion.a>
-                </motion.div>
+                </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

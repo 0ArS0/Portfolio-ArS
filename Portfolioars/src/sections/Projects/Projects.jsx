@@ -29,7 +29,7 @@ export const Projects = () => {
         <ScrollTrigger onEnter={() => projectsGet()} className="projects">
             <h3 className='title title-projects'>Projetos</h3>
             <div className="projects-container">
-                {projects.slice(0, 3).map((project) => (
+                {projects.slice(0, 2).map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
             </div>

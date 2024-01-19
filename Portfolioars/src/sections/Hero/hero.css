@@ -2,8 +2,9 @@
 
 .leftSide-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    width: 50%;
 }
 
 .profile-pic {
@@ -14,18 +15,21 @@
 }
 
 .button-curriculum {
-    margin-top: 1rem;
-    background-color: var(--background);
-    padding: 0.5rem 2rem;
-    box-shadow: 0.1px 0.1px 3px 0.1px var(--background-invert);
-    border-radius: 1rem;
+
     position: relative;
     overflow: hidden;
-    color: var(--background-invert);
-    transition: color ease-in-out .4s;
     cursor: pointer;
     text-decoration: none;
-    margin-top: 7%;
+
+    background-color: var(--background);
+    color: var(--background-invert);
+    box-shadow: 0.1px 0.1px 3px 0.1px var(--background-invert);
+
+    border-radius: 1rem;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+
+    transition: color ease-in-out .4s;
 }
 
 .button-curriculum span {
@@ -65,9 +69,8 @@
     transition: width 1s ease-in-out;
 }
 
-.hero-title-container h1 {
-    display: flex;
-    flex-wrap: wrap;
+.hero-title {
+    font-size: 30px;
 }
 
 .hero-title {
@@ -76,8 +79,7 @@
 
 .hero-text {
     width: 90%;
-    display: flex;
-    flex-wrap: wrap;
+    font-size: 16px;
 }
 
 .social {
@@ -92,8 +94,7 @@
 }
 
 .blink {
-    color: var(--special-color);
-    font-weight: 800;
+    color: var(--text-primary);
     font-size: 18px;
     animation: blink 1s step-end infinite;
 }
@@ -117,10 +118,12 @@
     }
 
     .profile-pic {
-        width: 40%;
+        width: 60%;
     }
 
     .hero-title {
+        white-space: wrap;
+        overflow: visible;
         text-align: center;
     }
 

@@ -23,6 +23,8 @@
     flex-direction: column;
     width: 25rem;
     min-height: 22rem;
+    border-radius: 15px;
+    padding-inline: 1rem;
     position: relative;
     background-color: var(--background);
     box-shadow: 0.01px 0.01px 4px 0.01px var(--background-invert);

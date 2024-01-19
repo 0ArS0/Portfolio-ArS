@@ -39,12 +39,9 @@
     color: var(--background-invert);
 }
 
-.text-card {
-    font-size: 30px;
-    font-weight: 700;
-}
-
 .text-aboutme {
+    background: var(--backgroundOp);
+    border-radius: 1.5rem;
     text-align: start;
 }
 
@@ -56,6 +53,7 @@
 }
 
 .aboutme-container-right>img {
+    width: 80%;
     border-radius: 50%;
     border-bottom: 4px solid var(--special-color);
     background-color: #1a1a1a;

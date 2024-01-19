@@ -55,15 +55,7 @@ export const Skills = () => {
                                     <span className='barras'><span style={{ '--per': `${60}%`, '--anim': `skillbar 3s` }}></span></span>
                                 )}
                             </li>
-                            <li className='skill'>
-                                <div>
-                                    <IoLogoJavascript size={20} className='skill-check' />
-                                    <span>JavaScript</span>
-                                </div>
-                                {counterOn && (
-                                    <span className='barras'><span style={{ '--per': `${40}%`, '--anim': `skillbar 3s` }}></span></span>
-                                )}
-                            </li>
+
                             <li className='skill'>
                                 <div>
                                     <FaReact size={20} className='skill-check' />
@@ -71,6 +63,15 @@ export const Skills = () => {
                                 </div>
                                 {counterOn && (
                                     <span className='barras'><span style={{ '--per': `${50}%`, '--anim': `skillbar 3s` }}></span></span>
+                                )}
+                            </li>
+                            <li className='skill'>
+                                <div>
+                                    <IoLogoJavascript size={20} className='skill-check' />
+                                    <span>JavaScript</span>
+                                </div>
+                                {counterOn && (
+                                    <span className='barras'><span style={{ '--per': `${40}%`, '--anim': `skillbar 3s` }}></span></span>
                                 )}
                             </li>
                             <li className='skill'>
