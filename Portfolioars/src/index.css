@@ -21,7 +21,6 @@ html {
   --background-invert: #f6f6f6;
   --backgroundOp: #1a1a1ace;
   --text-primary: #ffffff;
-  --special-color: #ffffff;
   --sombra: #ffffff69;
 }
 
@@ -35,7 +34,6 @@ html {
   --background-invert: #1a1a1a;
   --backgroundOp: #f6f6f6ce;
   --text-primary: #000000;  
-  --special-color: #1a1a1a; 
   --sombra: #00000069;
 }
 

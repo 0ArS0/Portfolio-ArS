@@ -90,7 +90,7 @@ svg {
     bottom: -2.5px;
     height: 2px;
     width: 0;
-    background: var(--special-color);
+    background: var(--text-primary);
     border-radius: 50px;
     transition: width 0.2s linear;
 }

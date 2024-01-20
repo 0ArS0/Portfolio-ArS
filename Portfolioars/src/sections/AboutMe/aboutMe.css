@@ -40,8 +40,6 @@
 }
 
 .text-aboutme {
-    background: var(--backgroundOp);
-    border-radius: 1.5rem;
     text-align: start;
 }
 
@@ -55,9 +53,9 @@
 .aboutme-container-right>img {
     width: 80%;
     border-radius: 50%;
-    border-bottom: 4px solid var(--special-color);
+    border-bottom: 4px solid var(--text-primary);
     background-color: #1a1a1a;
-    box-shadow: 10px 10px 20px -14px var(--special-color);
+    box-shadow: 10px 10px 20px -14px var(--text-primary);
 }
 
 @media screen and (max-width: 1050px) {
