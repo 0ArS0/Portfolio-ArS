@@ -57,7 +57,7 @@ export const Hero = () => {
                     className='button-curriculum'
                     style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }}
                     ref={btnRef}
-                    href='https://drive.google.com/file/d/18V65-2EczAn9usCFvDxVB460FN9kEo7i/view?usp=sharing'
+                    href='https://drive.google.com/file/d/1ObfczBXqK_-DY5nzlTgsoMVw0qV9uU5B/view?usp=sharing'
                     target='_blank'
                 >
                     <span className='text' >

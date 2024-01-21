@@ -11,6 +11,15 @@
     border-radius: 90px;
 }
 
+
+.title-container-aboutme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+
 .aboutme-container-left > h2 {
     margin-block: 1.5rem;
 }
@@ -20,6 +29,11 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
+}
+
+
+.text-aboutme > a {
+    color: var(--text-primary);
 }
 
 .card-aboutme {

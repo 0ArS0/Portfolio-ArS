@@ -21,7 +21,7 @@
     transition: all .5s ease;
 }
 
-.card-container2 {
+.project-container {
     position: absolute;
     height: 100%;
     transform:
@@ -30,7 +30,7 @@
     transition: all 0.3s ease-out;
 }
 
-.card2 {
+.project-card {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -39,6 +39,7 @@
     background-color: var(--background);
     border-radius: 1rem;
     color: var(--background-invert);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     text-align: start;
     transition: all 0.3s ease-out;
 }
