@@ -8,20 +8,21 @@
     margin-bottom: 5rem;
 }
 
-.skills .scroll-trigger {
+.skills>div {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 100px;
     width: 100%;
 }
 
+
+
 .skill-container {
     display: flex;
-    justify-content: start;
+    align-items: center;
     flex-direction: column;
-
     width: 23rem;
     min-height: 22rem;
     border-radius: 15px;
@@ -50,116 +51,42 @@
 }
 
 
-.skill-check {
-    color: var(--background-invert);
-}
-
 .skill-container>h2 {
     align-self: center;
     margin-top: 1.5em;
 }
 
+.seila {
+    width: 90%;
+}
 
-
-.img-icon {
-    width: 20px;
+.seila ul {
+    padding: 0;
 }
 
 .skill {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    position: relative;
+    gap: 5px;
+    padding: 0.6rem;
+    margin: 15px 0px;
+    border-radius: 1rem;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.skill .skill-percentage-text {
-    position: absolute;
-    right: 42%;
-    top: -4%;
-    z-index: 1;
+.skill:hover {
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
+    background-color: var(--background-invert);
+    color: var(--background);
+    transform: translatey(-3px);
+
+    .skill-check {
+        color: var(--background);
+    }
+}
+
+.skill-check {
     color: var(--background-invert);
-}
-
-.skill>div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.skill .skill-name {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.skill-stats .barras {
-    display: block;
-    position: relative;
-    overflow: clip;
-    height: 15px;
-    width: 40%;
-    border-radius: 5px;
-    background-color: var(--backgroundOp);
-    box-shadow: 0.01px 0.01px 1px var(--background-invert);
-}
-
-.skill-stats {
-    padding: 1% 2%;
-}
-
-.skill-stats ul {
-    list-style: none;
-}
-
-.skill-stats ul li {
-    margin: 15px 0;
-}
-
-.barras>span {
-    height: inherit;
-    position: absolute;
-    background: linear-gradient(to right, var(--backgroundOp), var(--background-invert));
-    border-radius: 3px;
-    width: var(--per);
-    animation: var(--anim) forwards;
-}
-
-
-
-@media(prefers-reduced-motion: no-preference) {
-    @keyframes skillbar {
-        0% {
-            width: 0%;
-        }
-
-        100% {
-            width: var(--per);
-        }
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .skill {
-        flex-direction: column;
-    }
-
-    .skill>div {
-        justify-content: space-around;
-    }
-
-    .icon-skill-container {
-        top: -34%;
-    }
-
-    .skill .skill-percentage-text {
-        position: static;
-        z-index: 1;
-        color: var(--background-invert);
-    }
-
-    .skill-stats .barras {
-        width: 70%;
-    }
-
 }

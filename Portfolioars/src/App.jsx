@@ -124,6 +124,9 @@ export default function App() {
         </section>
 
       </main>
+      <footer className='text'>
+        Desenvolvido por Arthur Monteiro | &copy; Copyright 2024.
+      </footer>
     </div>
   )
 }

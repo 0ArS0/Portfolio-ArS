@@ -5,12 +5,10 @@ import { SkillSection } from '../../components/SkillSection';
 
 export const Skills = () => {
 
-    const [counterOn, setCounterOn] = useState(false);
-
     return (
         <div className='skills'>
             <h1 className='title'>Habilidades</h1>
-            {SkillSection({ counterOn, setCounterOn })}
+            {SkillSection()}
         </div>
     );
 }
