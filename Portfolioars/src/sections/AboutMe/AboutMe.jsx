@@ -5,6 +5,9 @@ import './aboutMe.css';
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 
+
+import { FaInstagram } from "react-icons/fa";
+
 export const AboutMe = () => {
 
     const [counterOn, setCounterOn] = useState(false)
@@ -14,14 +17,9 @@ export const AboutMe = () => {
             className="aboutme">
             <div className='aboutme-container-left '>
                 <h2 className='title title-aboutme'>Sobre Mim</h2>
-
                 <p className='text text-aboutme'>
-                    Me chamo Arthur da Silva Monteiro, tenho 19 anos, tenho 2 cachorros e faço parte do universo tecnológico desde muito cedo. No entanto, minha jornada em programação teve início na faculdade FAETERJ em 2022, onde, em três meses, absorvi os fundamentos da lógica de programação. Foi lá que uma amiga me indicou o SERRATEC, onde participei de um bootcamp intensivo, dedicando cinco meses intensos que representaram cerca de 90% do meu conhecimento na área.
+                    Me chamo Arthur, tenho 19 anos e dois lindos cachorros, faço parte do universo tecnologico desde muito cedo. No entanto, minha jornada em programação teve início na faculdade FAETERJ em 2022, onde, em três meses, absorvi os fundamentos da lógica de programação. Foi lá que uma amiga me indicou o SERRATEC, onde participei de <a href='https://drive.google.com/file/d/1N0Vza6jqU2ZnKu-z53V3zqRUmxYRcTg9/view?usp=sharing' target='_blank'>uma imersão de 770 horas</a>. Durante essa experiência, concentrei-me em aprimorar meus conhecimentos, trabalhando em projetos do zero com diferentes equipes. E atualmente, ela é responsável por 90% do meu conhecimento na área. Hoje, busco praticar e expandir meus conhecimentos como desenvolvedor Full stack.
                 </p>
-                <p className='text text-aboutme'>
-                    Atualmente, estou concentrado em praticar e expandir meu conhecimento, buscando realizar diversos projetos do zero e em diferentes linguagens, tanto no back-end quanto no front-end. E com a minha dedicação à área, busco um crescimento contínuo neste campo.
-                </p>
-
                 <ScrollTrigger className="card-aboutme-container" onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)} >
 
                     <div className="card-aboutme">
@@ -34,7 +32,7 @@ export const AboutMe = () => {
                     </div>
                     <div className="card-aboutme">
                         {counterOn ? (
-                            <CountUp className="title count" start={0} end={1} duration={5} delay={0} />
+                            <CountUp className="title count" start={0} end={3} duration={5} delay={0} />
                         ) : (
                             0
                         )}
@@ -53,7 +51,7 @@ export const AboutMe = () => {
                         ease: "easeInOut",
                         repeat: Infinity
                     }}
-                    src='/img/ProfilePicDark.png' />
+                    src='/img/ProfilePic.jpeg' />
             </div>
         </motion.div>
     )

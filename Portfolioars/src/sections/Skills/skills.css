@@ -21,19 +21,16 @@
     display: flex;
     justify-content: start;
     flex-direction: column;
-    width: 25rem;
+
+    width: 23rem;
     min-height: 22rem;
     border-radius: 15px;
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
+    margin-inline: 0.5rem;
     position: relative;
     background-color: var(--background);
     box-shadow: 0.01px 0.01px 4px 0.01px var(--background-invert);
     transition: width .5s ease-in-out;
-}
-
-.skill-container>h2 {
-    align-self: center;
-    margin-top: 1.5em;
 }
 
 .icon-skill-container {
@@ -42,8 +39,8 @@
     padding: 1.2rem 1.2rem;
     border-radius: 90px;
     position: absolute;
-    top: -120px;
-    left: 200px;
+    top: -35%;
+    left: 50%;
     margin: auto;
     transform: translate(-50%, 100%);
 }
@@ -52,16 +49,36 @@
     color: var(--background);
 }
 
+
+.skill-check {
+    color: var(--background-invert);
+}
+
+.skill-container>h2 {
+    align-self: center;
+    margin-top: 1.5em;
+}
+
+
+
 .img-icon {
     width: 20px;
 }
-
 
 .skill {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: relative;
+}
+
+.skill .skill-percentage-text {
+    position: absolute;
+    right: 42%;
+    top: -4%;
+    z-index: 1;
+    color: var(--background-invert);
 }
 
 .skill>div {
@@ -70,19 +87,21 @@
     gap: 5px;
 }
 
-.skill-check {
-    color: var(--background-invert);
+.skill .skill-name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .skill-stats .barras {
-    background-color: var(--backgroundOp);
     display: block;
-    box-shadow: 0.01px 0.01px 1px var(--background-invert);
-    height: 15px;
-    width: 60%;
-    border-radius: 5px;
     position: relative;
     overflow: clip;
+    height: 15px;
+    width: 40%;
+    border-radius: 5px;
+    background-color: var(--backgroundOp);
+    box-shadow: 0.01px 0.01px 1px var(--background-invert);
 }
 
 .skill-stats {
@@ -99,15 +118,14 @@
 
 .barras>span {
     height: inherit;
-    background: linear-gradient(to right, var(--backgroundOp), var(--background-invert));
     position: absolute;
+    background: linear-gradient(to right, var(--backgroundOp), var(--background-invert));
     border-radius: 3px;
-}
-
-.barras span {
     width: var(--per);
     animation: var(--anim) forwards;
 }
+
+
 
 @media(prefers-reduced-motion: no-preference) {
     @keyframes skillbar {
@@ -121,4 +139,27 @@
     }
 }
 
+@media screen and (max-width: 420px) {
+    .skill {
+        flex-direction: column;
+    }
 
+    .skill>div {
+        justify-content: space-around;
+    }
+
+    .icon-skill-container {
+        top: -34%;
+    }
+
+    .skill .skill-percentage-text {
+        position: static;
+        z-index: 1;
+        color: var(--background-invert);
+    }
+
+    .skill-stats .barras {
+        width: 70%;
+    }
+
+}

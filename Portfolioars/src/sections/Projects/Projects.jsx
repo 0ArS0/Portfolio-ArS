@@ -6,9 +6,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
 const MAX_VISIBILITY = 2;
-    
+
 const Card = ({ title, content, image, deploy, repo }) => (
-    <div className='card2'>
+    <div className='project-card'>
         <h4 className='title title-project'>
             {title}
         </h4>
@@ -33,12 +33,12 @@ const Carousel = ({ children }) => {
         <div className='carousel'>
 
             {React.Children.map(children, (child, i) => (
-                <div className='card-container2' style={{
+                <div className='project-container' style={{
                     '--active': i === active ? 1 : 0,
                     '--offset': (active - i) / 3,
                     '--direction': Math.sign(active - i),
                     '--abs-offset': Math.abs(active - i) / 3,
-                    'pointer-events': active === i ? 'auto' : 'none',
+                    'pointerEvents': active === i ? 'auto' : 'none',
                     'opacity': Math.abs(active - i) >= MAX_VISIBILITY ? '0' : '1',
                     'display': Math.abs(active - i) > MAX_VISIBILITY ? 'none' : 'block',
                 }}>

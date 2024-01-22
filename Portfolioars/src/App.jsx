@@ -81,11 +81,11 @@ export default function App() {
                   onClick={() => setMenuOpen(false)} className='underline-a'>Contato</a>
               </li>
               <li>
-                <a>
+                <a onClick={() => toggleTheme()} >
                   {theme === 'light' ? (
-                    <MdOutlineWbSunny className='darkmode-item' onClick={() => toggleTheme()} />
+                    <MdOutlineWbSunny className='darkmode-item' />
                   ) : (
-                    <IoMoonOutline className='darkmode-item' onClick={() => toggleTheme()} />
+                    <IoMoonOutline className='darkmode-item' />
                   )}
                 </a>
               </li>
