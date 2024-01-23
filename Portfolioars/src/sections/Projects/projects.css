@@ -123,6 +123,17 @@ h2 {
     transform: scale(0.98);
 }
 
+.options-project .link-disabled {
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    border-radius: 3rem;
+    filter: blur(2px);
+    color: var(--background-invert);
+    background: var(--backgroundOp);
+    border: 1px solid var(--background-invert);
+}
+
+
 .title-project {
     text-align: center;
 }

@@ -1,3 +1,7 @@
+.contact {
+    padding: 4rem 0rem 0rem 0rem;
+}
+
 .text-container-contact {
     display: flex;
     flex-direction: column;
@@ -9,6 +13,16 @@
     font-size: 60px;
     line-height: 88px;
 }
+
+.item {
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 1rem 0rem;
+    max-width: 100%;
+    gap: 15px;
+}
+
 
 .text-container-contact span {
     font-weight: 300;
@@ -42,6 +56,16 @@ textarea {
     border: 1px solid var(--background-invert);
     color: var(--background-invert);
     border-radius: 5px;
+}
+
+/* Mover para contact */
+img {
+    display: block;
+}
+
+img,
+svg {
+    max-width: 100%;
 }
 
 .formContainer form button {
@@ -80,6 +104,15 @@ form>button:active {
     .contact {
         flex-direction: column;
     }
+
+    .item {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 2rem;
+        width: 100%;
+    }
+
 
     .formContainer {
         margin-top: -5rem;

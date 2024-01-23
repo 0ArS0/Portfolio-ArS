@@ -3,13 +3,12 @@ import React from 'react'
 import { SkillCategory } from './SkillCategory';
 
 // External Libraries Imports
-import ScrollTrigger from 'react-scroll-trigger';
 import { useReadLocalStorage } from 'usehooks-ts';
 
 // Icon Imports
 import { GoDatabase } from "react-icons/go";
 import { IoLogoJavascript } from "react-icons/io";
-import { FaHtml5, FaCss3, FaReact, FaNodeJs, FaJava, FaTools } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaReact, FaJava, FaTools } from "react-icons/fa";
 import { SiSpring } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaGitAlt } from "react-icons/fa6";

@@ -5,16 +5,12 @@ import './aboutMe.css';
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 
-
-import { FaInstagram } from "react-icons/fa";
-
 export const AboutMe = () => {
 
     const [counterOn, setCounterOn] = useState(false)
 
     return (
-        <motion.div
-            className="aboutme">
+        <div className="aboutme">
             <div className='aboutme-container-left '>
                 <h2 className='title title-aboutme'>Sobre Mim</h2>
                 <p className='text text-aboutme'>
@@ -53,6 +49,6 @@ export const AboutMe = () => {
                     }}
                     src='/img/ProfilePic.jpeg' />
             </div>
-        </motion.div>
+        </div>
     )
 }
