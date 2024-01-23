@@ -1,13 +1,15 @@
 import React, { useRef } from 'react'
 import './contact.css'
-
-import { motion, useInView } from 'framer-motion'
-import emailjs from '@emailjs/browser';
-
 import 'react-toastify/dist/ReactToastify.css';
 import './custom-toast.css';
-import { ToastContainer, toast } from 'react-toastify';
 
+import { motion, useInView } from 'framer-motion'
+import { ToastContainer, toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
+
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+import { MdOutlineAlternateEmail } from "react-icons/md";
 
 const variants = {
     initial: {
@@ -59,46 +61,40 @@ export const Contact = () => {
                 <motion.div
                     variants={variants}
                     className='text-container-contact'>
-
                     <motion.h1
                         className='title'
                         variants={variants}>
-
-                        Entre em contato
+                        Contato
                     </motion.h1>
 
                     <motion.div
                         className='item'
-                        variants={variants}>
-
-                        <h2 className='title'>
-                            Email
-                        </h2>
-
+                        variants={variants}
+                        whileHover={{ scale: 1.05, originX: 0 }}
+                        transition={{ type: `spring`, stiffness: 300 }}
+                    >
+                        <MdOutlineAlternateEmail size={40} />
                         <span className='text'>
                             arthurmonteiro20172018@gmail.com
                         </span>
                     </motion.div>
                     <motion.div
                         className='item'
-                        variants={variants}>
-
-                        <h2 className='title'>
-                            Celular
-                        </h2>
-
+                        variants={variants}
+                        whileHover={{ scale: 1.05, originX: 0 }}
+                        transition={{ type: `spring`, stiffness: 300 }}>
+                        <FaPhone size={40} />
                         <span className='text'>
                             &#40;2*&#41; *****-1005
                         </span>
                     </motion.div>
                     <motion.div
                         className='item'
-                        variants={variants}>
+                        variants={variants}
+                        whileHover={{ scale: 1.05, originX: 0 }}
+                        transition={{ type: `spring`, stiffness: 300 }}>
 
-                        <h2 className='title'>
-                            Localidade
-                        </h2>
-
+                        <FaMapMarkerAlt size={40} />
                         <span className='text'>
                             Petrópolis - RJ, Brasil
                         </span>

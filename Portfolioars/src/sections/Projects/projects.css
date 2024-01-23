@@ -39,7 +39,7 @@
     background-color: var(--background);
     border-radius: 1rem;
     color: var(--background-invert);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
     text-align: start;
     transition: all 0.3s ease-out;
 }
@@ -122,6 +122,17 @@ h2 {
 .options-project .link:active {
     transform: scale(0.98);
 }
+
+.options-project .link-disabled {
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    border-radius: 3rem;
+    filter: blur(2px);
+    color: var(--background-invert);
+    background: var(--backgroundOp);
+    border: 1px solid var(--background-invert);
+}
+
 
 .title-project {
     text-align: center;

@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './skills.css'
 
 import { SkillSection } from '../../components/SkillSection';
 
 export const Skills = () => {
 
-    const [counterOn, setCounterOn] = useState(false);
-
     return (
         <div className='skills'>
             <h1 className='title'>Habilidades</h1>
-            {SkillSection({ counterOn, setCounterOn })}
+            {SkillSection()}
         </div>
     );
 }
