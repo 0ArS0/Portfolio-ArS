@@ -69,10 +69,10 @@ export const Hero = () => {
             {/* Div para conteudo ao lado da imagem */}
             <div className="rightSide-container">
 
-                <h1 className='hero-title title'>Desenvolvedor Full Stack.</h1>
+                <h1 className='hero-title title'>Arthur da Silva Monteiro</h1>
 
                 <p className='text hero-text' >
-                    <span>Programador em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar me meu conhecimento. <span className='blink'>|</span></span>
+                    <span>Desenvolvedor Full Stack em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar meu conhecimento. <span className='blink'>|</span></span>
                 </p>
                 <div className='social' >
                     <motion.a
