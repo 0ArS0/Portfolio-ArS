@@ -108,15 +108,27 @@ h2 {
     border: 1px solid var(--background);
     padding: 0.2rem 1rem;
     border-radius: 3rem;
+    transition: transform .1s ease-in-out;
+}
+
+.skill:hover {
+
+    color: var(--background);
+
+    .skill-check {
+        color: var(--background);
+    }
 }
 
 .options-project .link:hover {
     background: var(--background);
     border: 1px solid var(--background-invert);
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
+    transform: translatey(-3px);
+    color: var(--background-invert);
     cursor: pointer;
     padding: 0.2rem 1rem;
     border-radius: 3rem;
-    color: var(--background-invert);
 }
 
 .options-project .link:active {
