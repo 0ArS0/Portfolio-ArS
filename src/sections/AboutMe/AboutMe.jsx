@@ -12,7 +12,7 @@ export const AboutMe = () => {
     return (
         <div className="aboutme">
             <div className='aboutme-container-left '>
-                <h2 className='title title-aboutme'>Sobre Mim</h2>
+                <h2 className='title title-aboutme section-title'>Sobre Mim</h2>
                 <p className='text text-aboutme'>
                     Me chamo Arthur, tenho 19 anos e dois lindos cachorros, faço parte do universo tecnologico desde muito cedo. No entanto, minha jornada em programação teve início na faculdade FAETERJ em 2022, onde, em três meses, absorvi os fundamentos da lógica de programação. Foi lá que uma amiga me indicou o SERRATEC, onde participei de <a href='https://drive.google.com/file/d/1N0Vza6jqU2ZnKu-z53V3zqRUmxYRcTg9/view?usp=sharing' target='_blank'>uma imersão de 770 horas</a>. Durante essa experiência, concentrei-me em aprimorar meus conhecimentos, trabalhando em projetos do zero com diferentes equipes. E atualmente, ela é responsável por 90% do meu conhecimento na área. Hoje, busco praticar e expandir meus conhecimentos como desenvolvedor Full stack.
                 </p>

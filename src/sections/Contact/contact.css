@@ -10,7 +10,7 @@
 }
 
 .text-container-contact h1 {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 88px;
 }
 
@@ -77,6 +77,13 @@ svg {
     font-weight: 500;
     background-color: var(--background-invert);
     border: 2px solid var(--background-invert);
+    transition: transform .1s ease-in-out;
+}
+form>button:hover {
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
+    transform: translatey(-3px);
+    background-color: var(--background);
+    color: var(--background-invert);
 }
 
 form>div {
@@ -90,10 +97,6 @@ form>div>input {
     width: 100%;
 }
 
-form>button:hover {
-    background-color: var(--background);
-    color: var(--background-invert);
-}
 
 form>button:active {
     transform: scale(0.98);
