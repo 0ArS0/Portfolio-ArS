@@ -11,17 +11,21 @@
     border-radius: 90px;
 }
 
-
-.title-container-aboutme {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 30%;
+.aboutme-container-left>h2 {
+    margin-block: 1.5rem;
 }
 
+.aboutme-container-left>span {
+    padding-inline: 1rem 1rem;
+    border-radius: 0.7rem;
+    margin-left: 325px;
+}
 
-.aboutme-container-left > h2 {
-    margin-block: 1.5rem;
+.aboutme-container-left>span:hover {
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
+    background-color: var(--background-invert);
+    color: var(--background);
+    transform: translateY(-3px);
 }
 
 .card-aboutme-container {
@@ -29,10 +33,11 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    margin-top: 1rem;
 }
 
 
-.text-aboutme > a {
+.text-aboutme>a {
     color: var(--text-primary);
 }
 
@@ -61,6 +66,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 30%;
 }
 
@@ -109,6 +115,7 @@
     .aboutme-container-right {
         width: 50%;
     }
+
     .card-aboutme-container {
         flex-direction: column;
         gap: 40px;

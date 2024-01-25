@@ -1,8 +1,9 @@
 import React from 'react'
 import './projects.css'
+import { ProjectCarousel } from '../../../../components/Project/ProjectCarousel'
+import { ProjectCard } from '../../../../components/Project/ProjectCard'
 
-import { ProjectCard } from '../../components/ProjectCard';
-import { ProjectCarousel } from '../../components/ProjectCarousel';
+
 // import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
 
 export const Projects = () => {

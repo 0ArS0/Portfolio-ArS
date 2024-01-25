@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../sections/Projects/projects.css'
+import '../../pages/App/sections/Projects/projects.css'
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 

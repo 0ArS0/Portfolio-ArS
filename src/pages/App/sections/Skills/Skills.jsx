@@ -1,7 +1,7 @@
 import React from 'react'
 import './skills.css'
+import { SkillSection } from '../../../../components/Skill/SkillSection';
 
-import { SkillSection } from '../../components/SkillSection';
 
 export const Skills = () => {
 

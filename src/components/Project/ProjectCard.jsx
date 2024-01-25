@@ -32,8 +32,8 @@ export const ProjectCard = ({ title, content, image, deploy, repo, tecs }) => {
                     <div className='flip-image-back'>
                         Tecnologias Utilizadas:
                         <div className='tec-container'>
-                            {tecs.map((tec) => (
-                                <img src={tec} className='tec-img' />
+                            {tecs.map((tec, index) => (
+                                <img key={index} src={tec} className='tec-img' />
                             ))}
                         </div>
                     </div>

@@ -7,10 +7,10 @@ import { Contact } from './sections/Contact/Contact';
 import { Hero } from './sections/Hero/Hero';
 import { Projects } from './sections/Projects/Projects';
 import { Skills } from './sections/Skills/Skills';
-import { Header } from './components/Header/Header';
 
 // External Libraries Imports
 import useLocalStorage from 'use-local-storage';
+import { Header } from '../../components/Header/Header';
 
 export default function App() {
 
