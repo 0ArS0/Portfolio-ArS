@@ -61,7 +61,7 @@ export const Contact = () => {
                     variants={variants}
                     className='text-container-contact'>
                     <motion.h1
-                        className='title'
+                        className='title section-title'
                         variants={variants}>
                         Contato
                     </motion.h1>

@@ -95,12 +95,6 @@
     }
 }
 
-@media screen and (max-width: 980px) {
-    .text-aboutme {
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 800px) {
     .aboutme-container-left {
         width: 90%;

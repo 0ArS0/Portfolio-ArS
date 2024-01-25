@@ -52,6 +52,10 @@ body {
   font-family: 'Jura', sans-serif;
 }
 
+.section-title {
+  font-size: 32px;
+}
+
 .text {
   font-family: 'Arimo', sans-serif;
 }
