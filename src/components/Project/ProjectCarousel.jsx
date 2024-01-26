@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const MAX_VISIBILITY = 2;
 
 export const ProjectCarousel = ({ children }) => {
-    const [active, setActive] = useState(2);
+    const [active, setActive] = useState(1);
     const count = React.Children.count(children);
 
     return (
@@ -25,8 +25,8 @@ export const ProjectCarousel = ({ children }) => {
                     {child}
                 </div>
             ))}
-            {active > 0 && <button className='nav left' onClick={() => setActive(i => i - 1)}><FaChevronLeft /></button>}
-            {active < count - 1 && <button className='nav right' onClick={() => setActive(i => i + 1)}><FaChevronRight /></button>}
+            {active > 0 && <button className='project-control left' onClick={() => setActive(i => i - 1)}><FaChevronLeft /></button>}
+            {active < count - 1 && <button className='project-control right' onClick={() => setActive(i => i + 1)}><FaChevronRight /></button>}
         </div>
     );
 };

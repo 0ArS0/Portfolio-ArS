@@ -15,7 +15,7 @@ export const ProjectCard = ({ title, content, image, deploy, repo, tecs }) => {
 
     return (
         <div className='project-card'>
-            <h4 className='title title-project'>
+            <h4 className='title'>
                 {title}
             </h4>
             <div className='flip-image' onClick={handleFlip}>
@@ -27,13 +27,13 @@ export const ProjectCard = ({ title, content, image, deploy, repo, tecs }) => {
                     onAnimationComplete={() => setIsAnimating(false)}
                 >
                     <div className='flip-image-front'>
-                        <img src={image !== 'Indefinido' ? image : ''} className='img-project' />
+                        <img src={image} className='img-project' />
                     </div>
                     <div className='flip-image-back'>
                         Tecnologias Utilizadas:
                         <div className='tec-container'>
                             {tecs.map((tec, index) => (
-                                <img key={index} src={tec} className='tec-img' />
+                                <img key={index} src={tec}/>
                             ))}
                         </div>
                     </div>
@@ -49,7 +49,7 @@ export const ProjectCard = ({ title, content, image, deploy, repo, tecs }) => {
                     <a className='link-disabled'>Demo</a>
                 )}
 
-                <a className={'link'} href={repo} target='_blank'>Repositório</a>
+                <a className='link' href={repo} target='_blank'>Repositório</a>
             </div>
         </div >
     )

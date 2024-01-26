@@ -1,3 +1,7 @@
+.app {
+    color: var(--text-primary);
+}
+
 #main-home {
     max-width: 1366px;
     margin-inline: auto;
@@ -12,13 +16,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin: 0 auto;
     min-height: 100vh;
-    margin: auto;
     padding: 7rem 0rem 0rem 0rem;
-}
-
-.app {
-    color: var(--text-primary);
 }
 
 footer {

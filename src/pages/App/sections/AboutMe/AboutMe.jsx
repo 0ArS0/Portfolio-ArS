@@ -41,12 +41,13 @@ export const AboutMe = () => {
                         <h3 className='title title-aboutme-card'>Projetos Completos</h3>
                     </div>
                 </ScrollTrigger>
-                <span className='title'>
+                {/* <span className='title'>
                     <Link to='/LinhaDoTempo'>
                         Linha do Tempo
                     </Link>
-                </span>
+                </span> */}
             </div>
+
             <div className='aboutme-container-right' >
                 <motion.img
                     animate={{
@@ -59,7 +60,6 @@ export const AboutMe = () => {
                     }}
                     src='/img/ProfilePic.jpeg'
                 />
-
             </div>
         </div>
     )

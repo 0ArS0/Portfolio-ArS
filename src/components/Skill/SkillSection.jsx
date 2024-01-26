@@ -1,6 +1,6 @@
 import React from 'react'
+import { SkillCard } from './SkillCard';
 
-import { SkillCategory } from './SkillCategory';
 
 // External Libraries Imports
 import { useReadLocalStorage } from 'usehooks-ts';
@@ -23,36 +23,36 @@ export const SkillSection = () => {
     return (
         <div>
             {/* Front-End Skills */}
-            {SkillCategory({
-                icon: <MdDesignServices size={35}   className='icon-skill' />,
+            {SkillCard({
+                icon: <MdDesignServices size={35} className='icon-skill' />,
                 title: 'Front-End',
                 skills: [
-                    { icon: <FaHtml5 size={25} className='skill-check' />, label: 'HTML'},
-                    { icon: <FaCss3 size={25} className='skill-check' />, label: 'CSS'},
-                    { icon: <IoLogoJavascript size={25} className='skill-check' />, label: 'JavaScript'},
-                    { icon: <FaReact size={25} className='skill-check' />, label: 'React'},
+                    { icon: <FaHtml5 size={25} className='skill-check' />, label: 'HTML' },
+                    { icon: <FaCss3 size={25} className='skill-check' />, label: 'CSS' },
+                    { icon: <IoLogoJavascript size={25} className='skill-check' />, label: 'JavaScript' },
+                    { icon: <FaReact size={25} className='skill-check' />, label: 'React' },
                 ],
             })}
 
             {/* Back-End Skills */}
-            {SkillCategory({
+            {SkillCard({
                 icon: <GoDatabase size={35} className='icon-skill' />,
                 title: 'Back-End',
                 skills: [
-                    { icon: <FaJava size={25} className='skill-check' />, label: 'Java'},
-                    { icon: <SiSpring size={25} className='skill-check' />, label: 'Spring'},
-                    { icon: <BiLogoPostgresql size={25} className='skill-check' />, label: 'Postgresql'},
+                    { icon: <FaJava size={25} className='skill-check' />, label: 'Java' },
+                    { icon: <SiSpring size={25} className='skill-check' />, label: 'Spring' },
+                    { icon: <BiLogoPostgresql size={25} className='skill-check' />, label: 'Postgresql' },
                 ],
             })}
 
             {/* Other Skills */}
-            {SkillCategory({
+            {SkillCard({
                 icon: <FaTools size={35} className='icon-skill' />,
                 title: 'Outros',
                 skills: [
-                    { icon: <FaGitAlt size={25} className='skill-check' />, label: 'Git'},
-                    { icon: <TbBrandVscode size={25} className='skill-check' />, label: 'VsCode'},
-                    { icon: <FiGithub size={25} className='skill-check' />, label: 'GitHub'},
+                    { icon: <FaGitAlt size={25} className='skill-check' />, label: 'Git' },
+                    { icon: <TbBrandVscode size={25} className='skill-check' />, label: 'VsCode' },
+                    { icon: <FiGithub size={25} className='skill-check' />, label: 'GitHub' },
                 ],
             })}
         </div>

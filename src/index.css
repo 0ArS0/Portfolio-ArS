@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
-* {
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
 [data-theme="dark"] {
   background-image: url(/img/bgDark.jpg);
   background-repeat: no-repeat;
@@ -40,11 +31,20 @@ html {
   --sombra-2: rgba(0, 0, 0, 0.23);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 body {
   letter-spacing: 2px;
   line-height: 26px;
   user-select: none;
 }
+
+/* General Styles */
 
 .title {
   font-weight: 600;
@@ -58,6 +58,8 @@ body {
 .text {
   font-family: 'Arimo', sans-serif;
 }
+
+/* ScrollBar Style */
 
 ::-webkit-scrollbar {
   width: 10px;

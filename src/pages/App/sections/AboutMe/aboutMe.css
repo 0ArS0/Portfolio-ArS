@@ -15,6 +15,39 @@
     margin-block: 1.5rem;
 }
 
+.text-aboutme {
+    text-align: start;
+}
+
+.text-aboutme>a {
+    color: var(--text-primary);
+}
+
+.card-aboutme-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.card-aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-aboutme>h3 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.count {
+    font-size: 22px;
+    color: var(--background-invert);
+}
+
 .aboutme-container-left>span {
     padding-inline: 1rem 1rem;
     border-radius: 0.7rem;
@@ -28,39 +61,6 @@
     transform: translateY(-3px);
 }
 
-.card-aboutme-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-
-.text-aboutme>a {
-    color: var(--text-primary);
-}
-
-.card-aboutme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-aboutme-card {
-    text-align: center;
-    font-size: 18px;
-}
-
-.count {
-    font-size: 22px;
-    color: var(--background-invert);
-}
-
-.text-aboutme {
-    text-align: start;
-}
 
 .aboutme-container-right {
     display: flex;
@@ -79,21 +79,21 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .text-aboutme {
-        text-align: center;
+    .aboutme {
+        flex-direction: column;
     }
 
     .aboutme-container-left {
         width: 90%;
     }
 
-    .aboutme {
-        flex-direction: column;
-    }
-
-    .title-aboutme {
+    .aboutme-container-left>h2 {
         text-align: center;
         width: 100%;
+    }
+
+    .text-aboutme {
+        text-align: center;
     }
 
     .aboutme-container-right>img {
@@ -112,12 +112,13 @@
 }
 
 @media screen and (max-width: 540px) {
-    .aboutme-container-right {
-        width: 50%;
-    }
-
     .card-aboutme-container {
         flex-direction: column;
         gap: 40px;
     }
+
+    .aboutme-container-right {
+        width: 50%;
+    }
+
 }
