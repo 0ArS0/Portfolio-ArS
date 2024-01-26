@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
 import './hero.css';
-
+import { motion } from 'framer-motion'
 import VanillaTilt from 'vanilla-tilt';
-
-import { useReadLocalStorage } from 'usehooks-ts';
+import useLocalStorage from 'use-local-storage';
 import { RxExternalLink } from "react-icons/rx";
 
 function Tilt(props) {
@@ -26,7 +24,7 @@ const options = {
 };
 
 export const Hero = () => {
-    const theme = useReadLocalStorage('dark')
+    const [isDark, _] = useLocalStorage('isDark', false)
 
     // Lógica por trás da animação do botão do curriculo 
     const [eixoX, setEixoX] = useState(0);
@@ -94,14 +92,14 @@ export const Hero = () => {
                         whileTap={{ scale: 0.9 }}
                         href='https://github.com/0ArS0' target='_blank'>
                         <img
-                            src={theme === 'light' ? '/img/githubDark.svg' : '/img/githubLight.svg'} width={40} />
+                            src={!isDark ? '/img/githubDark.svg' : '/img/githubLight.svg'} width={40} />
                     </motion.a>
                     <motion.a
                         whileHover={{ y: -4 }}
                         whileTap={{ scale: 0.9 }}
                         href='https://www.linkedin.com/in/arthurmonteiro-ars/' target='_blank'>
                         <img
-                            src={theme === 'light' ? '/img/linkedInDark.svg' : '/img/linkedInLight.svg'} width={45} />
+                            src={!isDark ? '/img/linkedInDark.svg' : '/img/linkedInLight.svg'} width={45} />
                     </motion.a>
                 </div>
             </div>

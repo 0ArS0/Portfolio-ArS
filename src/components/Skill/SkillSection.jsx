@@ -1,10 +1,6 @@
 import React from 'react'
 import { SkillCard } from './SkillCard';
 
-
-// External Libraries Imports
-import { useReadLocalStorage } from 'usehooks-ts';
-
 // Icon Imports
 import { GoDatabase } from "react-icons/go";
 import { IoLogoJavascript } from "react-icons/io";
@@ -17,8 +13,6 @@ import { TbBrandVscode } from "react-icons/tb";
 import { MdDesignServices } from "react-icons/md";
 
 export const SkillSection = () => {
-
-    const theme = useReadLocalStorage('dark');
 
     return (
         <div>

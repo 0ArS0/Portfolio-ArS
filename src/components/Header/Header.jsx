@@ -13,7 +13,7 @@ import { IoMoonOutline } from 'react-icons/io5';
 
 export const Header = () => {
 
-    const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
+    const [isDark, setIsDark] = useLocalStorage('isDark', false)
 
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -38,18 +38,12 @@ export const Header = () => {
         };
     }, []);
 
-    // Theme Switcher
-    const toggleTheme = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light'
-        setTheme(newTheme)
-    }
-
     return (
         <nav className="nav-bar text">
             <div>
                 <div className='logo'>
                     <a href='#' onClick={() => setMenuOpen(false)}>
-                        <Image src={theme === 'dark' ? '/img/logoDark.png' : '/img/logoLight.png'} fluid />
+                        <Image src={isDark ? '/img/logoDark.png' : '/img/logoLight.png'} fluid />
                     </a>
                 </div>
 
@@ -71,8 +65,8 @@ export const Header = () => {
                             onClick={() => setMenuOpen(false)} className='underline-a'>Contato</a>
                     </li>
                     <li>
-                        <a onClick={() => toggleTheme()} >
-                            {theme === 'light' ? (
+                        <a onClick={() => setIsDark(!isDark)} >
+                            {isDark ? (
                                 <MdOutlineWbSunny className='darkmode-item' />
                             ) : (
                                 <IoMoonOutline className='darkmode-item' />

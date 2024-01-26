@@ -14,10 +14,10 @@ import { Header } from '../../components/Header/Header';
 
 export default function App() {
 
-  const [theme, _] = useLocalStorage('theme' ? 'dark' : 'light')
+  const [isDark, _] = useLocalStorage('isDark', false)
 
   return (
-    <div className='app' data-theme={theme} data-bs-theme={theme === 'light' ? 'dark' : 'light'}>
+    <div className='app' data-theme={isDark ? 'dark' : ''}>
       <header>
         <Header />
       </header>
