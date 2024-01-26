@@ -54,7 +54,7 @@ export const Contact = () => {
                 ref={ref}
                 variants={variants}
                 initial='initial'
-                whileInView='animate'
+                animate='animate'
                 className='contact'>
 
                 <motion.div

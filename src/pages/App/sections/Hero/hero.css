@@ -35,8 +35,8 @@
     border-radius: 1rem;
     margin-top: 2rem;
     padding: 0.5rem 2rem;
-
-    transition: color ease-in-out .4s;
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2)0px 6px 6px;
+    transition: color ease 1s, transform ease .1s;
 }
 
 .button-curriculum::before {
@@ -59,7 +59,13 @@
 }
 
 .button-curriculum:hover {
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
+    transform: translateY(-3px);
     color: var(--background);
+}
+
+.button-curriculum:active {
+    transform: scale(0.98);
 }
 
 .button-curriculum>span {
