@@ -1,17 +1,16 @@
+/* Section Project */
+
 .projects {
-    display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* overflow: hidden; */
-
     padding: 7rem 0rem 5rem 0rem;
 }
 
 .projects>h2 {
-    
     margin-bottom: 2rem;
 }
+
+/* Component ProjectCarousel */
 
 .carousel {
     position: relative;
@@ -31,86 +30,7 @@
     transition: all 0.3s ease-out;
 }
 
-.project-card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 14px;
-    padding: 2rem;
-    background-color: var(--background);
-    border-radius: 1rem;
-    color: var(--background-invert);
-    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
-    text-align: start;
-    transition: all 0.3s ease-out;
-}
-
-.title-project {
-    text-align: center;
-}
-
-.flip-image {
-    width: 80%;
-    height: 200px;
-    perspective: 1000px;
-}
-
-.flip-image-inner {
-    transition: transform .6s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-
-.flip-image-front,
-.flip-image-back {
-    width: 100%;
-    height: 200px;
-    position: absolute;
-    backface-visibility: hidden;
-}
-
-.flip-image-back {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    box-shadow: var(--sombra-1) 0px 3px 8px;
-    transform: rotateY(180deg);
-    border-radius: 1rem;
-}
-
-.tec-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-
-.img-project {
-    inline-size: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 1rem;
-    box-shadow: var(--sombra-1) 0px 3px 8px;
-}
-
-
-.card p,
-h2 {
-    transition: all 0.3s ease-out;
-}
-
-
-.card h2 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0 0 0.7em;
-    color: #000;
-}
-
-.nav {
+.project-control {
     color: white;
     font-size: 5rem;
     position: absolute;
@@ -138,6 +58,74 @@ h2 {
     }
 }
 
+/* Component ProjectCard */
+
+.project-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+    padding: 2rem;
+    background-color: var(--background);
+    border-radius: 1rem;
+    color: var(--background-invert);
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
+    text-align: start;
+    transition: all 0.3s ease-out;
+}
+
+.project-card>h4 {
+    text-align: center;
+}
+
+.flip-image {
+    width: 80%;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.flip-image-inner {
+    transition: transform .6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-image-front,
+.flip-image-back {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.img-project {
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: var(--sombra-1) 0px 3px 8px;
+}
+
+.flip-image-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: var(--sombra-1) 0px 3px 8px;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+.tec-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-project {
+    text-align: center;
+}
 
 .options-project {
     display: flex;
@@ -146,41 +134,33 @@ h2 {
     width: 100%;
 }
 
-.options-project>.link {
+.link {
     text-decoration: none;
-    color: var(--background);
-    background: var(--background-invert);
-    border: 1px solid var(--background);
     padding: 0.2rem 1rem;
     border-radius: 3rem;
+    color: var(--background);
+    background: var(--background-invert);
+    border: 1px solid var(--background-invert);
+    box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2)0px 6px 6px;
     transition: transform .1s ease-in-out;
 }
 
-.skill:hover {
-
-    color: var(--background);
-
-    .skill-check {
-        color: var(--background);
-    }
-}
-
-.options-project .link:hover {
+.link:hover {
     background: var(--background);
     border: 1px solid var(--background-invert);
     box-shadow: var(--sombra-1) 0px 10px 20px, var(--sombra-2) 0px 6px 6px;
-    transform: translatey(-3px);
     color: var(--background-invert);
     cursor: pointer;
     padding: 0.2rem 1rem;
     border-radius: 3rem;
+    transform: translatey(-3px);
 }
 
-.options-project .link:active {
+.link:active {
     transform: scale(0.98);
 }
 
-.options-project .link-disabled {
+.link-disabled {
     text-decoration: none;
     padding: 0.2rem 1rem;
     border-radius: 3rem;
@@ -190,14 +170,8 @@ h2 {
     border: 1px solid var(--background-invert);
 }
 
-
-
-.text-project {
-    text-align: center;
-}
-
 @media screen and (max-width: 965px) {
-    .nav {
+    .project-control {
         &.left {
             transform: translateX(-100%) translateY(-70%);
         }
@@ -209,7 +183,7 @@ h2 {
 }
 
 @media screen and (max-width: 620px) {
-    .nav {
+    .project-control {
         &.left {
             transform: translateX(0%) translateY(-120%);
         }
@@ -235,7 +209,7 @@ h2 {
         height: 130px;
     }
 
-    .nav {
+    .project-control {
         &.left {
             transform: translateX(-10%) translateY(-70%) scale(.6);
         }
@@ -261,7 +235,7 @@ h2 {
         height: 100px;
     }
 
-    .nav {
+    .project-control {
         &.left {
             transform: translateX(-30%) translateY(10%) scale(.6);
         }

@@ -7,17 +7,17 @@ import { Contact } from './sections/Contact/Contact';
 import { Hero } from './sections/Hero/Hero';
 import { Projects } from './sections/Projects/Projects';
 import { Skills } from './sections/Skills/Skills';
-import { Header } from './components/Header/Header';
 
 // External Libraries Imports
 import useLocalStorage from 'use-local-storage';
+import { Header } from '../../components/Header/Header';
 
 export default function App() {
 
-  const [theme, _] = useLocalStorage('theme' ? 'dark' : 'light')
+  const [isDark, _] = useLocalStorage('isDark', false)
 
   return (
-    <div className='app' data-theme={theme} data-bs-theme={theme === 'light' ? 'dark' : 'light'}>
+    <div className='app' data-theme={isDark ? 'dark' : ''}>
       <header>
         <Header />
       </header>

@@ -1,11 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Image } from 'react-bootstrap'
-import { motion } from 'framer-motion'
 import './hero.css';
-
+import { motion } from 'framer-motion'
 import VanillaTilt from 'vanilla-tilt';
-
-import { useReadLocalStorage } from 'usehooks-ts';
+import useLocalStorage from 'use-local-storage';
 import { RxExternalLink } from "react-icons/rx";
 
 function Tilt(props) {
@@ -19,8 +16,15 @@ function Tilt(props) {
     return <div ref={tilt} {...rest} />;
 }
 
+const options = {
+    speed: 1000,
+    max: 10,
+    glare: true,
+    reverse: true,
+};
+
 export const Hero = () => {
-    const theme = useReadLocalStorage('dark')
+    const [isDark, _] = useLocalStorage('isDark', false)
 
     // Lógica por trás da animação do botão do curriculo 
     const [eixoX, setEixoX] = useState(0);
@@ -46,12 +50,6 @@ export const Hero = () => {
         };
     }, []);
 
-    const options = {
-        speed: 1000,
-        max: 10,
-        glare: true,
-        reverse: true,
-    };
 
     return (
         <motion.div
@@ -62,12 +60,11 @@ export const Hero = () => {
             initial="hidden"
             animate="visible"
             transition={{ duration: 1, delay: 0.25 }}
-
             className="hero"
         >
             {/* Div para imagem de perfil */}
             <div className='leftSide-container' >
-                <Tilt className='profile-pic' options={options} />
+                <Tilt options={options} />
                 <a
                     className='button-curriculum'
                     style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }}
@@ -81,10 +78,10 @@ export const Hero = () => {
                 </a>
             </div>
 
-            {/* Div para conteudo ao lado da imagem */}
+            {/* Conteudo ao lado da imagem */}
             <div className="rightSide-container">
 
-                <h1 className='hero-title title section-title'>Arthur da Silva Monteiro</h1>
+                <h1 className=' title section-title'>Arthur da Silva Monteiro</h1>
 
                 <p className='text hero-text' >
                     <span>Desenvolvedor Full Stack em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar meu conhecimento. <span className='blink'>|</span></span>
@@ -95,14 +92,14 @@ export const Hero = () => {
                         whileTap={{ scale: 0.9 }}
                         href='https://github.com/0ArS0' target='_blank'>
                         <img
-                            src={theme === 'light' ? '/img/githubDark.svg' : '/img/githubLight.svg'} width={40} />
+                            src={!isDark ? '/img/githubDark.svg' : '/img/githubLight.svg'} width={40} />
                     </motion.a>
                     <motion.a
                         whileHover={{ y: -4 }}
                         whileTap={{ scale: 0.9 }}
                         href='https://www.linkedin.com/in/arthurmonteiro-ars/' target='_blank'>
                         <img
-                            src={theme === 'light' ? '/img/linkedInDark.svg' : '/img/linkedInLight.svg'} width={45} />
+                            src={!isDark ? '/img/linkedInDark.svg' : '/img/linkedInLight.svg'} width={45} />
                     </motion.a>
                 </div>
             </div>

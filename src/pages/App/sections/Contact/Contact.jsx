@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Svg } from '../../components/Svg';
+import { Svg } from '../../../../components/Svg';
 import './contact.css'
 import 'react-toastify/dist/ReactToastify.css';
 import './custom-toast.css';

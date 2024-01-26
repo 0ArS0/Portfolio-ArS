@@ -1,3 +1,5 @@
+/* Section Skills */
+
 .skills {
     flex-direction: column;
     flex-wrap: wrap;
@@ -8,6 +10,9 @@
     margin-bottom: 5rem;
 }
 
+
+/* Component SkillSection */
+
 .skills>div {
     display: flex;
     align-items: center;
@@ -16,6 +21,16 @@
     gap: 100px;
     width: 100%;
 }
+
+.icon-skill {
+    color: var(--background);
+}
+
+.skill-check {
+    color: var(--background-invert);
+}
+
+/* Component SkillCard */
 
 .skill-container {
     display: flex;
@@ -44,21 +59,16 @@
     transform: translate(-50%, 100%);
 }
 
-.icon-skill {
-    color: var(--background);
-}
-
-
 .skill-container>h2 {
     align-self: center;
     margin-top: 1.5em;
 }
 
-.seila {
+.skillList-container {
     width: 90%;
 }
 
-.seila ul {
+.skillList-container ul {
     padding: 0;
 }
 
@@ -83,8 +93,4 @@
     .skill-check {
         color: var(--background);
     }
-}
-
-.skill-check {
-    color: var(--background-invert);
 }

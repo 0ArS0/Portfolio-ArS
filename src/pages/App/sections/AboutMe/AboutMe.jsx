@@ -5,7 +5,11 @@ import './aboutMe.css';
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 
+import { Link, useNavigation } from 'react-router-dom'
+
 export const AboutMe = () => {
+
+    const navigate = useNavigation()
 
     const [counterOn, setCounterOn] = useState(false)
 
@@ -16,6 +20,8 @@ export const AboutMe = () => {
                 <p className='text text-aboutme'>
                     Me chamo Arthur, tenho 19 anos e dois lindos cachorros, faço parte do universo tecnologico desde muito cedo. No entanto, minha jornada em programação teve início na faculdade FAETERJ em 2022, onde, em três meses, absorvi os fundamentos da lógica de programação. Foi lá que uma amiga me indicou o SERRATEC, onde participei de <a href='https://drive.google.com/file/d/1N0Vza6jqU2ZnKu-z53V3zqRUmxYRcTg9/view?usp=sharing' target='_blank'>uma imersão de 770 horas</a>. Durante essa experiência, concentrei-me em aprimorar meus conhecimentos, trabalhando em projetos do zero com diferentes equipes. E atualmente, ela é responsável por 90% do meu conhecimento na área. Hoje, busco praticar e expandir meus conhecimentos como desenvolvedor Full stack.
                 </p>
+
+
                 <ScrollTrigger className="card-aboutme-container" onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)} >
 
                     <div className="card-aboutme">
@@ -35,6 +41,11 @@ export const AboutMe = () => {
                         <h3 className='title title-aboutme-card'>Projetos Completos</h3>
                     </div>
                 </ScrollTrigger>
+                {/* <span className='title'>
+                    <Link to='/LinhaDoTempo'>
+                        Linha do Tempo
+                    </Link>
+                </span> */}
             </div>
 
             <div className='aboutme-container-right' >
@@ -47,7 +58,8 @@ export const AboutMe = () => {
                         ease: "easeInOut",
                         repeat: Infinity
                     }}
-                    src='/img/ProfilePic.jpeg' />
+                    src='/img/ProfilePic.jpeg'
+                />
             </div>
         </div>
     )
