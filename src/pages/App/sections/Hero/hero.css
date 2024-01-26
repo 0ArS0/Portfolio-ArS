@@ -17,7 +17,6 @@
     border-radius: 10rem;
     width: 70%;
     aspect-ratio: 3/3;
-    /* min-height: 50vh; */
     border-bottom: 4px solid var(--special-color);
     box-shadow: -10px 5px 20px 1px var(--sombra);
     transition: width ease-in-out .5s;

@@ -69,7 +69,7 @@ export const Hero = () => {
                     className='button-curriculum'
                     style={{ '--eixoX': `${eixoX}px`, '--eixoY': `${eixoY}px` }}
                     ref={btnRef}
-                    href='https://drive.google.com/file/d/1ObfczBXqK_-DY5nzlTgsoMVw0qV9uU5B/view?usp=sharing'
+                    href='https://drive.google.com/file/d/17g93zLLpD4edoW7lhjlVthMAjjMlC_OD/view?usp=sharing'
                     target='_blank'
                 >
                     <span className='text' >
@@ -84,7 +84,7 @@ export const Hero = () => {
                 <h1 className=' title section-title'>Arthur da Silva Monteiro</h1>
 
                 <p className='text hero-text' >
-                    <span>Desenvolvedor Full Stack em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar meu conhecimento. <span className='blink'>|</span></span>
+                    <span>Desenvolvedor Full Stack em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar meu conhecimento.<span className='blink'>|</span></span>
                 </p>
                 <div className='social' >
                     <motion.a
