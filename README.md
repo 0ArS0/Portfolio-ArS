@@ -4,4 +4,4 @@
 
 Meu primeiro portfolio. Feito com [React.js](https://react.dev) & [Framer Motion](https://www.framer.com/motion/). 
 
-Acesse o portfolio [aqui](https://portfolioars.vercel.app).
+Acesse a demo [aqui](https://portfolioars.vercel.app).
