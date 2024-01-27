@@ -17,9 +17,8 @@
     border-radius: 10rem;
     width: 70%;
     aspect-ratio: 3/3;
-    /* min-height: 50vh; */
     border-bottom: 4px solid var(--special-color);
-    box-shadow: -10px 5px 20px 1px var(--sombra);
+    box-shadow: -10px 1px 20px 1px var(--sombra);
     transition: width ease-in-out .5s;
 }
 
@@ -31,18 +30,16 @@
 
     background-color: var(--background);
     color: var(--background-invert);
-    box-shadow: 0.1px 0.1px 3px 0.1px var(--background-invert);
-
-    border-radius: 1rem;
+    border: 1px solid var(--background-invert);
+    border-radius: 1rem;    
     margin-top: 2rem;
     padding: 0.5rem 2rem;
-
-    transition: color ease-in-out .4s;
+    transition: color ease 1s, transform ease .4s, box-shadow ease .4s;
 }
 
 .button-curriculum::before {
     content: '';
-    background-color: var(--background-invert);
+    background-color: var(--background);
     color: #000;
     width: 0px;
     height: 0px;
@@ -60,7 +57,13 @@
 }
 
 .button-curriculum:hover {
-    color: var(--background);
+    transform: translateY(-3px);
+    color: var(--background-invert);
+    box-shadow: var(--sombra-1) 0px 6px 20px, var(--sombra-2)0px 6px 6px;
+}
+
+.button-curriculum:active {
+    transform: scale(0.98);
 }
 
 .button-curriculum>span {
@@ -134,4 +137,12 @@
         text-align: center;
     }
 
+}
+
+
+@media screen and (max-width: 340px) {
+    .icon-curriculum {
+        display: none;
+    }
+    
 }

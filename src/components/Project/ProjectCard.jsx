@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-export const ProjectCard = ({ title, content, image, deploy, repo, tecs }) => {
+export const ProjectCard = ({ title, content, image, deploy, repo, tecs, completed }) => {
 
     const [isFlipped, setIsFlipped] = useState(false)
     const [isAnimating, setIsAnimating] = useState(false)
@@ -16,7 +16,7 @@ export const ProjectCard = ({ title, content, image, deploy, repo, tecs }) => {
     return (
         <div className='project-card'>
             <h4 className='title'>
-                {title}
+                {completed ? title : 'Em Breve' }
             </h4>
             <div className='flip-image' onClick={handleFlip}>
                 <motion.div
@@ -26,14 +26,14 @@ export const ProjectCard = ({ title, content, image, deploy, repo, tecs }) => {
                     transition={{ duration: 0.6, animationDirection: 'normal' }}
                     onAnimationComplete={() => setIsAnimating(false)}
                 >
-                    <div className='flip-image-front'>
+                    <div className={completed ? 'flip-image-front' : 'flip-image-front disabled'}>
                         <img src={image} className='img-project' />
                     </div>
                     <div className='flip-image-back'>
-                        Tecnologias Utilizadas:
+                        Tecnologias:
                         <div className='tec-container'>
                             {tecs.map((tec, index) => (
-                                <img key={index} src={tec}/>
+                                <img key={index} src={tec} />
                             ))}
                         </div>
                     </div>

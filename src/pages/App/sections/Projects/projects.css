@@ -93,9 +93,12 @@
 .flip-image-front,
 .flip-image-back {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16/9;
     position: absolute;
     backface-visibility: hidden;
+    &.disabled {
+        filter: blur(4px);
+    }
 }
 
 .img-project {
@@ -103,7 +106,8 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 1rem;
-    box-shadow: var(--sombra-1) 0px 3px 8px;
+    
+    box-shadow: 1px 1px 8px 1px var(--sombra);
 }
 
 .flip-image-back {
@@ -112,15 +116,20 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    box-shadow: var(--sombra-1) 0px 3px 8px;
     transform: rotateY(180deg);
     border-radius: 1rem;
+    box-shadow: 1px 1px 8px 1px var(--sombra);
 }
 
 .tec-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 40px;
+}
+
+.tec-container>img {
+    max-width: 30%;
 }
 
 .text-project {
@@ -224,15 +233,6 @@
     .carousel {
         width: 15rem;
         height: 15rem;
-    }
-
-    .flip-image {
-        height: 100px;
-    }
-
-    .flip-image-front,
-    .flip-image-back {
-        height: 100px;
     }
 
     .project-control {
