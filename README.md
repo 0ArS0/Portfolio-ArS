@@ -2,6 +2,6 @@
 
 [![Site preview](https://github.com/0ArS0/Portfolio-ArS/assets/114269871/fed930cd-971f-476c-af09-8f32164b35e9)](https://portfolioars.vercel.app)
 
-Meu primeiro portfolio. Feito com [React.js](https://nextjs.org/) and [Framer Motion](https://www.framer.com/motion/). 
+Meu primeiro portfolio. Feito com [React.js](https://react.dev) and [Framer Motion](https://www.framer.com/motion/). 
 
 Acesse o portfolio [aqui](https://portfolioars.vercel.app).
