@@ -73,7 +73,7 @@ export const Hero = () => {
                     target='_blank'
                 >
                     <span className='text' >
-                        Curriculo<RxExternalLink />
+                        Curriculo<RxExternalLink className='icon-curriculum'/>
                     </span>
                 </a>
             </div>

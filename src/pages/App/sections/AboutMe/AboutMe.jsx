@@ -34,7 +34,7 @@ export const AboutMe = () => {
                     </div>
                     <div className="card-aboutme">
                         {counterOn ? (
-                            <CountUp className="title count" start={0} end={3} duration={5} delay={0} />
+                            <CountUp className="title count" start={0} end={2} duration={5} delay={0} />
                         ) : (
                             0
                         )}
