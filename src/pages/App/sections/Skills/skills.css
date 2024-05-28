@@ -66,10 +66,28 @@
 
 .skillList-container {
     width: 90%;
+    max-height: 16.1rem;
+    overflow-y: auto;
+}
+
+.skillList-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.skillList-container::-webkit-scrollbar-track {
+    background: #74747473;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+}
+
+.skillList-container::-webkit-scrollbar-thumb {
+    background: var(--background-invert);
+    border-radius: 50px;
 }
 
 .skillList-container ul {
     padding: 0;
+    margin-inline: 1rem;
 }
 
 .skill {

@@ -18,7 +18,13 @@ export const AboutMe = () => {
             <div className='aboutme-container-left '>
                 <h2 className='title title-aboutme section-title'>Sobre Mim</h2>
                 <p className='text text-aboutme'>
-                    Me chamo Arthur, tenho 19 anos e dois lindos cachorros, faço parte do universo tecnologico desde muito cedo. No entanto, minha jornada em programação teve início na faculdade FAETERJ em 2022, onde, em três meses, absorvi os fundamentos da lógica de programação. Foi lá que uma amiga me indicou o SERRATEC, onde participei de <a href='https://drive.google.com/file/d/1N0Vza6jqU2ZnKu-z53V3zqRUmxYRcTg9/view?usp=sharing' target='_blank'>uma imersão de 770 horas</a>. Durante essa experiência, concentrei-me em aprimorar meus conhecimentos, trabalhando em projetos do zero com diferentes equipes. E atualmente, ela é responsável por 90% do meu conhecimento na área. Hoje, busco praticar e expandir meus conhecimentos como desenvolvedor Full stack.
+                    Me chamo Arthur, tenho 20 anos e sou apaixonado por tecnologia desde muito cedo. Além disso, tenho dois lindos cachorros que fazem parte da minha vida. Minha jornada na programação começou na faculdade FAETERJ em 2022, onde em apenas três meses, adquiri os fundamentos da lógica de programação.
+                </p>
+                <p className='text text-aboutme'>
+                    Foi nessa época que uma amiga me apresentou ao SERRATEC, onde participei de uma <a href='https://drive.google.com/file/d/1N0Vza6jqU2ZnKu-z53V3zqRUmxYRcTg9/view?usp=sharing' target='_blank'>intensa imersão de 770 horas.</a> Durante essa experiência, dediquei-me a aprimorar meus conhecimentos, trabalhando em projetos do zero com diferentes equipes. Essa imersão foi fundamental para o meu desenvolvimento, sendo responsável por 85% do meu conhecimento atual na área.
+                </p>
+                <p className='text text-aboutme'>
+                    Atualmente, trabalho como desenvolvedor back-end na <a href='https://www.linkedin.com/company/best2bee/mycompany/' target='_blank'>Best2Bee</a>, focando principalmente em Node.js e TypeScript. Continuo a expandir meus conhecimentos diariamente, tanto no trabalho quanto na faculdade, onde estou cursando Engenharia de Software. Esse curso tem me permitido explorar diversas áreas e aprofundar ainda mais minhas habilidades no campo da tecnologia.
                 </p>
 
 
@@ -26,7 +32,7 @@ export const AboutMe = () => {
 
                     <div className="card-aboutme">
                         {counterOn ? (
-                            <CountUp className="title count" start={0} end={7} duration={5} delay={0} />
+                            <CountUp className="title count" start={0} end={10} duration={5} delay={0} />
                         ) : (
                             0
                         )}

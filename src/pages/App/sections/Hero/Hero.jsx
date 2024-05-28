@@ -73,7 +73,7 @@ export const Hero = () => {
                     target='_blank'
                 >
                     <span className='text' >
-                        Curriculo<RxExternalLink className='icon-curriculum'/>
+                        Curriculo<RxExternalLink className='icon-curriculum' />
                     </span>
                 </a>
             </div>
@@ -84,7 +84,7 @@ export const Hero = () => {
                 <h1 className=' title section-title'>Arthur da Silva Monteiro</h1>
 
                 <p className='text hero-text' >
-                    <span>Desenvolvedor Full Stack em formação, com aproximadamente 7 meses de experiência. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar meu conhecimento.<span className='blink'>|</span></span>
+                    <span>Desenvolvedor Back-End, com aproximadamente 3 meses de experiência profissional. Estou imerso em um contínuo processo de aprendizado, explorando diversos projetos que possam agregar meu conhecimento.<span className='blink'>|</span></span>
                 </p>
                 <div className='social' >
                     <motion.a
